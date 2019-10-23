@@ -1,18 +1,20 @@
-#include <iostream>
-#include <cstdlib>
-#include <cstdio>
-#include <cstring>
-#include <vector>
-
 #include "Util.hpp"
 #include "ExpressionTree.hpp"
+#include "Rule.hpp"
 
 using namespace std;
 
 int main()
 {
-    string s = "+ + X * Y Z Y";
-    ExpressionTree *et = new ExpressionTree(s);
+
+    string original = "* X + Y Z";        // X(Y+Z)
+    string replacement = "+ * X Y * X Z"; //XY+XZ
+    Rule *r1 = new Rule(original, replacement);
+
+    //string s = "+ + X * Y Z Y";
+    ExpressionTree *et = new ExpressionTree(original);
+    r1->applyRule(et);
+
     cout << "Prefix : ";
     et->prefix();
     cout << "\nInfix : ";
