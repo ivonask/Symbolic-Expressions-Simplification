@@ -8,9 +8,14 @@
 
 class ExpressionTree
 {
+private:
+    Node *root;
+
 public:
     StackNode *top;
     ExpressionTree();
+    ExpressionTree(Node *root);
+    ExpressionTree(string prefixExpression);
     void clear();
 
     void push(Node *ptr);
