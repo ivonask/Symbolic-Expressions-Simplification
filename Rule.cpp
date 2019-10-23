@@ -6,17 +6,19 @@ Rule::Rule(string original, string replacement)
     this->replacement = new ExpressionTree(replacement);
 }
 
-ExpressionTree Rule::applyRule(ExpressionTree *expression)
+void Rule::applyRule(ExpressionTree *expression)
 {
-    ExpressionTree result;
+    //ExpressionTree *result;
 
-    match(replacement->peek(), expression->peek());
+    match(original->peek(), expression->peek());
 
-    return result;
+    //return result;
 }
 
 void Rule::match(Node *P, Node *T)
 {
+        printf("%s %s\n", T->d, P->d);
+
     if (compare(P, T))
     {
         cout << "Found a pattern!";
@@ -24,12 +26,18 @@ void Rule::match(Node *P, Node *T)
         //TODO: return here??
     }
     //TODO: apply to the degree of the tree node, not just left and right
-    match(P, T->l);
-    match(P, T->r);
+    if (T) match(P, T->l);
+    if (T) match(P, T->r);
 }
 
 bool Rule::compare(Node *P, Node *U)
 {
+
+    if (!U) {
+        return false;
+    }
+
+    //printf("%s %s\n", U->d, P->d);
 
     //TODO: add step 1: "don't care" logic
     //if(P->d == dontcare) return true;

@@ -12,7 +12,7 @@ private:
 
 public:
     Rule(string original, string replacement);
-    ExpressionTree applyRule(ExpressionTree *expression);
+    void applyRule(ExpressionTree *expression);
 };
 
 #endif // REWRITE_RULE_h

@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-
     string original = "* X + Y Z";        // X(Y+Z)
     string replacement = "+ * X Y * X Z"; //XY+XZ
     Rule *r1 = new Rule(original, replacement);
