@@ -17,27 +17,35 @@ void Rule::applyRule(ExpressionTree *expression)
 
 void Rule::match(Node *P, Node *T)
 {
-        printf("%s %s\n", T->d, P->d);
-
     if (compare(P, T))
     {
-        cout << "Found a pattern!";
+        cout << "Found a pattern!\n";
         //TODO: replace the original tree with replacement tree
-        //TODO: return here??
+        return;
     }
     //TODO: apply to the degree of the tree node, not just left and right
-    if (T) match(P, T->l);
-    if (T) match(P, T->r);
+    if (T)
+        match(P, T->l);
+    if (T)
+        match(P, T->r);
 }
 
 bool Rule::compare(Node *P, Node *U)
 {
+    //printf("%s %s\n", U->d, P->d);
 
-    if (!U) {
+    if (!U && !P)
+    {
+        return true;
+    }
+    else if (!U)
+    {
         return false;
     }
-
-    //printf("%s %s\n", U->d, P->d);
+    else if (!P)
+    {
+        return false;
+    }
 
     //TODO: add step 1: "don't care" logic
     //if(P->d == dontcare) return true;

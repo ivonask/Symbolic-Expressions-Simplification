@@ -11,7 +11,7 @@ int main()
     Rule *r1 = new Rule(original, replacement);
 
     //string s = "+ + X * Y Z Y";
-    ExpressionTree *et = new ExpressionTree(original);
+    ExpressionTree *et = new ExpressionTree("* X + Y Z");
     r1->applyRule(et);
 
     cout << "Prefix : ";
