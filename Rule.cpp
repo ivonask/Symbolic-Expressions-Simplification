@@ -20,7 +20,9 @@ void Rule::match(Node *P, Node *T)
     if (compare(P, T))
     {
         cout << "Found a pattern!\n";
-        //TODO: replace the original tree with replacement tree
+
+        //replace the original tree with replacement tree
+        *T = *replacement->peek();
         return;
     }
     //TODO: apply to the degree of the tree node, not just left and right
