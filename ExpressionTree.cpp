@@ -1,6 +1,8 @@
 #include "ExpressionTree.hpp"
 #include "Util.hpp"
 
+#include <map>
+
 using namespace std;
 
 //string example from ECF:      + X sin * X 1
@@ -119,6 +121,14 @@ void ExpressionTree::buildTree(vector<string> eqn)
     {
         insert(eqn.back());
         eqn.pop_back();
+    }
+}
+
+void ExpressionTree::translate(map<string, Node *>)
+{
+    if (isSymbol(root->d))
+    {
+        //find in map, replace
     }
 }
 

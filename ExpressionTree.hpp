@@ -29,6 +29,8 @@ public:
 
     void buildTree(vector<string> eqn);
 
+    void translate(map<string, Node *>);
+
     void infix();
     void inOrder(Node *ptr);
 

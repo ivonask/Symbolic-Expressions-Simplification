@@ -13,7 +13,7 @@ bool Rule::isAddedToMap(string var, Node *n)
     std::map<string, Node *>::iterator it = variables.find(var);
     if (it == variables.end())
     {
-        //addToMap(var, n);
+        variables.insert(pair<string, Node *>(var, n));
         return true;
     }
     else if (variables.find(var)->second->d == n->d)
@@ -67,6 +67,19 @@ void Rule::applyRule(ExpressionTree *expression)
     //return result;
 }
 
+void printMap()
+{
+    std::map<string, Node *>::iterator itr;
+    cout << "\nThe variables dictionary is : \n";
+    cout << "\tKEY\tELEMENT\n";
+    for (itr = variables.begin(); itr != variables.end(); ++itr)
+    {
+        cout << '\t' << itr->first
+             << '\t' << itr->second->d << '\n';
+    }
+    cout << endl;
+}
+
 void Rule::match(Node *P, Node *T)
 {
     if (compare(P, T))
@@ -74,7 +87,17 @@ void Rule::match(Node *P, Node *T)
         cout << "Found a pattern!\n";
 
         //replace the original tree with replacement tree
-        *T = *replacement->peek();
+        //*T = *replacement->peek();
+
+        cout << replacement->peek()->d;
+
+        // std::map<string, Node *>::iterator it = variables.find(replacement->peek()->d);
+
+        // cout << it->second->d;
+
+        // Node *n = it->second;
+
+        // *T = *n;
         return;
     }
     //TODO: apply to the degree of the tree node, not just left and right
