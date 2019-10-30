@@ -44,6 +44,7 @@ Node *ExpressionTree::pop()
     if (top == NULL)
     {
         cout << "Underflow" << endl;
+        return nullptr;
     }
     else
     {
@@ -86,7 +87,7 @@ void ExpressionTree::insert(string val)
 
 bool ExpressionTree::isSymbol(string ch)
 {
-    return ch == "X" || ch == "Y" || ch == "Z";
+    return (!isConstant(ch) && !isOperator(ch)); //TODO check defined variables from ECF file.
 }
 
 //     bool isDigit(char ch) {
@@ -95,7 +96,16 @@ bool ExpressionTree::isSymbol(string ch)
 
 bool ExpressionTree::isOperator(string ch)
 {
-    return ch == "+" || ch == "-" || ch == "*" || ch == "/";
+    return ch == "+" || ch == "-" || ch == "*" || ch == "/"; //TODO check defined operators from ECF file.
+}
+
+bool ExpressionTree::isConstant(string ch)
+{
+    if (ch.find("D_") == 0)
+    {
+        return true;
+    }
+    return false;
 }
 
 // int toDigit(string ch)

@@ -23,8 +23,9 @@ public:
     Node *peek();
 
     void insert(string val);
-    bool isSymbol(string ch);
-    bool isOperator(string ch);
+    static bool isSymbol(string ch);
+    static bool isOperator(string ch);
+    static bool isConstant(string ch);
 
     void buildTree(vector<string> eqn);
 
