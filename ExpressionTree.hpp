@@ -2,6 +2,7 @@
 #define EXPRESSION_TREE_h
 
 #include <vector>
+#include <map>
 
 #include "StackNode.hpp"
 #include "Node.hpp"
@@ -9,7 +10,7 @@
 class ExpressionTree
 {
 private:
-    Node *root;
+    //Node *root;
 
 public:
     StackNode *top;
@@ -29,7 +30,8 @@ public:
 
     void buildTree(vector<string> eqn);
 
-    void translate(map<string, Node *>);
+    ExpressionTree *translate(map<string, Node *> variables);
+    void translateNode(Node *n, map<string, Node *> variables);
 
     void infix();
     void inOrder(Node *ptr);

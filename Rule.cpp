@@ -89,15 +89,9 @@ void Rule::match(Node *P, Node *T)
         //replace the original tree with replacement tree
         //*T = *replacement->peek();
 
-        cout << replacement->peek()->d;
+        ExpressionTree *translated = replacement->translate(variables);
 
-        // std::map<string, Node *>::iterator it = variables.find(replacement->peek()->d);
-
-        // cout << it->second->d;
-
-        // Node *n = it->second;
-
-        // *T = *n;
+        *T = *translated->peek();
         return;
     }
     //TODO: apply to the degree of the tree node, not just left and right

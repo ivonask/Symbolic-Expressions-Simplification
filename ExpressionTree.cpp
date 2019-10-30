@@ -124,12 +124,54 @@ void ExpressionTree::buildTree(vector<string> eqn)
     }
 }
 
-void ExpressionTree::translate(map<string, Node *>)
+void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
 {
-    if (isSymbol(root->d))
+    if (n == nullptr)
+    {
+        return;
+    }
+    Node *newNode;
+
+    if (isSymbol(n->d))
     {
         //find in map, replace
+
+        std::map<string, Node *>::iterator it = variables.find(n->d);
+
+        //newNode = new Node(it->second);
+        newNode = (it->second);
     }
+    else
+    {
+        newNode = n;
+    }
+
+    n->d = newNode->d;
+
+    translateNode(n->l, variables);
+    translateNode(n->r, variables);
+}
+
+ExpressionTree *ExpressionTree::translate(map<string, Node *> variables)
+{
+    ExpressionTree *translatedTree;
+    if (isSymbol(top->node->d))
+    {
+        //find in map, replace
+
+        std::map<string, Node *>::iterator it = variables.find(top->node->d);
+
+        translatedTree = new ExpressionTree(it->second);
+    }
+    else
+    {
+        translatedTree = new ExpressionTree(top->node);
+    }
+
+    translateNode(translatedTree->top->node->l, variables);
+    translateNode(translatedTree->top->node->r, variables);
+
+    return translatedTree;
 }
 
 void ExpressionTree::infix()

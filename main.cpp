@@ -11,11 +11,14 @@ int main()
     Rule *r1 = new Rule(original, replacement);
 
     //string s = "+ + X * Y Z Y";
-    ExpressionTree *et = new ExpressionTree("+ c + * a + b c b");
+    //ExpressionTree *et = new ExpressionTree("+ c + * a + b c b");
+    ExpressionTree *et = new ExpressionTree("+ x + * a + b d y");
+
     r1->applyRule(et);
 
     cout << "Prefix : ";
     et->prefix();
     cout << "\nInfix : ";
     et->infix();
+    cout << "\n";
 }
