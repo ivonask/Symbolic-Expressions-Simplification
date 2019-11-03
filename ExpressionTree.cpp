@@ -137,6 +137,8 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
         //find in map, replace
 
         std::map<string, Node *>::iterator it = variables.find(n->d);
+        if (it == variables.end())
+            return;
 
         //newNode = new Node(it->second);
         newNode = (it->second);
@@ -146,7 +148,7 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
         newNode = n;
     }
 
-    n->d = newNode->d;
+    *n = *newNode;
 
     translateNode(n->l, variables);
     translateNode(n->r, variables);

@@ -26,6 +26,19 @@ bool Rule::isAddedToMap(string var, Node *n)
     }
 }
 
+void printMap()
+{
+    std::map<string, Node *>::iterator itr;
+    cout << "\nThe variables dictionary is : \n";
+    cout << "\tKEY\tELEMENT\n";
+    for (itr = variables.begin(); itr != variables.end(); ++itr)
+    {
+        cout << '\t' << itr->first
+             << '\t' << itr->second->d << '\n';
+    }
+    cout << endl;
+}
+
 bool Rule::compareNode(Node *n1, Node *n2)
 {
     //case 1: both nodes operators
@@ -67,19 +80,6 @@ void Rule::applyRule(ExpressionTree *expression)
     //return result;
 }
 
-void printMap()
-{
-    std::map<string, Node *>::iterator itr;
-    cout << "\nThe variables dictionary is : \n";
-    cout << "\tKEY\tELEMENT\n";
-    for (itr = variables.begin(); itr != variables.end(); ++itr)
-    {
-        cout << '\t' << itr->first
-             << '\t' << itr->second->d << '\n';
-    }
-    cout << endl;
-}
-
 void Rule::match(Node *P, Node *T)
 {
     if (compare(P, T))
@@ -111,13 +111,13 @@ bool Rule::compare(Node *P, Node *U)
     {
         return true;
     }
-    else if (!U) //if only one node is empty, they aren't the same
+    else if (!U) //TODO: check if there is cases when a subtree is not empty but the compare method should return false. Also think about the general case with more than 2 children.
     {
-        return false;
+        return true;
     }
     else if (!P)
     {
-        return false;
+        return true;
     }
 
     //step 2: compare the nodes

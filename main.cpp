@@ -12,7 +12,9 @@ int main()
 
     //string s = "+ + X * Y Z Y";
     //ExpressionTree *et = new ExpressionTree("+ c + * a + b c b");
-    ExpressionTree *et = new ExpressionTree("+ x + * a + b d y");
+    ExpressionTree *et = new ExpressionTree("* * x1 x2 + * y1 y2 z");
+    //ExpressionTree *et = new ExpressionTree("* x + * y1 y2 z");
+    //ExpressionTree *et = new ExpressionTree("* x + y * z w");
 
     r1->applyRule(et);
 
