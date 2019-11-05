@@ -52,12 +52,12 @@ bool Rule::compareNode(Node *n1, Node *n2)
     //case 2: pattern node is a variable/constant, expression node is an operator -> expression subtree is represented as that pattern variable, if constant return false
     else if (ExpressionTree::isOperator(n2->d))
     {
-        if (ExpressionTree::isConstant(n1->d))
-            return false;
-        else
-        {
-            return isAddedToMap(n1->d, n2);
-        }
+        // if (ExpressionTree::isConstant(n1->d))
+        //     return false;
+        // else
+        // {
+        return isAddedToMap(n1->d, n2);
+        // }
     }
     //case 3: expression node is a variable/constant, pattern node is an operator
     else if (ExpressionTree::isOperator(n1->d))
@@ -96,9 +96,8 @@ void Rule::match(Node *P, Node *T)
     }
     //TODO: apply to the degree of the tree node, not just left and right
     if (T)
-        match(P, T->l);
-    if (T)
-        match(P, T->r);
+        for (int i = 0; i < T->chlidren.size(); i++)
+            match(P, T->chlidren[i]);
 }
 
 bool Rule::compare(Node *P, Node *U)
@@ -128,14 +127,12 @@ bool Rule::compare(Node *P, Node *U)
 
     //step 3: compare the chlidren nodes recursively
     //TODO: apply to the degree of the tree node, not just left and right
-    if (!compare(P->l, U->l))
-    {
-        return false;
-    }
-    if (!compare(P->r, U->r))
-    {
-        return false;
-    }
+
+    for (int i = 0; i < P->chlidren.size(); i++)
+        if (!compare(P->chlidren[i], U->chlidren[i]))
+        {
+            return false;
+        }
 
     return true;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <map>
+#include <memory>
 
 //#include "ExpressionTree.hpp"
 
@@ -12,18 +13,15 @@ class Node /*node declaration*/
 {
 public:
     string d;
-    Node *l, *r;
+    std::vector<Node*> chlidren;
     Node(string d)
     {
         this->d = d;
-        this->l = NULL;
-        this->r = NULL;
     }
     Node(Node *n)
     {
         this->d = n->d;
-        this->l = new Node(n->l);
-        this->r = new Node(n->r);
+        this->chlidren = n->chlidren;
     }
 
     // void translateNode(map<string, Node *> variables)

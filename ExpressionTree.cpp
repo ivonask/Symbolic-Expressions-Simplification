@@ -63,7 +63,7 @@ Node *ExpressionTree::peek()
 
 void ExpressionTree::insert(string val)
 {
-    if (isSymbol(val))
+    if (isSymbol(val) || isConstant(val))
     {
         Node *nptr = new Node(val);
         push(nptr);
@@ -71,8 +71,13 @@ void ExpressionTree::insert(string val)
     else if (isOperator(val))
     {
         Node *nptr = new Node(val);
-        nptr->l = pop();
-        nptr->r = pop();
+        // nptr->l = pop();
+        // nptr->r = pop();
+        //TODO: read from some definition of the operator - how many children?
+        //for (int i = 0; i < nptr->chlidren.size(); i++)
+        for (int i = 0; i < 2; i++) //for now - default is 2
+            nptr->chlidren.push_back(pop());
+
         push(nptr);
     }
     else
@@ -150,8 +155,11 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
 
     *n = *newNode;
 
-    translateNode(n->l, variables);
-    translateNode(n->r, variables);
+    for (int i = 0; i < n->chlidren.size(); i++)
+        translateNode(n->chlidren[i], variables);
+
+    // translateNode(n->l, variables);
+    // translateNode(n->r, variables);
 }
 
 ExpressionTree *ExpressionTree::translate(map<string, Node *> variables)
@@ -170,8 +178,11 @@ ExpressionTree *ExpressionTree::translate(map<string, Node *> variables)
         translatedTree = new ExpressionTree(top->node);
     }
 
-    translateNode(translatedTree->top->node->l, variables);
-    translateNode(translatedTree->top->node->r, variables);
+    for (int i = 0; i < translatedTree->top->node->chlidren.size(); i++)
+        translateNode(translatedTree->top->node->chlidren[i], variables);
+
+    // translateNode(translatedTree->top->node->l, variables);
+    // translateNode(translatedTree->top->node->r, variables);
 
     return translatedTree;
 }
@@ -185,9 +196,17 @@ void ExpressionTree::inOrder(Node *ptr)
 {
     if (ptr != NULL)
     {
-        inOrder(ptr->l);
-        printf("%s", ptr->d.c_str());
-        inOrder(ptr->r);
+        if (ptr->chlidren.empty())
+        {
+            printf("%s", ptr->d.c_str());
+        }
+        else
+        {
+            inOrder(ptr->chlidren[0]); //TODO: general case? the way operands are written depends on the operator
+            printf("%s", ptr->d.c_str());
+            for (int i = 1; i < ptr->chlidren.size(); i++)
+                inOrder(ptr->chlidren[i]);
+        }
     }
 }
 void ExpressionTree::prefix()
@@ -200,7 +219,7 @@ void ExpressionTree::preOrder(Node *ptr)
     if (ptr != NULL)
     {
         printf("%s", ptr->d.c_str());
-        preOrder(ptr->l);
-        preOrder(ptr->r);
+        for (int i = 0; i < ptr->chlidren.size(); i++)
+            preOrder(ptr->chlidren[i]);
     }
 }
