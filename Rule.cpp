@@ -8,6 +8,33 @@ Rule::Rule(string original, string replacement)
     this->replacement = new ExpressionTree(replacement);
 }
 
+bool isEqual(Node *n1, Node *n2)
+{
+    if (!n1 && !n2) //if both nodes are empty, the comparison came to end and they are the same
+    {
+        return true;
+    }
+    if (n1 && n2)
+    {
+        if (n1->chlidren.size() != n2->chlidren.size())
+        {
+            return false;
+        }
+        for (int i = 0; i < n1->chlidren.size(); i++)
+        {
+            if (!isEqual(n1->chlidren[i], n2->chlidren[i]))
+            {
+                return false;
+            }
+        }
+        if (n1->d == n2->d)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 bool Rule::isAddedToMap(string var, Node *n)
 {
     std::map<string, Node *>::iterator it = variables.find(var);
@@ -16,7 +43,7 @@ bool Rule::isAddedToMap(string var, Node *n)
         variables.insert(pair<string, Node *>(var, n));
         return true;
     }
-    else if (variables.find(var)->second->d == n->d)
+    else if (isEqual(variables.find(var)->second, n))
     {
         return true;
     }
@@ -49,22 +76,32 @@ bool Rule::compareNode(Node *n1, Node *n2)
         else
             return false;
     }
-    //case 2: pattern node is a variable/constant, expression node is an operator -> expression subtree is represented as that pattern variable, if constant return false
+    //case 2: pattern node is a variable, expression node is an operator -> expression subtree is represented as that pattern variable, if constant return false
     else if (ExpressionTree::isOperator(n2->d))
     {
-        // if (ExpressionTree::isConstant(n1->d))
-        //     return false;
-        // else
-        // {
-        return isAddedToMap(n1->d, n2);
-        // }
+        if (ExpressionTree::isConstant(n1->d))
+            return false;
+        else
+        {
+            return isAddedToMap(n1->d, n2);
+        }
     }
     //case 3: expression node is a variable/constant, pattern node is an operator
     else if (ExpressionTree::isOperator(n1->d))
     {
         return false;
     }
-    //case 5: both nodes are variables/constants
+    else if (ExpressionTree::isConstant(n1->d))
+    {
+        if (ExpressionTree::isConstant(n2->d))
+        {
+            if (n1->d == n2->d)
+                return true; //TODO: is mapping needed?
+            else
+                return false;
+        }
+    }
+    //case 5: pattern node is a variable, expression a variable or a constant
     else
     {
         return isAddedToMap(n1->d, n2);
@@ -94,7 +131,7 @@ void Rule::match(Node *P, Node *T)
         *T = *translated->peek();
         return;
     }
-    //TODO: apply to the degree of the tree node, not just left and right
+
     if (T)
         for (int i = 0; i < T->chlidren.size(); i++)
             match(P, T->chlidren[i]);
@@ -131,6 +168,7 @@ bool Rule::compare(Node *P, Node *U)
     for (int i = 0; i < P->chlidren.size(); i++)
         if (!compare(P->chlidren[i], U->chlidren[i]))
         {
+            variables.clear();
             return false;
         }
 

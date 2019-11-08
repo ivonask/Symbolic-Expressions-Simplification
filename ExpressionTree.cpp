@@ -73,8 +73,9 @@ void ExpressionTree::insert(string val)
         Node *nptr = new Node(val);
         // nptr->l = pop();
         // nptr->r = pop();
+
         //TODO: read from some definition of the operator - how many children?
-        //for (int i = 0; i < nptr->chlidren.size(); i++)
+        //or: while pop() =! null?
         for (int i = 0; i < 2; i++) //for now - default is 2
             nptr->chlidren.push_back(pop());
 
@@ -87,19 +88,10 @@ void ExpressionTree::insert(string val)
     }
 }
 
-// bool isConstant(string ch)
-// {
-//     return ch._Starts_with("_D");
-// }
-
 bool ExpressionTree::isSymbol(string ch)
 {
     return (!isConstant(ch) && !isOperator(ch)); //TODO check defined variables from ECF file.
 }
-
-//     bool isDigit(char ch) {
-//       return ch >= '0' && ch <= '9';
-//    }
 
 bool ExpressionTree::isOperator(string ch)
 {
@@ -114,11 +106,6 @@ bool ExpressionTree::isConstant(string ch)
     }
     return false;
 }
-
-// int toDigit(string ch)
-// {
-//     return ch - "0";
-// }
 
 void ExpressionTree::buildTree(vector<string> eqn)
 {
