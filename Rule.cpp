@@ -110,11 +110,7 @@ bool Rule::compareNode(Node *n1, Node *n2)
 
 void Rule::applyRule(ExpressionTree *expression)
 {
-    //ExpressionTree *result;
-
     match(original->peek(), expression->peek());
-
-    //return result;
 }
 
 void Rule::match(Node *P, Node *T)
@@ -124,11 +120,9 @@ void Rule::match(Node *P, Node *T)
         cout << "Found a pattern!\n";
 
         //replace the original tree with replacement tree
-        //*T = *replacement->peek();
-
         ExpressionTree *translated = replacement->translate(variables);
-
         *T = *translated->peek();
+
         return;
     }
 
@@ -139,36 +133,23 @@ void Rule::match(Node *P, Node *T)
 
 bool Rule::compare(Node *P, Node *U)
 {
-    //printf("%s %s\n", U->d, P->d);
-
     //step 1: check for empty nodes
-
-    if (!U && !P) //if both nodes are empty, the comparison came to end and they are the same
-    {
-        return true;
-    }
-    else if (!U) //TODO: check if there is cases when a subtree is not empty but the compare method should return false. Also think about the general case with more than 2 children.
-    {
-        return true;
-    }
-    else if (!P)
+    if (!U || !P) //if any of the nodes are empty, the comparison came to end and they are the same
     {
         return true;
     }
 
     //step 2: compare the nodes
-    if (!compareNode(P, U)) //instead of "=="
+    if (!compareNode(P, U)) //true if expression node is successfully mapped to a pattern variable or the nodes are the same
     {
         return false;
     }
 
     //step 3: compare the chlidren nodes recursively
-    //TODO: apply to the degree of the tree node, not just left and right
-
     for (int i = 0; i < P->chlidren.size(); i++)
         if (!compare(P->chlidren[i], U->chlidren[i]))
         {
-            variables.clear();
+            variables.clear(); //important: clear the mappings for this subtree since the matching was unsuccessful
             return false;
         }
 
