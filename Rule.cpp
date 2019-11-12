@@ -4,6 +4,9 @@ std::map<string, Node *> variables;
 
 Rule::Rule(string original, string replacement)
 {
+    this->originalStr = original;
+    this->replacementStr = replacement;
+
     this->original = new ExpressionTree(original);
     this->replacement = new ExpressionTree(replacement);
 }
@@ -118,6 +121,9 @@ void Rule::match(Node *P, Node *T)
     if (compare(P, T))
     {
         cout << "Found a pattern!\n";
+        cout << "Rule applied: " << originalStr << " -> " << replacementStr << "\n";
+
+        //printMap();
 
         //replace the original tree with replacement tree
         ExpressionTree *translated = replacement->translate(variables);

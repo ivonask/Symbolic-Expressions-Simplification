@@ -11,6 +11,7 @@
                 "${workspaceFolder}\\ExpressionTree.cpp",
                 "${workspaceFolder}\\Operator.cpp",
                 "${workspaceFolder}\\Util.cpp",
+                "${workspaceFolder}\\RuleSet.cpp",
                 "-o",
                 "${workspaceFolder}\\a.exe"
             ],

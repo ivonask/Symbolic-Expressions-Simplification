@@ -9,7 +9,8 @@ class Rule
 {
 private:
     ExpressionTree *original, *replacement;
-    std::map<string, Node *> variables;
+    string originalStr, replacementStr;
+    map<string, Node *> variables;
 
     void match(Node *P, Node *T);
     bool compare(Node *P, Node *U);
