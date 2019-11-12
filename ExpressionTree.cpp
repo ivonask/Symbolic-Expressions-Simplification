@@ -126,7 +126,6 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
     {
         return;
     }
-    Node *newNode;
 
     if (isSymbol(n->d))
     {
@@ -137,14 +136,8 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
             return;
 
         //newNode = new Node(it->second);
-        newNode = (it->second);
+        *n = new Node(it->second);
     }
-    else
-    {
-        newNode = n;
-    }
-
-    *n = *newNode;
 
     for (int i = 0; i < n->chlidren.size(); i++)
         translateNode(n->chlidren[i], variables);

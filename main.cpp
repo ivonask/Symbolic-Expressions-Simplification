@@ -50,7 +50,7 @@ int main()
     RuleSet *arithmetic = loadArithmeticRuleSet();
     RuleSet *trigonometric = loadTrigonometricRuleSet();
 
-    ExpressionTree *et1 = new ExpressionTree("+ * * * x1 x2 y1 y2 * * x1 x2 z");
+    ExpressionTree *et1 = new ExpressionTree("+ * * x1 x2 y * * x1 x2 z");
     ExpressionTree *et2 = new ExpressionTree("+ a a");
     ExpressionTree *et3 = new ExpressionTree("* a D_1");
 

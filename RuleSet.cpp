@@ -11,7 +11,7 @@ void RuleSet::addRule(Rule *rule)
 }
 void RuleSet::applyAllRules(ExpressionTree *expression)
 {
-    cout << "\nInital expression: ";
+    cout << "\nInitial expression: ";
     expression->prefix();
     cout << "\n";
 

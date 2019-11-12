@@ -113,6 +113,7 @@ bool Rule::compareNode(Node *n1, Node *n2)
 
 void Rule::applyRule(ExpressionTree *expression)
 {
+    variables.clear();
     match(original->peek(), expression->peek());
 }
 
@@ -123,7 +124,7 @@ void Rule::match(Node *P, Node *T)
         cout << "Found a pattern!\n";
         cout << "Rule applied: " << originalStr << " -> " << replacementStr << "\n";
 
-        //printMap();
+        replacement = new ExpressionTree(replacementStr); //TODO fix translating expressions, this is a workaround
 
         //replace the original tree with replacement tree
         ExpressionTree *translated = replacement->translate(variables);
