@@ -15,32 +15,35 @@ void print(ExpressionTree *et)
 
 int main()
 {
+    Util::loadOperators();
+
     string original = "* X + Y Z";        // X(Y+Z)
     string replacement = "+ * X Y * X Z"; //XY+XZ
     Rule *r1 = new Rule(original, replacement);
     Rule *r6 = new Rule(replacement, original);
 
     Rule *r2 = new Rule("+ X X", "* D_2 X");
-
     Rule *r3 = new Rule("* X D_1", "X");
-
     Rule *r4 = new Rule("* X D_0", "D_0");
-
     Rule *r5 = new Rule("+ D_0 X", "X");
 
-    //string s = "+ + X * Y Z Y";
-    ExpressionTree *et1 = new ExpressionTree("* * x1 x2 + * y1 y2 z");
+    Rule *r7 = new Rule("+ * sin A cos B * cos A sin B", "sin + A B");
+
+    /***************     try individual rules    ****************/
+    //ExpressionTree *et1 = new ExpressionTree("* * x1 x2 + * y1 y2 z");
     //r1->applyRule(et1);
 
-    ExpressionTree *et4 = new ExpressionTree("+ a a");
+    //ExpressionTree *et4 = new ExpressionTree("+ a a");
     //r2->applyRule(et4);
 
-    ExpressionTree *et5 = new ExpressionTree("+ a D_1");
+    //ExpressionTree *et5 = new ExpressionTree("+ a D_1");
     //r3->applyRule(et5);
 
     //(x1+x1)*x2*(y1*y2+z*D_1)
-    ExpressionTree *et6 = new ExpressionTree("* * + x1 x1 x2 + * y1 y2 * z D_1");
+    //ExpressionTree *et6 = new ExpressionTree("* * + x1 x1 x2 + * y1 y2 * z D_1");
     //print(et6);
+
+    /***************     try a series of rules    ****************/
 
     //(x1+x1)*x2*(y1*y2+z*D_1)*D_0
     //ExpressionTree *et7 = new ExpressionTree("* * * + x1 x1 x2 + * y1 y2 * z D_1 D_0");   //works
@@ -73,9 +76,24 @@ int main()
     // r4->applyRule(et8);
     // print(et8);
 
-    ExpressionTree *et9 = new ExpressionTree("+ * + * a b * * c d e y * + * a b * * c d e z"); //works
-    print(et9);
+    // ExpressionTree *et9 = new ExpressionTree("+ * + * a b * * c d e y * + * a b * * c d e z"); //works
+    // print(et9);
 
-    r6->applyRule(et9);
-    print(et9);
+    // r6->applyRule(et9);
+    // print(et9);
+
+    // ExpressionTree *et10 = new ExpressionTree("+ X sin * X D_1");
+    // print(et10);
+
+    // r3->applyRule(et10);
+    // print(et10);
+
+    ExpressionTree *et12 = new ExpressionTree("+ * sin a cos b * cos a sin b");
+    print(et12);
+
+    r7->applyRule(et12);
+    print(et12);
+
+    // ExpressionTree *et11 = new ExpressionTree("ifpos * X1 X2 Y Z");
+    // print(et11);
 }

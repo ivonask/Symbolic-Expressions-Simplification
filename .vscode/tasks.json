@@ -9,6 +9,8 @@
                 "${workspaceFolder}\\main.cpp",
                 "${workspaceFolder}\\Rule.cpp",
                 "${workspaceFolder}\\ExpressionTree.cpp",
+                "${workspaceFolder}\\Operator.cpp",
+                "${workspaceFolder}\\Util.cpp",
                 "-o",
                 "${workspaceFolder}\\a.exe"
             ],

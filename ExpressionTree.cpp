@@ -1,7 +1,9 @@
 #include "ExpressionTree.hpp"
 #include "Util.hpp"
+#include "Operator.hpp"
 
 #include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -72,10 +74,14 @@ void ExpressionTree::insert(string val)
     {
         Node *nptr = new Node(val);
 
+        Operator *op = Util::getOperatorInfo(val);
+
         //TODO: read from some definition of the operator - how many children?
         //or: while pop() =! null?
-        for (int i = 0; i < 2; i++) //for now - default is 2
+        for (int i = 0; i < op->numberOfChildren(); i++)
+        {
             nptr->chlidren.push_back(pop());
+        }
 
         push(nptr);
     }
@@ -93,7 +99,7 @@ bool ExpressionTree::isSymbol(string ch)
 
 bool ExpressionTree::isOperator(string ch)
 {
-    return ch == "+" || ch == "-" || ch == "*" || ch == "/"; //TODO check defined operators from ECF file.
+    return Util::isOperatorLoaded(ch);
 }
 
 bool ExpressionTree::isConstant(string ch)
@@ -181,10 +187,29 @@ void ExpressionTree::inOrder(Node *ptr)
         }
         else
         {
-            inOrder(ptr->chlidren[0]); //TODO: general case? the way operands are written depends on the operator
-            printf("%s ", ptr->d.c_str());
-            for (int i = 1; i < ptr->chlidren.size(); i++)
-                inOrder(ptr->chlidren[i]);
+            if (ptr->chlidren.size() == 1)
+            {
+                printf("%s (", ptr->d.c_str());
+                inOrder(ptr->chlidren[0]);
+                printf(")");
+            }
+            else if (ptr->chlidren.size() == 2)
+            {
+                inOrder(ptr->chlidren[0]);
+                printf("%s ", ptr->d.c_str());
+                inOrder(ptr->chlidren[1]);
+            }
+            else
+            {
+                printf("%s (", ptr->d.c_str());
+                for (int i = 0; i < ptr->chlidren.size(); i++)
+                {
+                    inOrder(ptr->chlidren[i]);
+                    if (i != ptr->chlidren.size() - 1)
+                        printf(",");
+                }
+                printf(")");
+            }
         }
     }
 }
