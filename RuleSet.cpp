@@ -15,11 +15,20 @@ void RuleSet::applyAllRules(ExpressionTree *expression)
     expression->prefix();
     cout << "\n";
 
+    bool reset = true;
     vector<Rule *>::iterator itr;
-    for (int i = 0; i < rules.size(); i++)
+    do
     {
-        rules[i]->applyRule(expression);
-    }
+        reset = false;
+        for (int i = 0; i < rules.size(); i++)
+        {
+            if (rules[i]->applyRule(expression))
+            {
+                reset = true;
+                break;
+            }
+        }
+    } while (reset);
 
     cout << "Final result: ";
     expression->prefix();

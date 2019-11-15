@@ -12,7 +12,7 @@ private:
     string originalStr, replacementStr;
     map<string, Node *> variables;
 
-    void match(Node *P, Node *T);
+    bool match(Node *P, Node *T);
     bool compare(Node *P, Node *U);
 
     bool isAddedToMap(string var, Node *n);
@@ -20,7 +20,7 @@ private:
 
 public:
     Rule(string original, string replacement);
-    void applyRule(ExpressionTree *expression);
+    bool applyRule(ExpressionTree *expression);
 };
 
 #endif // REWRITE_RULE_h

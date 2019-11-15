@@ -111,13 +111,13 @@ bool Rule::compareNode(Node *n1, Node *n2)
     }
 }
 
-void Rule::applyRule(ExpressionTree *expression)
+bool Rule::applyRule(ExpressionTree *expression)
 {
     variables.clear();
-    match(original->peek(), expression->peek());
+    return match(original->peek(), expression->peek());
 }
 
-void Rule::match(Node *P, Node *T)
+bool Rule::match(Node *P, Node *T)
 {
     if (compare(P, T))
     {
@@ -130,12 +130,16 @@ void Rule::match(Node *P, Node *T)
         ExpressionTree *translated = replacement->translate(variables);
         *T = *translated->peek();
 
-        return;
+        return true;
     }
 
+    bool matched = false;
     if (T)
         for (int i = 0; i < T->chlidren.size(); i++)
-            match(P, T->chlidren[i]);
+        {
+            matched = match(P, T->chlidren[i]) || matched;
+        }
+    return matched;
 }
 
 bool Rule::compare(Node *P, Node *U)
