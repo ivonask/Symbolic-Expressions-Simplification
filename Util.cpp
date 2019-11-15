@@ -41,3 +41,25 @@ void Util::loadOperators() //TODO make dependent on the RuleSet?
     operatorsInfo.insert(pair<string, Operator *>("cos", new Operator("cos", 1)));
     operatorsInfo.insert(pair<string, Operator *>("ifpos", new Operator("ifpos", 3)));
 }
+Rule *Util::loadRule(string rule)
+{
+    vector<string> ruleVec = split(rule, "->");
+    return new Rule(ruleVec[0], ruleVec[1]);
+}
+
+RuleSet *Util::loadRulesFromFile(string file_in)
+{
+    vector<Rule *> rules;
+    ifstream file(file_in);
+    if (!file)
+    {
+        cout << "Unable to open file " << file_in;
+        return nullptr;
+    }
+    string str;
+    while (std::getline(file, str))
+    {
+        rules.push_back(loadRule(str));
+    }
+    return new RuleSet(rules);
+}
