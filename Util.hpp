@@ -12,6 +12,7 @@
 #include "Operator.hpp"
 #include "Rule.hpp"
 #include "RuleSet.hpp"
+#include "ExpressionTree.hpp"
 
 using namespace std;
 
@@ -28,6 +29,8 @@ public:
     static Operator *getOperatorInfo(string name);
     static void loadOperators();
     static RuleSet *loadRulesFromFile(string file_in);
+    static ExpressionTree *loadExpressionFromFile(string file_in);
+    static void printTree(ExpressionTree *et);
 };
 
 #endif // UTIL_h

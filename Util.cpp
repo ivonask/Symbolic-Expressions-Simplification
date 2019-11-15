@@ -61,5 +61,29 @@ RuleSet *Util::loadRulesFromFile(string file_in)
     {
         rules.push_back(loadRule(str));
     }
+    file.close();
     return new RuleSet(rules);
+}
+
+ExpressionTree *Util::loadExpressionFromFile(string file_in)
+{
+    ifstream file(file_in);
+    if (!file)
+    {
+        cout << "Unable to open file " << file_in;
+        return nullptr;
+    }
+    string str;
+    getline(file, str);
+    file.close();
+    return new ExpressionTree(str);
+}
+
+void Util::printTree(ExpressionTree *et)
+{
+    cout << "Prefix : ";
+    et->prefix();
+    cout << "\nInfix : ";
+    et->infix();
+    cout << "\n\n";
 }
