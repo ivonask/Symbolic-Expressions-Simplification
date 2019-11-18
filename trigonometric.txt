@@ -1,1 +1,6 @@
 + * sin A cos B * cos A sin B->sin + A B
+- * sin A cos B * cos A sin B->sin - A B
+- * cos A cos B * sin A sin B->cos + A B
++ * cos A cos B * sin A sin B->cos - A B
+* D_2 * sin A cos A->sin * D_2 A
+/ sin A cos A->tan A
