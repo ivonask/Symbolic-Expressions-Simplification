@@ -1,5 +1,7 @@
 #include "RuleSet.hpp"
 
+int MAX_ITERATIONS = 4;
+
 RuleSet::RuleSet(vector<Rule *> rules)
 {
     this->rules = rules;
@@ -13,7 +15,7 @@ void RuleSet::applyAllRules(ExpressionTree *expression)
 {
     cout << "\nInitial expression: ";
     expression->prefix();
-    cout << "\n";
+    cout << "\n\n";
 
     bool reset = true;
     vector<Rule *>::iterator itr;
@@ -30,15 +32,19 @@ void RuleSet::applyAllRules(ExpressionTree *expression)
             {
                 cout << "New expression: ";
                 expression->prefix();
-                cout << "\n";
+                cout << "\n\n";
 
                 reset = true;
                 break;
             }
         }
-        if (ruleAppliedBefore == i && ++cnt >= 4)
+        if (ruleAppliedBefore == i && ++cnt >= MAX_ITERATIONS - 1)
         {
             reset = false;
+        }
+        else if (ruleAppliedBefore != i)
+        {
+            cnt = 0;
         }
         ruleAppliedBefore = i;
     } while (reset);
