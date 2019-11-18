@@ -1,11 +1,12 @@
-+ * * * * + x1 x1 x2 y1 y2 D_0 * * * + x1 x1 x2 z D_1
++ * + * + * a b * * c d e y * + * a b * * c d e z A * * C + * x y * x z D_0
 
 //only the first line will be loaded
 
-//-------------------other-examples-------------------//
+//other-examples
 + * * x1 x2 y * * x1 x2 z
 + a a
 * a D_1
+* D_1 a
 + * * * + x1 x1 x2 y1 y2 * * * + x1 x1 x2 z D_1
 + * * * * + x1 x1 x2 y1 y2 D_0 * * * + x1 x1 x2 z D_1
 + * + * + * a b * * c d e y * + * a b * * c d e z A * * C + * x y * x z D_0
@@ -13,3 +14,4 @@
 + X sin * X D_1
 + * sin a cos b * cos a sin b
 ifpos * X1 X2 Y Z
+or C not and C B

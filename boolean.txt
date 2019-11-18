@@ -1,0 +1,15 @@
+or X X->X
+or X D_1->D_1
+or X D_0->X
+and X D_1->X
+and X D_0->D_0
+and X X->X
+not not X->X
+or X not X->D_1
+and X not X->D_0
+or X and X Y->X
+and X or X Y->X
+not or X Y->and not X not Y
+not and X Y->or not X not Y
+or and X Y and X Z->and X or Y Z
+and or X Y or X Z->or X and Y Z

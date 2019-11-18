@@ -11,7 +11,9 @@ int main()
 
     RuleSet *arithmetic = Util::loadRulesFromFile("arithmetic.txt");
     RuleSet *trigonometric = Util::loadRulesFromFile("trigonometric.txt");
+    RuleSet *boolean_alg = Util::loadRulesFromFile("boolean.txt");
 
     ExpressionTree *et = Util::loadExpressionFromFile("expressions.txt");
     arithmetic->applyAllRules(et);
+    //boolean_alg->applyAllRules(et);
 }
