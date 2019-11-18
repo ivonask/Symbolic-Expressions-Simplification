@@ -1,9 +1,10 @@
-+ * + * + * a b * * c d e y * + * a b * * c d e z A * * C + * x y * x z D_0
++ * * * x1 x2 y1 y2 * * x1 x2 z
 
 //only the first line will be loaded
 
 //other-examples
 + * * x1 x2 y * * x1 x2 z
++ * * * x1 x2 y1 y2 * * x1 x2 z
 + a a
 * a D_1
 * D_1 a

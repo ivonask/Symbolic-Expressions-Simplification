@@ -4,5 +4,7 @@
 * X D_0->D_0
 + D_0 X->X
 / X X->D_1
+* * X Y Z->* X * Y Z
++ + X Y Z->+ X + Y Z
 + X Y->+ Y X
 * X Y->* Y X
