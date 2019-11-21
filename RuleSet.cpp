@@ -1,6 +1,6 @@
 #include "RuleSet.hpp"
 
-int MAX_ITERATIONS = 4;
+int MAX_ITERATIONS = 50;
 
 RuleSet::RuleSet(vector<Rule *> rules)
 {
@@ -19,7 +19,6 @@ void RuleSet::applyAllRules(ExpressionTree *expression)
 
     bool reset = true;
     vector<Rule *>::iterator itr;
-    int ruleAppliedBefore = rules.size(); //anti infinite loop mechanism
     int cnt = 0;
     do
     {
@@ -38,15 +37,12 @@ void RuleSet::applyAllRules(ExpressionTree *expression)
                 break;
             }
         }
-        if (ruleAppliedBefore == i && ++cnt >= MAX_ITERATIONS - 1)
-        {
-            reset = false;
-        }
-        else if (ruleAppliedBefore != i)
+        if (cnt >= MAX_ITERATIONS)
         {
             cnt = 0;
+            reset = true;
         }
-        ruleAppliedBefore = i;
+        cnt++;
     } while (reset);
 
     cout << "Final result: ";
