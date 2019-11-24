@@ -1,0 +1,1304 @@
+Running in batch mode: run 10/10
+Start time: Sun Jan 26 14:49:43 2014
+
+Evaluating initial population...
+Generation: 0
+Elapsed time: 2513
+Deme: 0
+Evaluations: 1000
+Stats: fitness
+	max: 10124.1
+	min: 23.2226
+	avg: 2738.9
+	stdev: 3090.52
+
+Generation: 1
+Elapsed time: 6192
+Deme: 0
+Evaluations: 2000
+Stats: fitness
+	max: 9906.59
+	min: 21.5232
+	avg: 700.662
+	stdev: 1502.89
+
+Best in 1
+<Individual size="1">
+	<FitnessMin value="21.5232"/>
+	<Tree size="16">* - + dd SL / dd MR + / pavg pos pt + SL pmin </Tree>
+</Individual>
+
+Generation: 2
+Elapsed time: 9523
+Deme: 0
+Evaluations: 3000
+Stats: fitness
+	max: 9906.59
+	min: 21.5232
+	avg: 331.263
+	stdev: 887.217
+
+Best in 2
+<Individual size="1">
+	<FitnessMin value="21.5232"/>
+	<Tree size="16">* - + dd SL / dd MR + / pavg pos pt + SL pmin </Tree>
+</Individual>
+
+Generation: 3
+Elapsed time: 12082
+Deme: 0
+Evaluations: 4000
+Stats: fitness
+	max: 7358.54
+	min: 20.5617
+	avg: 330.344
+	stdev: 1137.69
+
+Best in 3
+<Individual size="1">
+	<FitnessMin value="20.5617"/>
+	<Tree size="8">- - - pos dd MR age pt </Tree>
+</Individual>
+
+Generation: 4
+Elapsed time: 13554
+Deme: 0
+Evaluations: 5000
+Stats: fitness
+	max: 9906.59
+	min: 20.5617
+	avg: 315.182
+	stdev: 1227.09
+
+Best in 4
+<Individual size="1">
+	<FitnessMin value="20.5617"/>
+	<Tree size="8">- - - pos dd MR age pt </Tree>
+</Individual>
+
+Generation: 5
+Elapsed time: 14320
+Deme: 0
+Evaluations: 6000
+Stats: fitness
+	max: 9257.6
+	min: 19.7599
+	avg: 258.357
+	stdev: 1136.36
+
+Best in 5
+<Individual size="1">
+	<FitnessMin value="19.7599"/>
+	<Tree size="188">+ - - * SL + PAT pos / * - * / - / pt PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin pt MR + + pavg pmin pos pos pos pmin </Tree>
+</Individual>
+
+Generation: 6
+Elapsed time: 15082
+Deme: 0
+Evaluations: 7000
+Stats: fitness
+	max: 9906.59
+	min: 19.7599
+	avg: 221.43
+	stdev: 1138.66
+
+Best in 6
+<Individual size="1">
+	<FitnessMin value="19.7599"/>
+	<Tree size="188">+ - - * SL + PAT pos / * - * / - / pt PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin pt MR + + pavg pmin pos pos pos pmin </Tree>
+</Individual>
+
+Generation: 7
+Elapsed time: 15842
+Deme: 0
+Evaluations: 8000
+Stats: fitness
+	max: 7369.82
+	min: 19.7599
+	avg: 194.55
+	stdev: 1012.99
+
+Best in 7
+<Individual size="1">
+	<FitnessMin value="19.7599"/>
+	<Tree size="188">+ - - * SL + PAT pos / * - * / - / pt PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin pt MR + + pavg pmin pos pos pos pmin </Tree>
+</Individual>
+
+Generation: 8
+Elapsed time: 16421
+Deme: 0
+Evaluations: 9000
+Stats: fitness
+	max: 9699.7
+	min: 16.6686
+	avg: 201.317
+	stdev: 1040.22
+
+Best in 8
+<Individual size="1">
+	<FitnessMin value="16.6686"/>
+	<Tree size="610">* - pos + dd * + + + - pos / pos + dd PAT pos + PAT dd * / pos pos SL / / age age / MR age / / / pmin PAT * pavg SL / * pavg age pos MR + / * - pos dd / PAT dd - * w w / PAT age * pos + PAT dd / + pmin pt + SL pmin pos - - pos pmin pos age pos + SL dd / / - / * pos dd - MR pavg + / dd dd / SL age pos - * pavg pt pos PAT / pos - - pt PAT / pmin pt - pos pos MR + / pavg dd * PAT PAT + * pos * pos w + age MR / - / SL w + age SL * / pmin age pos pmin * / / + age dd / MR dd * + pt PAT * pt pt + + * pt pmin + pmin MR / + dd age pos dd pos * * + * - + pmin pmin pos pmin * / pt pmin pos age pos + * w SL / pmin age pos pos pos / MR pavg * / - * + pt SL * pt pmin pos + age pmin / - pos MR / age PAT + pos pmin - PAT age / / * pos age + SL w - / SL pt * PAT SL / - pos pt / pt w * / pmin SL + pt MR pos / * - * / - / pt PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * pavg pmin / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL MR + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 9
+Elapsed time: 16898
+Deme: 0
+Evaluations: 10000
+Stats: fitness
+	max: 9558.19
+	min: 16.6686
+	avg: 198.477
+	stdev: 1020.52
+
+Best in 9
+<Individual size="1">
+	<FitnessMin value="16.6686"/>
+	<Tree size="610">* - pos + dd * + + + - pos / pos + dd PAT pos + PAT dd * / pos pos SL / / age age / MR age / / / pmin PAT * pavg SL / * pavg age pos MR + / * - pos dd / PAT dd - * w w / PAT age * pos + PAT dd / + pmin pt + SL pmin pos - - pos pmin pos age pos + SL dd / / - / * pos dd - MR pavg + / dd dd / SL age pos - * pavg pt pos PAT / pos - - pt PAT / pmin pt - pos pos MR + / pavg dd * PAT PAT + * pos * pos w + age MR / - / SL w + age SL * / pmin age pos pmin * / / + age dd / MR dd * + pt PAT * pt pt + + * pt pmin + pmin MR / + dd age pos dd pos * * + * - + pmin pmin pos pmin * / pt pmin pos age pos + * w SL / pmin age pos pos pos / MR pavg * / - * + pt SL * pt pmin pos + age pmin / - pos MR / age PAT + pos pmin - PAT age / / * pos age + SL w - / SL pt * PAT SL / - pos pt / pt w * / pmin SL + pt MR pos / * - * / - / pt PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * pavg pmin / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL MR + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 10
+Elapsed time: 17419
+Deme: 0
+Evaluations: 11000
+Stats: fitness
+	max: 9906.59
+	min: 16.6533
+	avg: 146.052
+	stdev: 858.794
+
+Best in 10
+<Individual size="1">
+	<FitnessMin value="16.6533"/>
+	<Tree size="610">* - pos + dd * + + + - pos / pos + dd PAT pos + PAT dd * / pos pos SL / / age age / MR age / / / pmin PAT * pavg SL / * pavg age pos MR + / * - pos dd / PAT dd - * w w / PAT age * pos + PAT dd / + pmin pt + SL pmin pos - - pos pmin pos age pos + SL dd / / - / * pos dd - MR pavg + / dd dd / SL age pos - * pavg pt pos PAT / pos - - pt PAT + pmin pt - pos pos MR + / pavg dd * PAT PAT + * pos * pos w + age MR / - / SL w + age SL * / pmin age pos pmin * / / + age dd / MR dd * + pt PAT * pt pt + + * pt pmin + pmin MR / + dd age pos dd pos * * + * - + pmin pmin pos pmin * / pt pmin pos age pos + * w SL / pmin age pos pos pos / MR pavg * / - * + pt SL * pt pmin pos + age pmin / - pos MR / age PAT + pos pmin - PAT age / / * pos age + SL w - / SL pt * PAT SL / - pos pt / pt w * / pmin SL + pt MR pos / * - * / - - SL PAT / pt w / pos pavg + w MR / / * age MR pos MR pos - pmin pavg / - pos * dd pmin - * age MR / age pavg - + - w age * w dd * pos pavg pos pmin * * / / - MR MR - age w * * PAT age / dd pavg / - / SL age pos dd / pos age + MR age pos * / * w pt / pt pavg - + dd SL * MR w - pos + pos pos * pmin PAT * / + pmin MR * age pt * - pmin pavg + MR dd - / / + - w dd pos pt - pos pavg pos pmin / - + MR SL / MR MR + / w pavg pos dd + * pos + MR dd pos - w MR pos / - pmin w - pmin pmin / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * pavg pmin / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL pt + SL dd / pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 11
+Elapsed time: 17953
+Deme: 0
+Evaluations: 12000
+Stats: fitness
+	max: 7683.36
+	min: 16.2254
+	avg: 161.623
+	stdev: 930.994
+
+Best in 11
+<Individual size="1">
+	<FitnessMin value="16.2254"/>
+	<Tree size="186">* - - pos + dd - pmin + pt / age - dd pt MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * pavg pmin / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL pt + SL dd / pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 12
+Elapsed time: 18414
+Deme: 0
+Evaluations: 13000
+Stats: fitness
+	max: 7399.36
+	min: 16.0478
+	avg: 141.276
+	stdev: 830.191
+
+Best in 12
+<Individual size="1">
+	<FitnessMin value="16.0478"/>
+	<Tree size="22">* + - pos dd MR - pmin + pt / age - SL pt + / pavg age + SL pmin </Tree>
+</Individual>
+
+Generation: 13
+Elapsed time: 18830
+Deme: 0
+Evaluations: 14000
+Stats: fitness
+	max: 7379.35
+	min: 15.9095
+	avg: 146.98
+	stdev: 833.695
+
+Best in 13
+<Individual size="1">
+	<FitnessMin value="15.9095"/>
+	<Tree size="38">* + - pos + dd - pmin + pt / age - SL pt MR - pmin + pt / age - SL pt + / pavg + + + MR pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 14
+Elapsed time: 19167
+Deme: 0
+Evaluations: 15000
+Stats: fitness
+	max: 9906.59
+	min: 15.7767
+	avg: 127.991
+	stdev: 822.032
+
+Best in 14
+<Individual size="1">
+	<FitnessMin value="15.7767"/>
+	<Tree size="179">* - - + dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * pavg pmin / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL MR + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg dd + SL pmin </Tree>
+</Individual>
+
+Generation: 15
+Elapsed time: 19467
+Deme: 0
+Evaluations: 16000
+Stats: fitness
+	max: 9906.59
+	min: 15.7605
+	avg: 61.8438
+	stdev: 521.544
+
+Best in 15
+<Individual size="1">
+	<FitnessMin value="15.7605"/>
+	<Tree size="21">* + - pos dd MR - pmin + pt / age - SL pt + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 16
+Elapsed time: 19835
+Deme: 0
+Evaluations: 17000
+Stats: fitness
+	max: 9906.59
+	min: 15.6367
+	avg: 88.246
+	stdev: 663.381
+
+Best in 16
+<Individual size="1">
+	<FitnessMin value="15.6367"/>
+	<Tree size="21">* - - + dd - pmin + pt / age - SL SL MR age + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 17
+Elapsed time: 20226
+Deme: 0
+Evaluations: 18000
+Stats: fitness
+	max: 9699.7
+	min: 15.624
+	avg: 115.364
+	stdev: 788.388
+
+Best in 17
+<Individual size="1">
+	<FitnessMin value="15.624"/>
+	<Tree size="37">* + - + dd - pmin + pt / age - SL SL MR - pmin + pt / age - SL pt + / pavg + - + pt pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 18
+Elapsed time: 20604
+Deme: 0
+Evaluations: 19000
+Stats: fitness
+	max: 7468.6
+	min: 15.624
+	avg: 78.1918
+	stdev: 575.738
+
+Best in 18
+<Individual size="1">
+	<FitnessMin value="15.624"/>
+	<Tree size="37">* + - + dd - pmin + pt / age - SL SL MR - pmin + pt / age - SL pt + / pavg + - + pt pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 19
+Elapsed time: 20928
+Deme: 0
+Evaluations: 20000
+Stats: fitness
+	max: 7582
+	min: 15.624
+	avg: 100.102
+	stdev: 732.563
+
+Best in 19
+<Individual size="1">
+	<FitnessMin value="15.624"/>
+	<Tree size="37">* + - + dd - pmin + pt / age - SL SL MR - pmin + pt / age - SL pt + / pavg + - + pt pt MR MR + SL pmin </Tree>
+</Individual>
+
+Generation: 20
+Elapsed time: 21190
+Deme: 0
+Evaluations: 21000
+Stats: fitness
+	max: 9906.59
+	min: 15.5545
+	avg: 113.516
+	stdev: 823.842
+
+Best in 20
+<Individual size="1">
+	<FitnessMin value="15.5545"/>
+	<Tree size="22">* + - + dd pmin MR - pmin + pt / age pos SL + / pavg SL + SL pmin </Tree>
+</Individual>
+
+Generation: 21
+Elapsed time: 21458
+Deme: 0
+Evaluations: 22000
+Stats: fitness
+	max: 7358.54
+	min: 15.467
+	avg: 101.818
+	stdev: 750.33
+
+Best in 21
+<Individual size="1">
+	<FitnessMin value="15.467"/>
+	<Tree size="22">* + - + dd pmin MR - pmin + pt / age pos SL + / age SL + SL pmin </Tree>
+</Individual>
+
+Generation: 22
+Elapsed time: 21801
+Deme: 0
+Evaluations: 23000
+Stats: fitness
+	max: 7797.93
+	min: 15.467
+	avg: 126.17
+	stdev: 823.139
+
+Best in 22
+<Individual size="1">
+	<FitnessMin value="15.467"/>
+	<Tree size="22">* + - + dd pmin MR - pmin + pt / age pos SL + / age SL + SL pmin </Tree>
+</Individual>
+
+Generation: 23
+Elapsed time: 22143
+Deme: 0
+Evaluations: 24000
+Stats: fitness
+	max: 7358.54
+	min: 15.4439
+	avg: 100.823
+	stdev: 709.544
+
+Best in 23
+<Individual size="1">
+	<FitnessMin value="15.4439"/>
+	<Tree size="168">* - - + dd - pmin + pt / age - SL SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR w + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt PAT age + SL pmin </Tree>
+</Individual>
+
+Generation: 24
+Elapsed time: 22472
+Deme: 0
+Evaluations: 25000
+Stats: fitness
+	max: 9104.79
+	min: 15.4078
+	avg: 117.729
+	stdev: 767.712
+
+Best in 24
+<Individual size="1">
+	<FitnessMin value="15.4078"/>
+	<Tree size="172">* - - + dd - pmin + pt / age - SL SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / - MR pavg * MR dd pos - MR w + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + pmin + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + / pavg + - + MR pt PAT age + SL pmin </Tree>
+</Individual>
+
+Generation: 25
+Elapsed time: 22839
+Deme: 0
+Evaluations: 26000
+Stats: fitness
+	max: 9699.7
+	min: 15.3453
+	avg: 108.491
+	stdev: 788.136
+
+Best in 25
+<Individual size="1">
+	<FitnessMin value="15.3453"/>
+	<Tree size="139">* - - + dd - pmin + pt / age - dd - pmin + pt / age - SL pt MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + dd / * dd MR + dd pt * - pos * * w dd - MR pavg pos / - SL pt + SL dd * / * w pt / pt pavg + + dd SL * - pt dd / pavg w + + - pos pavg pos / MR + pt pavg + - / pos pavg / PAT dd SL pos / pos pmin * dd pt pos - pos * pos pmin / PAT PAT * pos * pavg pmin + * PAT MR + age pavg + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 26
+Elapsed time: 23240
+Deme: 0
+Evaluations: 27000
+Stats: fitness
+	max: 7358.54
+	min: 15.3206
+	avg: 128.508
+	stdev: 838.141
+
+Best in 26
+<Individual size="1">
+	<FitnessMin value="15.3206"/>
+	<Tree size="182">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * MR pmin / * dd MR * pmin pavg * - / * MR dd pos MR pos / - SL MR + SL dd - - - pos dd MR pos dd + pos / PAT dd - - pt dd - SL dd + + - pos / + PAT age * MR dd MR + - / pos pavg / PAT dd pos / PAT dd pos / - pt MR dd - - - / * MR MR * PAT pmin / age - SL SL - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * MR dd / SL dd / pos w + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 27
+Elapsed time: 23687
+Deme: 0
+Evaluations: 28000
+Stats: fitness
+	max: 9906.59
+	min: 15.2267
+	avg: 87.893
+	stdev: 709.568
+
+Best in 27
+<Individual size="1">
+	<FitnessMin value="15.2267"/>
+	<Tree size="160">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * MR pmin / * dd MR * pmin pavg * - / * MR dd pos MR pos / - SL MR + SL dd - - - pos dd MR pos dd + pos / PAT dd - - pt dd - SL dd + / + PAT MR + pmin dd - - - / * MR MR * PAT pmin / age - SL SL - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * MR dd / SL dd / pos w + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 28
+Elapsed time: 24140
+Deme: 0
+Evaluations: 29000
+Stats: fitness
+	max: 8496.25
+	min: 15.2267
+	avg: 98.9781
+	stdev: 716.726
+
+Best in 28
+<Individual size="1">
+	<FitnessMin value="15.2267"/>
+	<Tree size="160">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * MR pmin / * dd MR * pmin pavg * - / * MR dd pos MR pos / - SL MR + SL dd - - - pos dd MR pos dd + pos / PAT dd - - pt dd - SL dd + / + PAT MR + pmin dd - - - / * MR MR * PAT pmin / age - SL SL - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * MR dd / SL dd / pos w + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 29
+Elapsed time: 24601
+Deme: 0
+Evaluations: 30000
+Stats: fitness
+	max: 7307.87
+	min: 15.2267
+	avg: 87.2141
+	stdev: 687.001
+
+Best in 29
+<Individual size="1">
+	<FitnessMin value="15.2267"/>
+	<Tree size="160">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT + pos * MR pmin / * dd MR * pmin pavg * - / * MR dd pos MR pos / - SL MR + SL dd - - - pos dd MR pos dd + pos / PAT dd - - pt dd - SL dd + / + PAT MR + pmin dd - - - / * MR MR * PAT pmin / age - SL SL - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * MR dd / SL dd / pos w + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 30
+Elapsed time: 25021
+Deme: 0
+Evaluations: 31000
+Stats: fitness
+	max: 9906.59
+	min: 15.1972
+	avg: 98.5512
+	stdev: 755.076
+
+Best in 30
+<Individual size="1">
+	<FitnessMin value="15.1972"/>
+	<Tree size="160">* - - + dd - pmin + pt / age - SL SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 31
+Elapsed time: 25351
+Deme: 0
+Evaluations: 32000
+Stats: fitness
+	max: 8004.32
+	min: 15.1358
+	avg: 99.8752
+	stdev: 697.814
+
+Best in 31
+<Individual size="1">
+	<FitnessMin value="15.1358"/>
+	<Tree size="148">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / dd pos pos pos * + pos - pos * pos pmin / PAT PAT pmin * - / * MR dd pos MR pos / - SL MR + SL dd - - - pos dd MR pos dd + pos / PAT dd - - pt dd - SL dd + / + PAT MR + pmin dd - - - / * MR MR * PAT pmin / age - SL pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT PAT + * pos MR / SL dd / pos w + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 32
+Elapsed time: 25625
+Deme: 0
+Evaluations: 33000
+Stats: fitness
+	max: 9906.59
+	min: 15.1133
+	avg: 79.0248
+	stdev: 644.974
+
+Best in 32
+<Individual size="1">
+	<FitnessMin value="15.1133"/>
+	<Tree size="171">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 33
+Elapsed time: 25893
+Deme: 0
+Evaluations: 34000
+Stats: fitness
+	max: 9906.59
+	min: 15.1133
+	avg: 91.5185
+	stdev: 728.041
+
+Best in 33
+<Individual size="1">
+	<FitnessMin value="15.1133"/>
+	<Tree size="171">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 34
+Elapsed time: 26172
+Deme: 0
+Evaluations: 35000
+Stats: fitness
+	max: 7358.54
+	min: 15.0832
+	avg: 68.2287
+	stdev: 570.735
+
+Best in 34
+<Individual size="1">
+	<FitnessMin value="15.0832"/>
+	<Tree size="174">* - - + + dd - pmin + pt / age - SL pt pmin MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT + w / * dd MR + dd pt * - / * MR dd pos MR pos / - SL PAT - SL dd * pos * / MR w pos age + pos / PAT dd - - PAT dd - pavg w + + - pos / + PAT age * MR dd pos - MR w + - / dd / PAT dd pos pos SL pos / age * dd pt - - - / * MR MR * PAT pmin * * PAT dd + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 35
+Elapsed time: 26473
+Deme: 0
+Evaluations: 36000
+Stats: fitness
+	max: 7358.54
+	min: 15.0832
+	avg: 74.8482
+	stdev: 593.485
+
+Best in 35
+<Individual size="1">
+	<FitnessMin value="15.0832"/>
+	<Tree size="174">* - - + + dd - pmin + pt / age - SL pt pmin MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT + w / * dd MR + dd pt * - / * MR dd pos MR pos / - SL PAT - SL dd * pos * / MR w pos age + pos / PAT dd - - PAT dd - pavg w + + - pos / + PAT age * MR dd pos - MR w + - / dd / PAT dd pos pos SL pos / age * dd pt - - - / * MR MR * PAT pmin * * PAT dd + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 36
+Elapsed time: 26753
+Deme: 0
+Evaluations: 37000
+Stats: fitness
+	max: 7307.87
+	min: 15.0832
+	avg: 85.5866
+	stdev: 629.398
+
+Best in 36
+<Individual size="1">
+	<FitnessMin value="15.0832"/>
+	<Tree size="174">* - - + + dd - pmin + pt / age - SL pt pmin MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT + w / * dd MR + dd pt * - / * MR dd pos MR pos / - SL PAT - SL dd * pos * / MR w pos age + pos / PAT dd - - PAT dd - pavg w + + - pos / + PAT age * MR dd pos - MR w + - / dd / PAT dd pos pos SL pos / age * dd pt - - - / * MR MR * PAT pmin * * PAT dd + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 37
+Elapsed time: 27023
+Deme: 0
+Evaluations: 38000
+Stats: fitness
+	max: 7307.87
+	min: 15.0832
+	avg: 107.497
+	stdev: 742.516
+
+Best in 37
+<Individual size="1">
+	<FitnessMin value="15.0832"/>
+	<Tree size="174">* - - + + dd - pmin + pt / age - SL pt pmin MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT + w / * dd MR + dd pt * - / * MR dd pos MR pos / - SL PAT - SL dd * pos * / MR w pos age + pos / PAT dd - - PAT dd - pavg w + + - pos / + PAT age * MR dd pos - MR w + - / dd / PAT dd pos pos SL pos / age * dd pt - - - / * MR MR * PAT pmin * * PAT dd + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 38
+Elapsed time: 27284
+Deme: 0
+Evaluations: 39000
+Stats: fitness
+	max: 7307.87
+	min: 15.0506
+	avg: 82.4962
+	stdev: 635.126
+
+Best in 38
+<Individual size="1">
+	<FitnessMin value="15.0506"/>
+	<Tree size="159">* - - + + dd - pmin + pt / age - SL pt pmin MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd pos MR pos / - SL PAT + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + * pos / pos pmin * MR PAT PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd + pavg pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 39
+Elapsed time: 27528
+Deme: 0
+Evaluations: 40000
+Stats: fitness
+	max: 10124.5
+	min: 15.0261
+	avg: 105.724
+	stdev: 788.08
+
+Best in 39
+<Individual size="1">
+	<FitnessMin value="15.0261"/>
+	<Tree size="177">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd PAT pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg MR + + - pos / pos pmin * MR dd pos - MR + pt pavg + - / pos pmin pos dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR pavg * * PAT pavg / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 40
+Elapsed time: 27793
+Deme: 0
+Evaluations: 41000
+Stats: fitness
+	max: 9906.59
+	min: 15.0261
+	avg: 110.068
+	stdev: 774.552
+
+Best in 40
+<Individual size="1">
+	<FitnessMin value="15.0261"/>
+	<Tree size="177">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - / * MR dd PAT pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg MR + + - pos / pos pmin * MR dd pos - MR + pt pavg + - / pos pmin pos dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR pavg * * PAT pavg / age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + pos PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 41
+Elapsed time: 28078
+Deme: 0
+Evaluations: 42000
+Stats: fitness
+	max: 7358.54
+	min: 14.9889
+	avg: 97.4467
+	stdev: 661.251
+
+Best in 41
+<Individual size="1">
+	<FitnessMin value="14.9889"/>
+	<Tree size="181">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * SL dd pos - MR + pt pavg + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT pavg + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 42
+Elapsed time: 28327
+Deme: 0
+Evaluations: 43000
+Stats: fitness
+	max: 9906.59
+	min: 14.9889
+	avg: 84.9072
+	stdev: 675.652
+
+Best in 42
+<Individual size="1">
+	<FitnessMin value="14.9889"/>
+	<Tree size="181">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / + PAT age * SL dd pos - MR + pt pavg + - / pos pavg / PAT dd pos pos SL pos / pos pmin * dd pt - - - / * MR MR * PAT pmin * * PAT pavg + age pavg - pos + PAT PAT + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 43
+Elapsed time: 28567
+Deme: 0
+Evaluations: 44000
+Stats: fitness
+	max: 9906.59
+	min: 14.9627
+	avg: 91.7873
+	stdev: 682.337
+
+Best in 43
+<Individual size="1">
+	<FitnessMin value="14.9627"/>
+	<Tree size="168">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - pos pmin pos / - SL PAT + SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 44
+Elapsed time: 28793
+Deme: 0
+Evaluations: 45000
+Stats: fitness
+	max: 9906.59
+	min: 14.9627
+	avg: 99.0384
+	stdev: 742.562
+
+Best in 44
+<Individual size="1">
+	<FitnessMin value="14.9627"/>
+	<Tree size="168">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - pos pmin pos / - SL PAT + SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 45
+Elapsed time: 29008
+Deme: 0
+Evaluations: 46000
+Stats: fitness
+	max: 8220.33
+	min: 14.9627
+	avg: 98.1728
+	stdev: 729.842
+
+Best in 45
+<Individual size="1">
+	<FitnessMin value="14.9627"/>
+	<Tree size="168">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / age PAT PAT * - pos pmin pos / - SL PAT + SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 46
+Elapsed time: 29224
+Deme: 0
+Evaluations: 47000
+Stats: fitness
+	max: 7358.54
+	min: 14.9069
+	avg: 117.334
+	stdev: 788.146
+
+Best in 46
+<Individual size="1">
+	<FitnessMin value="14.9069"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 47
+Elapsed time: 29433
+Deme: 0
+Evaluations: 48000
+Stats: fitness
+	max: 7307.87
+	min: 14.9069
+	avg: 99.8259
+	stdev: 742.97
+
+Best in 47
+<Individual size="1">
+	<FitnessMin value="14.9069"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 48
+Elapsed time: 29639
+Deme: 0
+Evaluations: 49000
+Stats: fitness
+	max: 8213.11
+	min: 14.9069
+	avg: 101.105
+	stdev: 735.253
+
+Best in 48
+<Individual size="1">
+	<FitnessMin value="14.9069"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 49
+Elapsed time: 29849
+Deme: 0
+Evaluations: 50000
+Stats: fitness
+	max: 7358.54
+	min: 14.9069
+	avg: 113.798
+	stdev: 785.826
+
+Best in 49
+<Individual size="1">
+	<FitnessMin value="14.9069"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 50
+Elapsed time: 30061
+Deme: 0
+Evaluations: 51000
+Stats: fitness
+	max: 9906.59
+	min: 14.8958
+	avg: 76.9345
+	stdev: 623.713
+
+Best in 50
+<Individual size="1">
+	<FitnessMin value="14.8958"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin + PAT dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 51
+Elapsed time: 30271
+Deme: 0
+Evaluations: 52000
+Stats: fitness
+	max: 9906.59
+	min: 14.8958
+	avg: 156.45
+	stdev: 925.519
+
+Best in 51
+<Individual size="1">
+	<FitnessMin value="14.8958"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin + PAT dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 52
+Elapsed time: 30476
+Deme: 0
+Evaluations: 53000
+Stats: fitness
+	max: 7358.54
+	min: 14.8844
+	avg: 112.658
+	stdev: 771.207
+
+Best in 52
+<Individual size="1">
+	<FitnessMin value="14.8844"/>
+	<Tree size="170">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL * PAT dd MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - pos pmin pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 53
+Elapsed time: 30686
+Deme: 0
+Evaluations: 54000
+Stats: fitness
+	max: 7358.54
+	min: 14.8844
+	avg: 130.708
+	stdev: 840.949
+
+Best in 53
+<Individual size="1">
+	<FitnessMin value="14.8844"/>
+	<Tree size="170">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL * PAT dd MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - pos pmin pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 54
+Elapsed time: 30886
+Deme: 0
+Evaluations: 55000
+Stats: fitness
+	max: 7358.54
+	min: 14.8844
+	avg: 87.4207
+	stdev: 670.742
+
+Best in 54
+<Individual size="1">
+	<FitnessMin value="14.8844"/>
+	<Tree size="170">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - SL * PAT dd MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - pos pmin pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 55
+Elapsed time: 31084
+Deme: 0
+Evaluations: 56000
+Stats: fitness
+	max: 8004.32
+	min: 14.8574
+	avg: 81.9081
+	stdev: 634.559
+
+Best in 55
+<Individual size="1">
+	<FitnessMin value="14.8574"/>
+	<Tree size="169">* - - + + dd - pmin pos / - PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - pos pmin pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 56
+Elapsed time: 31288
+Deme: 0
+Evaluations: 57000
+Stats: fitness
+	max: 7358.54
+	min: 14.8375
+	avg: 112.88
+	stdev: 764.343
+
+Best in 56
+<Individual size="1">
+	<FitnessMin value="14.8375"/>
+	<Tree size="174">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd * pmin pavg + + - pos / pos pmin + SL dd pos - MR * pmin PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 57
+Elapsed time: 31484
+Deme: 0
+Evaluations: 58000
+Stats: fitness
+	max: 7358.54
+	min: 14.8375
+	avg: 93.0253
+	stdev: 651.419
+
+Best in 57
+<Individual size="1">
+	<FitnessMin value="14.8375"/>
+	<Tree size="174">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd * pmin pavg + + - pos / pos pmin + SL dd pos - MR * pmin PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 58
+Elapsed time: 31682
+Deme: 0
+Evaluations: 59000
+Stats: fitness
+	max: 7358.54
+	min: 14.8375
+	avg: 82.8795
+	stdev: 644.043
+
+Best in 58
+<Individual size="1">
+	<FitnessMin value="14.8375"/>
+	<Tree size="174">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL pavg * pos * / MR w pos age + pos / PAT dd - - pt dd * pmin pavg + + - pos / pos pmin + SL dd pos - MR * pmin PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 59
+Elapsed time: 31887
+Deme: 0
+Evaluations: 60000
+Stats: fitness
+	max: 7358.54
+	min: 14.8349
+	avg: 74.5101
+	stdev: 583.818
+
+Best in 59
+<Individual size="1">
+	<FitnessMin value="14.8349"/>
+	<Tree size="170">* - - + + dd - pmin pos / - PAT age * MR dd - pmin + pt / age - SL * PAT dd MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - pos pmin pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 60
+Elapsed time: 32090
+Deme: 0
+Evaluations: 61000
+Stats: fitness
+	max: 8213.11
+	min: 14.8196
+	avg: 103.32
+	stdev: 732.025
+
+Best in 60
+<Individual size="1">
+	<FitnessMin value="14.8196"/>
+	<Tree size="176">* - - + + dd - pmin pos / + PAT age * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR - SL dd * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + + - pos / pos pmin * MR pavg w + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 61
+Elapsed time: 32288
+Deme: 0
+Evaluations: 62000
+Stats: fitness
+	max: 10124.2
+	min: 14.811
+	avg: 105.169
+	stdev: 769.016
+
+Best in 61
+<Individual size="1">
+	<FitnessMin value="14.811"/>
+	<Tree size="169">* - - + + dd - pmin pos / pos - MR PAT * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + + - pos / pos pmin + MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pt + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + pos - pos * pos pmin / PAT PAT PAT * - MR pos / - SL MR + dd pt * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 62
+Elapsed time: 32485
+Deme: 0
+Evaluations: 63000
+Stats: fitness
+	max: 9906.59
+	min: 14.811
+	avg: 110.473
+	stdev: 786.02
+
+Best in 62
+<Individual size="1">
+	<FitnessMin value="14.811"/>
+	<Tree size="169">* - - + + dd - pmin pos / pos - MR PAT * MR dd - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + + - pos / pos pmin + MR pavg pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pt + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + pos - pos * pos pmin / PAT PAT PAT * - MR pos / - SL MR + dd pt * pos * / MR w / dd MR + pos / PAT dd - - pt dd / pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 63
+Elapsed time: 32686
+Deme: 0
+Evaluations: 64000
+Stats: fitness
+	max: 7358.54
+	min: 14.8029
+	avg: 77.5693
+	stdev: 607.27
+
+Best in 63
+<Individual size="1">
+	<FitnessMin value="14.8029"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - PAT dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 64
+Elapsed time: 32883
+Deme: 0
+Evaluations: 65000
+Stats: fitness
+	max: 7358.54
+	min: 14.8029
+	avg: 110.815
+	stdev: 724.415
+
+Best in 64
+<Individual size="1">
+	<FitnessMin value="14.8029"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos / - SL MR + SL dd * pos * / MR w / dd MR + pos / PAT dd - - PAT dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 65
+Elapsed time: 33083
+Deme: 0
+Evaluations: 66000
+Stats: fitness
+	max: 7358.54
+	min: 14.7914
+	avg: 110.985
+	stdev: 773.201
+
+Best in 65
+<Individual size="1">
+	<FitnessMin value="14.7914"/>
+	<Tree size="174">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR * pmin PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 66
+Elapsed time: 33282
+Deme: 0
+Evaluations: 67000
+Stats: fitness
+	max: 9906.59
+	min: 14.7914
+	avg: 122.666
+	stdev: 849.596
+
+Best in 66
+<Individual size="1">
+	<FitnessMin value="14.7914"/>
+	<Tree size="174">* - - + + dd - pmin pos / + PAT age * MR dd - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w pos age + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR * pmin PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 67
+Elapsed time: 33483
+Deme: 0
+Evaluations: 68000
+Stats: fitness
+	max: 7307.87
+	min: 14.7148
+	avg: 68.6804
+	stdev: 554.626
+
+Best in 67
+<Individual size="1">
+	<FitnessMin value="14.7148"/>
+	<Tree size="186">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w dd + pos / PAT dd - - pt dd / pavg w + + / pos / pos pmin * pmin pavg w + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 68
+Elapsed time: 33682
+Deme: 0
+Evaluations: 69000
+Stats: fitness
+	max: 7358.54
+	min: 14.7148
+	avg: 100.216
+	stdev: 738.779
+
+Best in 68
+<Individual size="1">
+	<FitnessMin value="14.7148"/>
+	<Tree size="186">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL dd pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w dd + pos / PAT dd - - pt dd / pavg w + + / pos / pos pmin * pmin pavg w + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 69
+Elapsed time: 33880
+Deme: 0
+Evaluations: 70000
+Stats: fitness
+	max: 7307.87
+	min: 14.6768
+	avg: 97.5831
+	stdev: 696.593
+
+Best in 69
+<Individual size="1">
+	<FitnessMin value="14.6768"/>
+	<Tree size="191">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w * dd MR + pos / PAT dd - - PAT dd / pavg w + + - pos / pos pmin * pmin dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 70
+Elapsed time: 34084
+Deme: 0
+Evaluations: 71000
+Stats: fitness
+	max: 9906.59
+	min: 14.6768
+	avg: 94.6517
+	stdev: 707.291
+
+Best in 70
+<Individual size="1">
+	<FitnessMin value="14.6768"/>
+	<Tree size="191">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w * dd MR + pos / PAT dd - - PAT dd / pavg w + + - pos / pos pmin * pmin dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 71
+Elapsed time: 34282
+Deme: 0
+Evaluations: 72000
+Stats: fitness
+	max: 8004.32
+	min: 14.6768
+	avg: 79.4869
+	stdev: 627.713
+
+Best in 71
+<Individual size="1">
+	<FitnessMin value="14.6768"/>
+	<Tree size="191">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w * dd MR + pos / PAT dd - - PAT dd / pavg w + + - pos / pos pmin * pmin dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 72
+Elapsed time: 34485
+Deme: 0
+Evaluations: 73000
+Stats: fitness
+	max: 8213.11
+	min: 14.6768
+	avg: 103.332
+	stdev: 737.544
+
+Best in 72
+<Individual size="1">
+	<FitnessMin value="14.6768"/>
+	<Tree size="191">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w * dd MR + pos / PAT dd - - PAT dd / pavg w + + - pos / pos pmin * pmin dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 73
+Elapsed time: 34692
+Deme: 0
+Evaluations: 74000
+Stats: fitness
+	max: 7307.87
+	min: 14.6768
+	avg: 126.751
+	stdev: 835.261
+
+Best in 73
+<Individual size="1">
+	<FitnessMin value="14.6768"/>
+	<Tree size="191">* - - + + dd - pmin pos / + pos - pos / pavg dd * * dd pmin / pavg pmin pavg * MR + + SL pt - MR pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos MR pos / - SL MR + SL dd * pos * / MR w * dd MR + pos / PAT dd - - PAT dd / pavg w + + - pos / pos pmin * pmin dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / pos pmin * dd pt - - - / age pt + * PAT dd / age MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * pmin MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 74
+Elapsed time: 34905
+Deme: 0
+Evaluations: 75000
+Stats: fitness
+	max: 8393.12
+	min: 14.633
+	avg: 87.6795
+	stdev: 634.666
+
+Best in 74
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 75
+Elapsed time: 35116
+Deme: 0
+Evaluations: 76000
+Stats: fitness
+	max: 7358.54
+	min: 14.633
+	avg: 83.8271
+	stdev: 624.822
+
+Best in 75
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 76
+Elapsed time: 35324
+Deme: 0
+Evaluations: 77000
+Stats: fitness
+	max: 7358.54
+	min: 14.633
+	avg: 84.8672
+	stdev: 598.312
+
+Best in 76
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 77
+Elapsed time: 35535
+Deme: 0
+Evaluations: 78000
+Stats: fitness
+	max: 9906.59
+	min: 14.633
+	avg: 104.002
+	stdev: 773.341
+
+Best in 77
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 78
+Elapsed time: 35747
+Deme: 0
+Evaluations: 79000
+Stats: fitness
+	max: 7307.87
+	min: 14.633
+	avg: 89.9099
+	stdev: 671.59
+
+Best in 78
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 79
+Elapsed time: 35969
+Deme: 0
+Evaluations: 80000
+Stats: fitness
+	max: 8213.11
+	min: 14.633
+	avg: 101.778
+	stdev: 735.385
+
+Best in 79
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Generation: 80
+Elapsed time: 36183
+Deme: 0
+Evaluations: 81000
+Stats: fitness
+	max: 7358.54
+	min: 14.633
+	avg: 72.7222
+	stdev: 574.541
+
+Best in 80
+<Individual size="1">
+	<FitnessMin value="14.633"/>
+	<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+</Individual>
+
+Termination: max generation reached (80)
+
+Best of run: 
+<HallOfFame size="1">
+	<Individual size="1" gen="74">
+		<FitnessMin value="14.633"/>
+		<Tree size="173">* - - + + dd - pmin pos / + PAT age * MR + + SL age - dd pavg - pmin + pt / age - pos PAT SL MR / * SL SL pos pos pos * + pos - pos * pos pmin / PAT PAT PAT * - / * MR dd pos age pos pos PAT * pos * / MR w / dd MR + pos / PAT dd - - pt dd * pmin w + + - pos / pos pmin * SL dd pos - MR PAT + - / dd / PAT dd pos pos SL pos / w * age pt - - - / age pavg * * PAT dd / pavg MR - pos / age w + + SL pt - MR pavg - + - pos pt + pmin pmin + * dd MR + PAT dd + * * pmin pavg / SL dd / pos SL + pavg w + PAT + SL pmin </Tree>
+	</Individual>
+</HallOfFame>
+

@@ -1,0 +1,50 @@
++ + - + + w pmin dd / - pt w pos dd + / / pavg pmin SL / / pavg dd w / + - SL + MR pt SL pmin 
++ + / / + MR pavg / SL pt * - PAT SL - pmin pt dd - + - / pmin w pos pt * / pmin pt + SL pmin - MR dd 
+* - pos / / pt w / pt pmin + pos MR - - pt SL + SL pmin + pos + + SL pavg - pmin pt + * + w PAT pmin pos + dd SL 
++ - - - / pmin w / pavg pmin - + pmin pt - pmin MR pos / / pt pmin pmin - + dd / + pavg pavg SL - / * SL pmin * SL MR / + SL pmin / pt pmin 
++ / - - * dd SL / MR pavg - * pt SL * pmin dd + + + dd MR pos SL + - pt PAT * pavg w / PAT w 
++ + - * / SL dd pos SL + pt MR - pmin - age + pmin dd - / pos / SL w MR - pos - pt SL pos / pmin w 
+- + pos - + SL PAT pmin + + w w / - pt MR / pmin w - + + pos MR - pt SL * - PAT dd / pmin pavg + - / pmin w pt PAT 
++ + - + / SL MR / PAT w / age age - SL / - MR pavg MR + * / pt MR - pmin pt + - SL MR + / SL MR / pmin w 
++ + + - + SL pmin - MR SL pmin - pmin pt + / - SL - MR SL - MR PAT / / * pmin pmin + pavg pavg w 
+- + / * pos dd pmin PAT pos + / pmin w * pmin w + - + MR pavg - SL pt - / pt dd pos + pmin SL 
++ - + * PAT age * / SL dd pos SL - + - pt pmin - MR SL * / SL dd pos SL - pos pos + pmin pmin / pos pt * + SL SL - PAT SL 
+- + + - - pmin w PAT pavg + dd / pt MR * + + pos pt * w pavg MR pos / * w pavg + SL pmin 
++ + + - - pmin pt - MR SL + * age PAT + pmin pmin + SL + / SL pmin pos pmin * - / * pmin SL pt pavg w 
+- pos * + + pmin w pos SL / pmin pt - + / dd w + / dd w + pt MR + * + pmin w / dd w * pos dd pos dd 
++ - - dd + MR pt - pt pos / pmin w + - / - SL w * MR w - / SL pavg / MR pavg + + - pmin age pmin + dd pmin 
++ + - / - pmin w / w age * pos pavg + pt MR + * pos SL / dd MR / * pmin SL - pavg SL + * + / dd pt + pavg dd - pmin w + * pos SL + SL pavg / dd w 
++ - / pos + pmin PAT pos w pos / age pt - + + - dd MR + pmin SL + pmin + pmin SL + + / PAT SL - pt PAT + / MR pmin * pt w 
+- - - dd - - MR dd pmin pos - pt - dd pmin - - pt * / SL pavg + SL pavg - / pmin w / + pt pt pos PAT 
+- + pos + - w age / SL MR + + + SL PAT / pmin w + - PAT pt / pmin MR + * pos - MR PAT pt - + - MR w - w SL pmin 
++ + + + pos dd / MR PAT - + SL dd / MR SL + + dd SL / pmin w - + / pos w SL / dd age - - - MR pmin - SL age - pmin pt 
++ + / + - MR MR SL / * MR MR + pt SL - * pmin pmin - + pt age * dd dd - + - * pmin pmin - dd SL - - MR MR pos pt - + * PAT dd pos MR * + dd dd / pmin w 
+- + - + * dd dd * dd pmin + pos age * MR w - - * dd pmin - PAT SL + pmin * MR w - pos - + pt pt + dd pmin - + / SL MR / dd w pt 
++ - pos * dd - SL pmin - MR + SL * dd pmin + + / + age age pos w / dd w - / / pmin MR w pt 
++ * pos + * pmin dd * SL SL + - + PAT dd dd - + pmin dd + pt MR + / * + pmin dd dd pos w + / * dd dd pos w / * dd dd pos SL 
+- + + * + pmin pmin pos age / / SL w MR + / / MR SL / PAT age / / pavg SL / PAT age + - pos + MR age * + pavg PAT / pmin w - - + pt pt pos pmin * dd + dd pmin 
+- + / pmin w + + - age pt SL + + pmin dd pmin + + / / pt PAT MR + MR pt / MR pmin 
+- + + / - w PAT - pmin SL + + w SL * age age + - / age w + pt MR / * dd w SL - - pos * pt w SL * dd + pmin + dd pmin 
++ + / * MR - SL w / * dd pt + SL w + / / pmin pt * w w - * dd pmin / pmin pt pos - - * dd dd + pt MR - / pt pmin * dd pmin 
++ - + + + SL w - PAT MR - SL age - + / pmin pt - pt pmin / / pmin MR / dd pmin / pmin w 
+- / * * pavg PAT * / SL pmin pmin + - / MR dd * age MR + - SL pt + pmin SL - - MR + - dd pt / dd w * - + pmin SL / w SL + / pmin pt - dd w 
+- + - / / pmin w * w dd - + MR pt + pmin SL * / pos SL MR / + pavg SL MR - - - pos SL - pmin pt + / pmin w SL - dd pavg 
+- - * - / pavg w pt pmin - pos * MR age + + dd MR + dd dd * - + - dd MR / dd pmin - pt SL - pos - w pmin + pos pmin + PAT SL 
+- * - + pmin dd - pavg age pos - + pmin dd - pavg pmin - + pos MR pt pos * - SL pt + age pmin 
++ / pos - / pmin PAT - pmin SL * - MR / pavg pmin / / dd pmin / MR pavg + - + / dd pavg - dd pt - - pavg pmin / pt pmin - - / pmin w - pt SL - - MR pmin dd 
++ pos + * pos SL SL pos * pmin pmin - / + + pavg pavg - dd w * w / pavg age * - + pt MR + pmin age pos pmin 
+- - pos + * dd pmin * dd pmin + - * MR w / PAT pt - pos pt * dd dd * + + - MR pmin pos pt + pos MR pos pt w 
+* + * * + pmin SL / dd pt pmin / * pmin SL / pmin SL - / / + pmin SL w / pmin - dd age * - - pt pmin pos pavg pos - pmin MR 
++ + + / - pt PAT SL SL / / MR MR - MR PAT + - * + pmin dd + pmin dd - - pt dd - age MR + / age / w pmin * / PAT MR + SL w 
+- - - pt + * w MR dd + + / MR PAT + pt age - / MR pavg * dd dd - + - pos pt * pmin dd - / MR SL * pmin dd pos / SL MR 
+- - * + pos pavg pmin + - SL MR + PAT pmin + * + pt SL + pt w * SL - pmin SL + pt - * SL - pt PAT PAT 
+- * + pos pmin pos * w SL - / dd w - pt pmin - * pos + MR pt + - pt PAT pos MR * / * dd w w / * pmin pmin pos PAT 
+- - + * dd dd / + pmin pmin / w pavg - * + MR pt pos w / * SL dd * pt PAT / pos * + MR pt / pt pavg pos - pos PAT MR 
++ + / + + SL pmin + SL pmin - * PAT SL - MR pmin + + / w SL pmin - / pmin w * pt w - + PAT + SL + SL pmin - MR - PAT pt 
++ + + / - dd pt / pt pt + SL pos PAT - + - SL MR + w SL / pos PAT - pt dd - * pos / dd PAT + - pmin PAT + PAT pmin - pos - pt dd / pmin w 
+* * dd + * * dd pmin dd - pmin pmin - - - / w SL - MR SL - pt SL - / pavg + PAT MR - / dd w / w MR 
++ - + - / pt SL pavg - pmin MR - - pt dd + pmin SL - + + / pt SL w / + pmin SL MR - - pt dd / pmin w 
++ + - * / pmin dd + PAT dd + - pt dd * w MR * / pavg w / w - MR dd + - + SL pmin pos SL / / pos SL / pt SL MR 
++ + * / age pavg pmin / - SL pt + + MR dd + pavg pt + + pos - SL pt pos + dd pmin / + pos pavg pavg + + MR age + w pt 
+- + + * - PAT MR pos SL + * pavg PAT / pavg w - - * SL SL + age MR * + pavg SL / MR pavg + - pos * PAT PAT + * pmin pmin / dd w / pt w 
++ + - / pmin w + - MR SL pos age - pmin pos - PAT pt - + - pmin - pt SL / / PAT w pmin pt 

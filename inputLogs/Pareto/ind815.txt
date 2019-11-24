@@ -1,0 +1,4 @@
+<Individual size="1">
+	<MOFitness value1="14.805" value2="7.0697" value3="158.716" value4="38.9072" value5="2.7857" value6="16.5447" value7="878.467" value8="992.336" value9="0.138481"/>
+	<Tree size="43">+ + + - - wc MR pavg / age wc + * * dd dd + pmin we * / pavg age + age we - SL + - * wc age * dd we - * we pmin - w pt </Tree>
+</Individual>
