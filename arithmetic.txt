@@ -8,3 +8,8 @@
 + D_0 X->X
 + X D_0->X
 / X X->D_1
+- X X->D_0
++ X * Y X->* + D_1 Y X
++ X * X Y->* + D_1 Y X
++ * Y X X->* + D_1 Y X
++ * X Y X->* + D_1 Y X

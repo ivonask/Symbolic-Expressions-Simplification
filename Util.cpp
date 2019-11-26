@@ -37,16 +37,17 @@ void Util::loadOperators() //TODO make dependent on the RuleSet?
     operatorsInfo.insert(pair<string, Operator *>("-", new Operator("-", 2)));
     operatorsInfo.insert(pair<string, Operator *>("*", new Operator("*", 2)));
     operatorsInfo.insert(pair<string, Operator *>("/", new Operator("/", 2)));
+    operatorsInfo.insert(pair<string, Operator *>("pos", new Operator("pos", 1)));
 
-    operatorsInfo.insert(pair<string, Operator *>("sin", new Operator("sin", 1)));
-    operatorsInfo.insert(pair<string, Operator *>("cos", new Operator("cos", 1)));
+    // operatorsInfo.insert(pair<string, Operator *>("sin", new Operator("sin", 1)));
+    // operatorsInfo.insert(pair<string, Operator *>("cos", new Operator("cos", 1)));
 
-    operatorsInfo.insert(pair<string, Operator *>("ifpos", new Operator("ifpos", 3)));
+    // operatorsInfo.insert(pair<string, Operator *>("ifpos", new Operator("ifpos", 3)));
 
-    operatorsInfo.insert(pair<string, Operator *>("or", new Operator("or", 2)));
-    operatorsInfo.insert(pair<string, Operator *>("and", new Operator("and", 2)));
-    operatorsInfo.insert(pair<string, Operator *>("not", new Operator("not", 1)));
-    operatorsInfo.insert(pair<string, Operator *>("xor", new Operator("xor", 2)));
+    // operatorsInfo.insert(pair<string, Operator *>("or", new Operator("or", 2)));
+    // operatorsInfo.insert(pair<string, Operator *>("and", new Operator("and", 2)));
+    // operatorsInfo.insert(pair<string, Operator *>("not", new Operator("not", 1)));
+    // operatorsInfo.insert(pair<string, Operator *>("xor", new Operator("xor", 2)));
 }
 Rule *Util::loadRule(string rule)
 {

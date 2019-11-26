@@ -16,7 +16,7 @@ public:
     RuleSet(vector<Rule *> rules);
 
     void addRule(Rule *rule);
-    void applyAllRules(ExpressionTree *expression);
+    int applyAllRules(ExpressionTree *expression);
 };
 
 #endif // RULE_SET_h
