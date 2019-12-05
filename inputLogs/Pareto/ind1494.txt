@@ -1,4 +1,0 @@
-<Individual size="1">
-	<MOFitness value1="17.1083" value2="7.11481" value3="154.694" value4="38.6708" value5="3.39457" value6="15.9379" value7="875.029" value8="1001.45" value9="0.13279"/>
-	<Tree size="22">+ pos pos / pos pmin / w PAT - - + / w w pmin MR + we + pt we </Tree>
-</Individual>

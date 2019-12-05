@@ -1,2 +1,0 @@
-    grep "<Tree" $file | tail -1 | sed 's/[[:blank:]]*<Tree size=\"[[:digit:]]*\">//g' | sed 's/<\/Tree>[[:blank:]]*//g' >> extracted.txt
-    grep "<Tree" $file | tail -1 | sed 's/[[:blank:]]*<Tree size=\"[[:digit:]]*\">//g' | sed 's/<\/Tree>[[:blank:]]*//g' >> extracted.txt
