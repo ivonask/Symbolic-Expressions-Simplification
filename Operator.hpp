@@ -6,14 +6,14 @@
 
 using namespace std;
 
-class Operator
+class OperatorNode
 {
 private:
     string op;
     int childrenNumber;
 
 public:
-    Operator(string name, int childrenNumber);
+    OperatorNode(string name, int childrenNumber);
     int numberOfChildren();
     string print(vector<string> children);
 };

@@ -1,16 +1,16 @@
 #include "Operator.hpp"
 
-Operator::Operator(string name, int childrenNumber)
+OperatorNode::OperatorNode(string name, int childrenNumber)
 {
     this->op = name;
     this->childrenNumber = childrenNumber;
 }
 
-int Operator::numberOfChildren()
+int OperatorNode::numberOfChildren()
 {
     return childrenNumber;
 }
 
-string Operator::print(vector<string> children)
-{
-}
+//string OperatorNode::print(vector<string> children)
+//{
+//}

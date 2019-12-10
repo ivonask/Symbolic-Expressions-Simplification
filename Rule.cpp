@@ -1,4 +1,6 @@
 #include "Rule.hpp"
+#include <iostream>
+#include <string>
 
 std::map<string, Node *> variables;
 
@@ -164,4 +166,9 @@ bool Rule::compare(Node *P, Node *U)
         }
 
     return true;
+}
+
+string Rule::printRule()
+{
+    return originalStr + " -> " + replacementStr;
 }

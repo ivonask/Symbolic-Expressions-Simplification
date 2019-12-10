@@ -20,13 +20,13 @@ class Util
 {
 private:
     static vector<string> operators;
-    static map<string, Operator *> operatorsInfo;
+    static map<string, OperatorNode *> operatorsInfo;
     static Rule *loadRule(string rule);
 
 public:
     static vector<string> split(const string &str, const string &delim);
     static bool isOperatorLoaded(string name);
-    static Operator *getOperatorInfo(string name);
+    static OperatorNode *getOperatorInfo(string name);
     static void loadOperators();
     static RuleSet *loadRulesFromFile(string file_in);
     static ExpressionTree *loadExpressionFromFile(string file_in);

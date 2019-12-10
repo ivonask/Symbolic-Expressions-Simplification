@@ -74,7 +74,7 @@ void ExpressionTree::insert(string val)
     {
         Node *nptr = new Node(val);
 
-        Operator *op = Util::getOperatorInfo(val);
+        OperatorNode *op = Util::getOperatorInfo(val);
 
         //TODO: read from some definition of the operator - how many children?
         //or: while pop() =! null?
@@ -113,11 +113,8 @@ bool ExpressionTree::isConstant(string ch)
 
 void ExpressionTree::buildTree(vector<string> eqn)
 {
-    for (auto i = eqn.rbegin(); i != eqn.rend(); ++i)
-    {
-        insert(eqn.back());
-        eqn.pop_back();
-    }
+    for (int i = eqn.size() - 1; i >= 0; i--)
+        insert(eqn[i]);
 }
 
 void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
@@ -206,17 +203,35 @@ void ExpressionTree::inOrder(Node *ptr)
         }
     }
 }
-void ExpressionTree::prefix()
+string ExpressionTree::prefix()
 {
-    preOrder(peek());
+    return preOrder(peek());
 }
 
-void ExpressionTree::preOrder(Node *ptr)
+void replaceAll(std::string& str, const std::string& from, const std::string& to) {
+	if (from.empty())
+		return;
+	size_t start_pos = 0;
+	while ((start_pos = str.find(from, start_pos)) != std::string::npos) {
+		str.replace(start_pos, from.length(), to);
+		start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
+	}
+}
+
+string ExpressionTree::preOrder(Node *ptr)
 {
     if (ptr != NULL)
     {
-        printf("%s ", ptr->d.c_str());
+		string res = "";
+        res = res + ptr->d + " ";
         for (int i = 0; i < ptr->chlidren.size(); i++)
-            preOrder(ptr->chlidren[i]);
+			res = res + preOrder(ptr->chlidren[i]) + " ";
+
+		while (res.find("  ")!= std::string::npos) {
+			replaceAll(res, "  ", " "); //replace double spaces with one
+		}
+
+		return res;
     }
+	return NULL;
 }

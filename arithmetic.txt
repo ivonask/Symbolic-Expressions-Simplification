@@ -1,6 +1,8 @@
 + * X Y * X Z->* X + Y Z
 + * Y X * Z X->* X + Y Z
 + X X->* D_2 X
++ * D_2 X X->* D_3 X
++ X * D_2 X->* D_3 X
 * X D_1->X
 * D_1 X->X
 * X D_0->D_0
@@ -9,6 +11,8 @@
 + X D_0->X
 / X X->D_1
 - X X->D_0
+- X D_0->X
+/ X D_1->X
 + X * Y X->* + D_1 Y X
 + X * X Y->* + D_1 Y X
 + * Y X X->* + D_1 Y X

@@ -4,3 +4,5 @@
 + * cos A cos B * sin A sin B->cos - A B
 * D_2 * sin A cos A->sin * D_2 A
 / sin A cos A->tan A
+sin D_0->D_0
+cos D_0->D_1

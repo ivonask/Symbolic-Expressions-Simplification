@@ -1,7 +1,17 @@
 #include "Util.hpp"
+#include <string>
+#include <cctype>
 
 vector<string> Util::operators;
-map<string, Operator *> Util::operatorsInfo;
+map<string, OperatorNode *> Util::operatorsInfo;
+
+bool isNumber(const std::string &s)
+{
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it))
+        ++it;
+    return !s.empty() && it == s.end();
+}
 
 vector<string> Util::split(const string &str, const string &delim)
 {
@@ -14,7 +24,11 @@ vector<string> Util::split(const string &str, const string &delim)
             pos = str.length();
         string token = str.substr(prev, pos - prev);
         if (!token.empty())
-            tokens.push_back(token);
+            if (isNumber(token))
+            {
+                token = "D_" + token;
+            }
+        tokens.push_back(token);
         prev = pos + delim.length();
     } while (pos < str.length() && prev < str.length());
     return tokens;
@@ -22,32 +36,32 @@ vector<string> Util::split(const string &str, const string &delim)
 
 bool Util::isOperatorLoaded(string name)
 {
-    map<string, Operator *>::iterator it = operatorsInfo.find(name);
+    map<string, OperatorNode *>::iterator it = operatorsInfo.find(name);
     return (it != operatorsInfo.end());
 }
 
-Operator *Util::getOperatorInfo(string name)
+OperatorNode *Util::getOperatorInfo(string name)
 {
     return operatorsInfo.at(name);
 }
 
 void Util::loadOperators() //TODO make dependent on the RuleSet?
 {
-    operatorsInfo.insert(pair<string, Operator *>("+", new Operator("+", 2))); //TODO check defined operators from ECF file.
-    operatorsInfo.insert(pair<string, Operator *>("-", new Operator("-", 2)));
-    operatorsInfo.insert(pair<string, Operator *>("*", new Operator("*", 2)));
-    operatorsInfo.insert(pair<string, Operator *>("/", new Operator("/", 2)));
-    operatorsInfo.insert(pair<string, Operator *>("pos", new Operator("pos", 1)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("+", new OperatorNode("+", 2))); //TODO check defined operators from ECF file.
+    operatorsInfo.insert(pair<string, OperatorNode *>("-", new OperatorNode("-", 2)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("*", new OperatorNode("*", 2)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("/", new OperatorNode("/", 2)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("pos", new OperatorNode("pos", 1)));
 
-    // operatorsInfo.insert(pair<string, Operator *>("sin", new Operator("sin", 1)));
-    // operatorsInfo.insert(pair<string, Operator *>("cos", new Operator("cos", 1)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("sin", new OperatorNode("sin", 1)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("cos", new OperatorNode("cos", 1)));
 
-    // operatorsInfo.insert(pair<string, Operator *>("ifpos", new Operator("ifpos", 3)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("ifpos", new OperatorNode("ifpos", 3)));
 
-    // operatorsInfo.insert(pair<string, Operator *>("or", new Operator("or", 2)));
-    // operatorsInfo.insert(pair<string, Operator *>("and", new Operator("and", 2)));
-    // operatorsInfo.insert(pair<string, Operator *>("not", new Operator("not", 1)));
-    // operatorsInfo.insert(pair<string, Operator *>("xor", new Operator("xor", 2)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("or", new OperatorNode("or", 2)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("and", new OperatorNode("and", 2)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("not", new OperatorNode("not", 1)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("xor", new OperatorNode("xor", 2)));
 }
 Rule *Util::loadRule(string rule)
 {

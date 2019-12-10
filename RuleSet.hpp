@@ -10,11 +10,14 @@ class RuleSet
 {
 private:
     vector<Rule *> rules;
+    vector<int> counter;
 
 public:
     RuleSet();
     RuleSet(vector<Rule *> rules);
 
+    vector<Rule *> getRules();
+    vector<int> getCounter();
     void addRule(Rule *rule);
     int applyAllRules(ExpressionTree *expression);
 };

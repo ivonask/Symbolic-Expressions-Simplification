@@ -21,6 +21,7 @@ private:
 public:
     Rule(string original, string replacement);
     bool applyRule(ExpressionTree *expression);
+    string printRule();
 };
 
 #endif // REWRITE_RULE_h

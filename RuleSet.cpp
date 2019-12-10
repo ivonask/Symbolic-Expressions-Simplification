@@ -11,10 +11,29 @@ void RuleSet::addRule(Rule *rule)
 {
     rules.push_back(rule);
 }
+
+vector<Rule *> RuleSet::getRules()
+{
+    return rules;
+}
+
+vector<int> RuleSet::getCounter()
+{
+    return counter;
+}
+
 int RuleSet::applyAllRules(ExpressionTree *expression)
 {
+    if (counter.empty())
+    {
+        for (int i = 0; i < rules.size(); i++)
+        {
+            counter.push_back(0);
+        }
+    }
+
     cout << "\nInitial expression: ";
-    expression->prefix();
+    cout << expression->prefix().c_str();
     cout << "\n\n";
 
     int appliedRules = 0;
@@ -32,10 +51,11 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
             if (rules[i]->applyRule(expression))
             {
                 cout << "New expression: ";
-                expression->prefix();
+                cout << expression->prefix().c_str();
                 cout << "\n\n";
 
                 appliedRules++;
+                counter[i]++;
 
                 reset = true;
                 break;
@@ -50,7 +70,7 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
     } while (reset);
 
     cout << "Final result: ";
-    expression->prefix();
+    cout << expression->prefix().c_str();
     cout << "\n";
 
     return appliedRules;

@@ -36,8 +36,8 @@ public:
     void infix();
     void inOrder(Node *ptr);
 
-    void prefix();
-    void preOrder(Node *ptr);
+    string prefix();
+    string preOrder(Node *ptr);
 };
 
 #endif // EXPRESSION_TREE_h
