@@ -208,30 +208,33 @@ string ExpressionTree::prefix()
     return preOrder(peek());
 }
 
-void replaceAll(std::string& str, const std::string& from, const std::string& to) {
-	if (from.empty())
-		return;
-	size_t start_pos = 0;
-	while ((start_pos = str.find(from, start_pos)) != std::string::npos) {
-		str.replace(start_pos, from.length(), to);
-		start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
-	}
+void replaceAll(std::string &str, const std::string &from, const std::string &to)
+{
+    if (from.empty())
+        return;
+    size_t start_pos = 0;
+    while ((start_pos = str.find(from, start_pos)) != std::string::npos)
+    {
+        str.replace(start_pos, from.length(), to);
+        start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
+    }
 }
 
 string ExpressionTree::preOrder(Node *ptr)
 {
     if (ptr != NULL)
     {
-		string res = "";
+        string res = "";
         res = res + ptr->d + " ";
         for (int i = 0; i < ptr->chlidren.size(); i++)
-			res = res + preOrder(ptr->chlidren[i]) + " ";
+            res = res + preOrder(ptr->chlidren[i]) + " ";
 
-		while (res.find("  ")!= std::string::npos) {
-			replaceAll(res, "  ", " "); //replace double spaces with one
-		}
+        while (res.find("  ") != std::string::npos)
+        {
+            replaceAll(res, "  ", " "); //replace double spaces with one
+        }
 
-		return res;
+        return res;
     }
-	return NULL;
+    return NULL;
 }

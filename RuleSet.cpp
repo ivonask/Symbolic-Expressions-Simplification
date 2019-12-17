@@ -1,4 +1,5 @@
 #include "RuleSet.hpp"
+#include "Util.hpp"
 
 int MAX_ITERATIONS = 50;
 
@@ -38,6 +39,9 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
 
     int appliedRules = 0;
 
+    while (Util::reduceConstants(expression->peek()))
+        ;
+
     bool reset = true;
     vector<Rule *>::iterator itr;
     int cnt = 0;
@@ -50,6 +54,9 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
         {
             if (rules[i]->applyRule(expression))
             {
+                while (Util::reduceConstants(expression->peek()))
+                    ;
+
                 cout << "New expression: ";
                 cout << expression->prefix().c_str();
                 cout << "\n\n";

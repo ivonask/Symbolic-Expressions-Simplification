@@ -1,6 +1,7 @@
 #include "Util.hpp"
 #include <string>
 #include <cctype>
+#include <math.h>
 
 vector<string> Util::operators;
 map<string, OperatorNode *> Util::operatorsInfo;
@@ -51,6 +52,7 @@ void Util::loadOperators() //TODO make dependent on the RuleSet?
     operatorsInfo.insert(pair<string, OperatorNode *>("-", new OperatorNode("-", 2)));
     operatorsInfo.insert(pair<string, OperatorNode *>("*", new OperatorNode("*", 2)));
     operatorsInfo.insert(pair<string, OperatorNode *>("/", new OperatorNode("/", 2)));
+    operatorsInfo.insert(pair<string, OperatorNode *>("sqr", new OperatorNode("sqr", 1)));
     operatorsInfo.insert(pair<string, OperatorNode *>("pos", new OperatorNode("pos", 1)));
 
     operatorsInfo.insert(pair<string, OperatorNode *>("sin", new OperatorNode("sin", 1)));
@@ -108,4 +110,70 @@ void Util::printTree(ExpressionTree *et)
     cout << "\nInfix : ";
     et->infix();
     cout << "\n\n";
+}
+
+bool Util::reduceConstants(Node *n)
+{
+    bool reduced = false;
+    if (n != NULL)
+    {
+        bool toReduce = false;
+        if (ExpressionTree::isOperator(n->d))
+        {
+            for (int i = 0; i < n->chlidren.size(); i++)
+            {
+                if (!ExpressionTree::isConstant(n->chlidren[i]->d))
+                {
+                    toReduce = false;
+                    break;
+                }
+                toReduce = true;
+            }
+
+            if (toReduce)
+            {
+                ExpressionTree *et = new ExpressionTree(n);
+                cout << "Reducing expression " << et->prefix() << endl;
+
+                double res, first, second;
+                first = atof(n->chlidren[0]->d.substr(2).c_str());
+
+                if (operatorsInfo.at(n->d)->numberOfChildren() == 2)
+                {
+                    second = atof(n->chlidren[1]->d.substr(2).c_str());
+
+                    if (n->d == "+")
+                        res = first + second;
+
+                    else if (n->d == "-")
+                        res = first - second;
+
+                    else if (n->d == "*")
+                        res = first * second;
+
+                    else if (n->d == "/")
+                        res = first / second;
+                }
+                else if (operatorsInfo.at(n->d)->numberOfChildren() == 1)
+                {
+                    if (n->d == "sin")
+                        res = sin(first);
+                    else if (n->d == "cos")
+                        res = cos(first);
+                }
+
+                string res_str = "D_" + to_string(res);
+
+                *n = new Node(res_str);
+                reduced = true;
+            }
+        }
+
+        if (n->chlidren.size() > 0)
+        {
+            for (int i = 0; i < n->chlidren.size(); i++)
+                reduced = reduceConstants(n->chlidren[i]) || reduced;
+        }
+    }
+    return reduced;
 }

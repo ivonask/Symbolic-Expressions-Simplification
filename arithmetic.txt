@@ -3,6 +3,7 @@
 + X X->* D_2 X
 + * D_2 X X->* D_3 X
 + X * D_2 X->* D_3 X
+* X X->sqr X
 * X D_1->X
 * D_1 X->X
 * X D_0->D_0

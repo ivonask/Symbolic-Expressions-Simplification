@@ -61,14 +61,11 @@ int main()
             << endl;
     }
 
-    ofs << "\n\nRules used:" << endl;
+    ofs << "\n\nCnt\t\tRule used" << endl;
 
     for (int i = 0; i < arithmetic->getCounter().size(); i++)
     {
-        if (arithmetic->getCounter()[i] > 0)
-        {
-            ofs << arithmetic->getRules()[i]->printRule() << "\t" << arithmetic->getCounter()[i] << endl;
-        }
+        ofs << arithmetic->getCounter()[i] << "\t\t" << arithmetic->getRules()[i]->printRule() << endl;
     }
 
     ofs.close();

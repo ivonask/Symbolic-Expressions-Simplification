@@ -25,12 +25,17 @@ private:
 
 public:
     static vector<string> split(const string &str, const string &delim);
+
     static bool isOperatorLoaded(string name);
     static OperatorNode *getOperatorInfo(string name);
     static void loadOperators();
+
     static RuleSet *loadRulesFromFile(string file_in);
     static ExpressionTree *loadExpressionFromFile(string file_in);
+
     static void printTree(ExpressionTree *et);
+
+    static bool reduceConstants(Node *n);
 };
 
 #endif // UTIL_h
