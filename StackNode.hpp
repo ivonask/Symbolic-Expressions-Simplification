@@ -3,12 +3,14 @@
 
 #include "Node.hpp"
 
+using namespace std;
+
 class StackNode /*stack declaration */
 {
 public:
-    Node *node;
-    StackNode *next;
-    StackNode(Node *treeN)
+    shared_ptr<Node> node;
+    shared_ptr<StackNode> next;
+    StackNode(shared_ptr<Node> treeN)
     {
         this->node = treeN;
         next = NULL;

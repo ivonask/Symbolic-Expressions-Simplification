@@ -3,17 +3,17 @@
 
 int MAX_ITERATIONS = 50;
 
-RuleSet::RuleSet(vector<Rule *> rules)
+RuleSet::RuleSet(vector<shared_ptr<Rule>> rules)
 {
     this->rules = rules;
 }
 
-void RuleSet::addRule(Rule *rule)
+void RuleSet::addRule(shared_ptr<Rule> rule)
 {
     rules.push_back(rule);
 }
 
-vector<Rule *> RuleSet::getRules()
+vector<shared_ptr<Rule>> RuleSet::getRules()
 {
     return rules;
 }
@@ -23,7 +23,7 @@ vector<int> RuleSet::getCounter()
     return counter;
 }
 
-int RuleSet::applyAllRules(ExpressionTree *expression)
+int RuleSet::applyAllRules(shared_ptr<ExpressionTree> expression)
 {
     if (counter.empty())
     {
@@ -43,7 +43,7 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
         ;
 
     bool reset = true;
-    vector<Rule *>::iterator itr;
+    vector<shared_ptr<Rule>>::iterator itr;
     int cnt = 0;
     do
     {
@@ -55,7 +55,7 @@ int RuleSet::applyAllRules(ExpressionTree *expression)
             if (rules[i]->applyRule(expression))
             {
                 while (Util::reduceConstants(expression->peek()))
-                    ;
+                    cout << expression->prefix().c_str() << endl;
 
                 cout << "New expression: ";
                 cout << expression->prefix().c_str();

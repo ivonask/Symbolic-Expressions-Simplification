@@ -10,22 +10,22 @@ int main()
 {
     Util::loadOperators();
 
-    RuleSet *arithmetic = Util::loadRulesFromFile("arithmetic.txt");
-    RuleSet *trigonometric = Util::loadRulesFromFile("trigonometric.txt");
-    RuleSet *boolean_alg = Util::loadRulesFromFile("boolean.txt");
+    shared_ptr<RuleSet> arithmetic = Util::loadRulesFromFile("arithmetic.txt");
+    shared_ptr<RuleSet> trigonometric = Util::loadRulesFromFile("trigonometric.txt");
+    shared_ptr<RuleSet> boolean_alg = Util::loadRulesFromFile("boolean.txt");
 
     // ExpressionTree *et = Util::loadExpressionFromFile("expressions.txt");
     // arithmetic->applyAllRules(et);
     //boolean_alg->applyAllRules(et);
 
-    ifstream file("expressions\\extractedTrees2.txt");
+    ifstream file("reduceThis.txt");
     if (!file)
     {
         cout << "Unable to open file\n";
         exit(1);
     }
     string str;
-    ExpressionTree *et;
+    shared_ptr<ExpressionTree> et;
 
     int changed = 0;
     int total = 0;
@@ -33,13 +33,12 @@ int main()
 
     while (std::getline(file, str))
     {
-        et = new ExpressionTree(str);
+        et = make_shared<ExpressionTree>(str);
         if (arithmetic->applyAllRules(et))
         {
             changed++;
             changedRules.insert(pair<string, string>(str, et->prefix()));
         }
-        delete et;
         total++;
     }
     file.close();

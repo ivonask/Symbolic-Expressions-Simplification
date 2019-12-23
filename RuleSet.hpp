@@ -9,17 +9,17 @@
 class RuleSet
 {
 private:
-    vector<Rule *> rules;
+    vector<shared_ptr<Rule>> rules;
     vector<int> counter;
 
 public:
     RuleSet();
-    RuleSet(vector<Rule *> rules);
+    RuleSet(vector<shared_ptr<Rule>> rules);
 
-    vector<Rule *> getRules();
+    vector<shared_ptr<Rule>> getRules();
     vector<int> getCounter();
-    void addRule(Rule *rule);
-    int applyAllRules(ExpressionTree *expression);
+    void addRule(shared_ptr<Rule> rule);
+    int applyAllRules(shared_ptr<ExpressionTree> expression);
 };
 
 #endif // RULE_SET_h

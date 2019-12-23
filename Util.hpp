@@ -8,6 +8,7 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include <memory>
 
 #include "Operator.hpp"
 #include "Rule.hpp"
@@ -20,22 +21,22 @@ class Util
 {
 private:
     static vector<string> operators;
-    static map<string, OperatorNode *> operatorsInfo;
-    static Rule *loadRule(string rule);
+    static map<string, shared_ptr<OperatorNode>> operatorsInfo;
+    static shared_ptr<Rule> loadRule(string rule);
 
 public:
     static vector<string> split(const string &str, const string &delim);
 
     static bool isOperatorLoaded(string name);
-    static OperatorNode *getOperatorInfo(string name);
+    static shared_ptr<OperatorNode> getOperatorInfo(string name);
     static void loadOperators();
 
-    static RuleSet *loadRulesFromFile(string file_in);
-    static ExpressionTree *loadExpressionFromFile(string file_in);
+    static shared_ptr<RuleSet> loadRulesFromFile(string file_in);
+    static shared_ptr<ExpressionTree> loadExpressionFromFile(string file_in);
 
-    static void printTree(ExpressionTree *et);
+    static void printTree(shared_ptr<ExpressionTree> et);
 
-    static bool reduceConstants(Node *n);
+    static bool reduceConstants(shared_ptr<Node> n);
 };
 
 #endif // UTIL_h

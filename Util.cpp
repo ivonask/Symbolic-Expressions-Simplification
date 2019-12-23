@@ -4,7 +4,7 @@
 #include <math.h>
 
 vector<string> Util::operators;
-map<string, OperatorNode *> Util::operatorsInfo;
+map<string, shared_ptr<OperatorNode>> Util::operatorsInfo;
 
 bool isNumber(const std::string &s)
 {
@@ -37,11 +37,11 @@ vector<string> Util::split(const string &str, const string &delim)
 
 bool Util::isOperatorLoaded(string name)
 {
-    map<string, OperatorNode *>::iterator it = operatorsInfo.find(name);
+    map<string, shared_ptr<OperatorNode>>::iterator it = operatorsInfo.find(name);
     return (it != operatorsInfo.end());
 }
 
-OperatorNode *Util::getOperatorInfo(string name)
+shared_ptr<OperatorNode> Util::getOperatorInfo(string name)
 {
     return operatorsInfo.at(name);
 }
@@ -65,15 +65,15 @@ void Util::loadOperators() //TODO make dependent on the RuleSet?
     // operatorsInfo.insert(pair<string, OperatorNode *>("not", new OperatorNode("not", 1)));
     // operatorsInfo.insert(pair<string, OperatorNode *>("xor", new OperatorNode("xor", 2)));
 }
-Rule *Util::loadRule(string rule)
+shared_ptr<Rule> Util::loadRule(string rule)
 {
     vector<string> ruleVec = split(rule, "->");
-    return new Rule(ruleVec[0], ruleVec[1]);
+    return make_shared<Rule>(ruleVec[0], ruleVec[1]);
 }
 
-RuleSet *Util::loadRulesFromFile(string file_in)
+shared_ptr<RuleSet> Util::loadRulesFromFile(string file_in)
 {
-    vector<Rule *> rules;
+    vector<shared_ptr<Rule>> rules;
     ifstream file(file_in);
     if (!file)
     {
@@ -86,10 +86,10 @@ RuleSet *Util::loadRulesFromFile(string file_in)
         rules.push_back(loadRule(str));
     }
     file.close();
-    return new RuleSet(rules);
+    return make_shared<RuleSet>(rules);
 }
 
-ExpressionTree *Util::loadExpressionFromFile(string file_in)
+shared_ptr<ExpressionTree> Util::loadExpressionFromFile(string file_in)
 {
     ifstream file(file_in);
     if (!file)
@@ -100,10 +100,10 @@ ExpressionTree *Util::loadExpressionFromFile(string file_in)
     string str;
     getline(file, str);
     file.close();
-    return new ExpressionTree(str);
+    return make_shared<ExpressionTree>(str);
 }
 
-void Util::printTree(ExpressionTree *et)
+void Util::printTree(shared_ptr<ExpressionTree> et)
 {
     cout << "Prefix : ";
     et->prefix();
@@ -112,13 +112,18 @@ void Util::printTree(ExpressionTree *et)
     cout << "\n\n";
 }
 
-bool Util::reduceConstants(Node *n)
+bool isReducable(string s)
+{
+    return (s == "+" || s == "-" || s == "*" || s == "/" || s == "sin" || s == "cos");
+}
+
+bool Util::reduceConstants(shared_ptr<Node> n)
 {
     bool reduced = false;
     if (n != NULL)
     {
         bool toReduce = false;
-        if (ExpressionTree::isOperator(n->d))
+        if (isReducable(n->d))
         {
             for (int i = 0; i < n->chlidren.size(); i++)
             {
@@ -132,7 +137,7 @@ bool Util::reduceConstants(Node *n)
 
             if (toReduce)
             {
-                ExpressionTree *et = new ExpressionTree(n);
+                shared_ptr<ExpressionTree> et = make_shared<ExpressionTree>(n);
                 cout << "Reducing expression " << et->prefix() << endl;
 
                 double res, first, second;
@@ -164,7 +169,8 @@ bool Util::reduceConstants(Node *n)
 
                 string res_str = "D_" + to_string(res);
 
-                *n = new Node(res_str);
+                shared_ptr<Node> n2 = make_shared<Node>(res_str);
+                *n = *n2;
                 reduced = true;
             }
         }

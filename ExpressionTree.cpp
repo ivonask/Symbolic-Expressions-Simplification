@@ -14,9 +14,9 @@ ExpressionTree::ExpressionTree()
     top = NULL;
 }
 
-ExpressionTree::ExpressionTree(Node *root)
+ExpressionTree::ExpressionTree(shared_ptr<Node> root)
 {
-    top = new StackNode(root);
+    top = make_shared<StackNode>(root);
 }
 
 ExpressionTree::ExpressionTree(string prefixExpression)
@@ -31,19 +31,19 @@ void ExpressionTree::clear()
     top = NULL;
 }
 
-void ExpressionTree::push(Node *ptr)
+void ExpressionTree::push(shared_ptr<Node> ptr)
 {
     if (top == NULL)
-        top = new StackNode(ptr);
+        top = make_shared<StackNode>(ptr);
     else
     {
-        StackNode *nptr = new StackNode(ptr);
+        shared_ptr<StackNode> nptr = make_shared<StackNode>(ptr);
         nptr->next = top;
         top = nptr;
     }
 }
 
-Node *ExpressionTree::pop()
+shared_ptr<Node> ExpressionTree::pop()
 {
     if (top == NULL)
     {
@@ -52,13 +52,13 @@ Node *ExpressionTree::pop()
     }
     else
     {
-        Node *ptr = top->node;
+        shared_ptr<Node> ptr = top->node;
         top = top->next;
         return ptr;
     }
 }
 
-Node *ExpressionTree::peek()
+shared_ptr<Node> ExpressionTree::peek()
 {
     return top->node;
 }
@@ -67,14 +67,14 @@ void ExpressionTree::insert(string val)
 {
     if (isSymbol(val) || isConstant(val))
     {
-        Node *nptr = new Node(val);
+        shared_ptr<Node> nptr = make_shared<Node>(val);
         push(nptr);
     }
     else if (isOperator(val))
     {
-        Node *nptr = new Node(val);
+        shared_ptr<Node> nptr = make_shared<Node>(val);
 
-        OperatorNode *op = Util::getOperatorInfo(val);
+        shared_ptr<OperatorNode> op = Util::getOperatorInfo(val);
 
         //TODO: read from some definition of the operator - how many children?
         //or: while pop() =! null?
@@ -117,7 +117,7 @@ void ExpressionTree::buildTree(vector<string> eqn)
         insert(eqn[i]);
 }
 
-void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
+void ExpressionTree::translateNode(shared_ptr<Node> n, map<string, shared_ptr<Node>> variables)
 {
     if (n == nullptr)
     {
@@ -128,32 +128,33 @@ void ExpressionTree::translateNode(Node *n, map<string, Node *> variables)
     {
         //find in map, replace
 
-        std::map<string, Node *>::iterator it = variables.find(n->d);
+        std::map<string, shared_ptr<Node>>::iterator it = variables.find(n->d);
         if (it == variables.end())
             return;
 
         //newNode = new Node(it->second);
-        *n = new Node(it->second);
+        shared_ptr<Node> newNode(it->second);
+        *n = *newNode;
     }
 
     for (int i = 0; i < n->chlidren.size(); i++)
         translateNode(n->chlidren[i], variables);
 }
 
-ExpressionTree *ExpressionTree::translate(map<string, Node *> variables)
+shared_ptr<ExpressionTree> ExpressionTree::translate(map<string, shared_ptr<Node>> variables)
 {
-    ExpressionTree *translatedTree;
+    shared_ptr<ExpressionTree> translatedTree;
     if (isSymbol(top->node->d))
     {
         //find in map, replace
 
-        std::map<string, Node *>::iterator it = variables.find(top->node->d);
+        std::map<string, shared_ptr<Node>>::iterator it = variables.find(top->node->d);
 
-        translatedTree = new ExpressionTree(it->second);
+        translatedTree = make_shared<ExpressionTree>(it->second);
     }
     else
     {
-        translatedTree = new ExpressionTree(top->node);
+        translatedTree = make_shared<ExpressionTree>(top->node);
     }
 
     for (int i = 0; i < translatedTree->top->node->chlidren.size(); i++)
@@ -167,7 +168,7 @@ void ExpressionTree::infix()
     inOrder(peek());
 }
 
-void ExpressionTree::inOrder(Node *ptr)
+void ExpressionTree::inOrder(shared_ptr<Node> ptr)
 {
     if (ptr != NULL)
     {
@@ -220,18 +221,21 @@ void replaceAll(std::string &str, const std::string &from, const std::string &to
     }
 }
 
-string ExpressionTree::preOrder(Node *ptr)
+string ExpressionTree::preOrder(shared_ptr<Node> ptr)
 {
     if (ptr != NULL)
     {
         string res = "";
         res = res + ptr->d + " ";
-        for (int i = 0; i < ptr->chlidren.size(); i++)
-            res = res + preOrder(ptr->chlidren[i]) + " ";
+        if (!ptr->chlidren.empty())
+        {
+            for (int i = 0; i < ptr->chlidren.size(); i++)
+                res = res + preOrder(ptr->chlidren[i]) + " ";
+        }
 
         while (res.find("  ") != std::string::npos)
         {
-            replaceAll(res, "  ", " "); //replace double spaces with one
+            replaceAll(res, "  ", " "); //replaces double spaces with one
         }
 
         return res;

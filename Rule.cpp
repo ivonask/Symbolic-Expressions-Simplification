@@ -2,18 +2,18 @@
 #include <iostream>
 #include <string>
 
-std::map<string, Node *> variables;
+std::map<string, shared_ptr<Node>> variables;
 
 Rule::Rule(string original, string replacement)
 {
     this->originalStr = original;
     this->replacementStr = replacement;
 
-    this->original = new ExpressionTree(original);
-    this->replacement = new ExpressionTree(replacement);
+    this->original = make_shared<ExpressionTree>(original);
+    this->replacement = make_shared<ExpressionTree>(replacement);
 }
 
-bool isEqual(Node *n1, Node *n2)
+bool isEqual(shared_ptr<Node> n1, shared_ptr<Node> n2)
 {
     if (!n1 && !n2) //if both nodes are empty, the comparison came to end and they are the same
     {
@@ -40,12 +40,12 @@ bool isEqual(Node *n1, Node *n2)
     return false;
 }
 
-bool Rule::isAddedToMap(string var, Node *n)
+bool Rule::isAddedToMap(string var, shared_ptr<Node> n)
 {
-    std::map<string, Node *>::iterator it = variables.find(var);
+    std::map<string, shared_ptr<Node>>::iterator it = variables.find(var);
     if (it == variables.end())
     {
-        variables.insert(pair<string, Node *>(var, n));
+        variables.insert(pair<string, shared_ptr<Node>>(var, n));
         return true;
     }
     else if (isEqual(variables.find(var)->second, n))
@@ -60,7 +60,7 @@ bool Rule::isAddedToMap(string var, Node *n)
 
 void printMap()
 {
-    std::map<string, Node *>::iterator itr;
+    std::map<string, shared_ptr<Node>>::iterator itr;
     cout << "\nThe variables dictionary is : \n";
     cout << "\tKEY\tELEMENT\n";
     for (itr = variables.begin(); itr != variables.end(); ++itr)
@@ -71,7 +71,7 @@ void printMap()
     cout << endl;
 }
 
-bool Rule::compareNode(Node *n1, Node *n2)
+bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
 {
     //case 1: both nodes operators
     if (ExpressionTree::isOperator(n1->d) && ExpressionTree::isOperator(n2->d))
@@ -113,22 +113,22 @@ bool Rule::compareNode(Node *n1, Node *n2)
     }
 }
 
-bool Rule::applyRule(ExpressionTree *expression)
+bool Rule::applyRule(shared_ptr<ExpressionTree> expression)
 {
     variables.clear();
     return match(original->peek(), expression->peek());
 }
 
-bool Rule::match(Node *P, Node *T)
+bool Rule::match(shared_ptr<Node> P, shared_ptr<Node> T)
 {
     if (compare(P, T))
     {
         cout << "Rule applied: " << originalStr << " -> " << replacementStr << "\n";
 
-        replacement = new ExpressionTree(replacementStr); //TODO fix translating expressions, this is a workaround
+        replacement = make_shared<ExpressionTree>(replacementStr); //TODO fix translating expressions, this is a workaround
 
         //replace the original tree with replacement tree
-        ExpressionTree *translated = replacement->translate(variables);
+        shared_ptr<ExpressionTree> translated = replacement->translate(variables);
         *T = *translated->peek();
 
         return true;
@@ -143,7 +143,7 @@ bool Rule::match(Node *P, Node *T)
     return matched;
 }
 
-bool Rule::compare(Node *P, Node *U)
+bool Rule::compare(shared_ptr<Node> P, shared_ptr<Node> U)
 {
     //step 1: check for empty nodes
     if (!U || !P) //if any of the nodes are empty, the comparison came to end and they are the same

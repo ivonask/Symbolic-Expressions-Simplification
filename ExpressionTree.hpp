@@ -3,9 +3,12 @@
 
 #include <vector>
 #include <map>
+#include <memory>
 
 #include "StackNode.hpp"
 #include "Node.hpp"
+
+using namespace std;
 
 class ExpressionTree
 {
@@ -13,15 +16,15 @@ private:
     //Node *root;
 
 public:
-    StackNode *top;
+    shared_ptr<StackNode> top;
     ExpressionTree();
-    ExpressionTree(Node *root);
+    ExpressionTree(shared_ptr<Node> root);
     ExpressionTree(string prefixExpression);
     void clear();
 
-    void push(Node *ptr);
-    Node *pop();
-    Node *peek();
+    void push(shared_ptr<Node> ptr);
+    shared_ptr<Node> pop();
+    shared_ptr<Node> peek();
 
     void insert(string val);
     static bool isSymbol(string ch);
@@ -30,14 +33,14 @@ public:
 
     void buildTree(vector<string> eqn);
 
-    ExpressionTree *translate(map<string, Node *> variables);
-    void translateNode(Node *n, map<string, Node *> variables);
+    shared_ptr<ExpressionTree> translate(map<string, shared_ptr<Node>> variables);
+    void translateNode(shared_ptr<Node> n, map<string, shared_ptr<Node>> variables);
 
     void infix();
-    void inOrder(Node *ptr);
+    void inOrder(shared_ptr<Node> ptr);
 
     string prefix();
-    string preOrder(Node *ptr);
+    string preOrder(shared_ptr<Node> ptr);
 };
 
 #endif // EXPRESSION_TREE_h

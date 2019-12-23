@@ -8,19 +8,19 @@
 class Rule
 {
 private:
-    ExpressionTree *original, *replacement;
+    shared_ptr<ExpressionTree> original, replacement;
     string originalStr, replacementStr;
-    map<string, Node *> variables;
+    map<string, shared_ptr<Node>> variables;
 
-    bool match(Node *P, Node *T);
-    bool compare(Node *P, Node *U);
+    bool match(shared_ptr<Node> P, shared_ptr<Node> T);
+    bool compare(shared_ptr<Node> P, shared_ptr<Node> U);
 
-    bool isAddedToMap(string var, Node *n);
-    bool compareNode(Node *n1, Node *n2);
+    bool isAddedToMap(string var, shared_ptr<Node> n);
+    bool compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2);
 
 public:
     Rule(string original, string replacement);
-    bool applyRule(ExpressionTree *expression);
+    bool applyRule(shared_ptr<ExpressionTree> expression);
     string printRule();
 };
 
