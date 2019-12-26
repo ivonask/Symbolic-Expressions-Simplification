@@ -52,7 +52,7 @@ void Util::loadOperators() //TODO make dependent on the RuleSet?
     operatorsInfo.insert(pair<string, OperatorNode *>("-", new OperatorNode("-", 2)));
     operatorsInfo.insert(pair<string, OperatorNode *>("*", new OperatorNode("*", 2)));
     operatorsInfo.insert(pair<string, OperatorNode *>("/", new OperatorNode("/", 2)));
-    operatorsInfo.insert(pair<string, OperatorNode *>("sqr", new OperatorNode("sqr", 1)));
+    // operatorsInfo.insert(pair<string, OperatorNode *>("sqr", new OperatorNode("sqr", 1)));
     operatorsInfo.insert(pair<string, OperatorNode *>("pos", new OperatorNode("pos", 1)));
 
     operatorsInfo.insert(pair<string, OperatorNode *>("sin", new OperatorNode("sin", 1)));
@@ -167,7 +167,23 @@ bool Util::reduceConstants(shared_ptr<Node> n)
                         res = cos(first);
                 }
 
-                string res_str = "D_" + to_string(res);
+                string res_str = to_string(res);
+
+                //check for neg 0:
+                if (res_str == "-0.000000")
+                    res_str = "0";
+
+                //remove extra trailing zeros:
+                while (res_str.find_last_of("0") == res_str.length() - 1 || res_str.find_last_of(".") == res_str.length() - 1)
+                {
+                    if (res_str == "0")
+                    {
+                        break;
+                    }
+                    res_str = res_str.substr(0, res_str.length() - 1);
+                }
+
+                res_str = "D_" + res_str;
 
                 shared_ptr<Node> n2 = make_shared<Node>(res_str);
                 *n = *n2;
