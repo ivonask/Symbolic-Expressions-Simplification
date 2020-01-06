@@ -1,15 +1,15 @@
-or _X_ _X_->_X_
-or _X_ D_1->D_1
-or _X_ D_0->_X_
-and _X_ D_1->_X_
-and _X_ D_0->D_0
-and _X_ _X_->_X_
-not not _X_->_X_
-or _X_ not _X_->D_1
-and _X_ not _X_->D_0
-or _X_ and _X_ _Y_->_X_
-and _X_ or _X_ _Y_->_X_
-not or _X_ _Y_->and not _X_ not _Y_
-not and _X_ _Y_->or not _X_ not _Y_
-or and _X_ _Y_ and _X_ _Z_->and _X_ or _Y_ _Z_
-and or _X_ _Y_ or _X_ _Z_->or _X_ and _Y_ _Z_
+OR _X_ _X_->_X_
+OR _X_ D_1->D_1
+OR _X_ D_0->_X_
+AND _X_ D_1->_X_
+AND _X_ D_0->D_0
+AND _X_ _X_->_X_
+NOT NOT _X_->_X_
+OR _X_ NOT _X_->D_1
+AND _X_ NOT _X_->D_0
+OR _X_ AND _X_ _Y_->_X_
+AND _X_ OR _X_ _Y_->_X_
+NOT OR _X_ _Y_->AND NOT _X_ NOT _Y_
+NOT AND _X_ _Y_->OR NOT _X_ NOT _Y_
+OR AND _X_ _Y_ AND _X_ _Z_->AND _X_ OR _Y_ _Z_
+AND OR _X_ _Y_ OR _X_ _Z_->OR _X_ AND _Y_ _Z_

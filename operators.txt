@@ -1,0 +1,17 @@
++ 2
+- 2
+* 2
+/ 2
+sqr 1
+pos 1
+sin 1
+cos 1
+ifpos 3
+OR 2
+AND 2
+NOT 1
+XOR 2
+AND2 2
+XNOR 2
+IF 3
+NAND 2

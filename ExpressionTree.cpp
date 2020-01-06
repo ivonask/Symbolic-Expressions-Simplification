@@ -22,7 +22,7 @@ ExpressionTree::ExpressionTree(shared_ptr<Node> root)
 ExpressionTree::ExpressionTree(string prefixExpression)
 {
     top = NULL;
-    vector<string> splitted = Util::split(prefixExpression, " ");
+    vector<string> splitted = Util::split(prefixExpression, " ", true);
     buildTree(splitted);
 }
 

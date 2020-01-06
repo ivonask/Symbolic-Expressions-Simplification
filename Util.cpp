@@ -14,7 +14,7 @@ bool isNumber(const std::string &s)
     return !s.empty() && it == s.end();
 }
 
-vector<string> Util::split(const string &str, const string &delim)
+vector<string> Util::split(const string &str, const string &delim, bool transformConstants)
 {
     vector<string> tokens;
     size_t prev = 0, pos = 0;
@@ -25,7 +25,7 @@ vector<string> Util::split(const string &str, const string &delim)
             pos = str.length();
         string token = str.substr(prev, pos - prev);
         if (!token.empty())
-            if (isNumber(token))
+            if (isNumber(token) && transformConstants)
             {
                 token = "D_" + token;
             }
@@ -46,28 +46,26 @@ shared_ptr<OperatorNode> Util::getOperatorInfo(string name)
     return operatorsInfo.at(name);
 }
 
-void Util::loadOperators() //TODO make dependent on the RuleSet?
+void Util::loadOperators(string file_in) //TODO make dependent on the RuleSet?
 {
-    operatorsInfo.insert(pair<string, OperatorNode *>("+", new OperatorNode("+", 2))); //TODO check defined operators from ECF file.
-    operatorsInfo.insert(pair<string, OperatorNode *>("-", new OperatorNode("-", 2)));
-    operatorsInfo.insert(pair<string, OperatorNode *>("*", new OperatorNode("*", 2)));
-    operatorsInfo.insert(pair<string, OperatorNode *>("/", new OperatorNode("/", 2)));
-    // operatorsInfo.insert(pair<string, OperatorNode *>("sqr", new OperatorNode("sqr", 1)));
-    operatorsInfo.insert(pair<string, OperatorNode *>("pos", new OperatorNode("pos", 1)));
-
-    operatorsInfo.insert(pair<string, OperatorNode *>("sin", new OperatorNode("sin", 1)));
-    operatorsInfo.insert(pair<string, OperatorNode *>("cos", new OperatorNode("cos", 1)));
-
-    // operatorsInfo.insert(pair<string, OperatorNode *>("ifpos", new OperatorNode("ifpos", 3)));
-
-    // operatorsInfo.insert(pair<string, OperatorNode *>("or", new OperatorNode("or", 2)));
-    // operatorsInfo.insert(pair<string, OperatorNode *>("and", new OperatorNode("and", 2)));
-    // operatorsInfo.insert(pair<string, OperatorNode *>("not", new OperatorNode("not", 1)));
-    // operatorsInfo.insert(pair<string, OperatorNode *>("xor", new OperatorNode("xor", 2)));
+    vector<shared_ptr<Rule>> rules;
+    ifstream file(file_in);
+    if (!file)
+    {
+        cout << "Unable to open file " << file_in;
+        return;
+    }
+    string str;
+    while (std::getline(file, str))
+    {
+        vector<string> vec = split(str, " ", false);
+        operatorsInfo.insert(pair<string, OperatorNode *>(vec[0], new OperatorNode(vec[0], stoi(vec[1]))));
+    }
+    file.close();
 }
 shared_ptr<Rule> Util::loadRule(string rule)
 {
-    vector<string> ruleVec = split(rule, "->");
+    vector<string> ruleVec = split(rule, "->", true);
     return make_shared<Rule>(ruleVec[0], ruleVec[1]);
 }
 

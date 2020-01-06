@@ -25,11 +25,11 @@ private:
     static shared_ptr<Rule> loadRule(string rule);
 
 public:
-    static vector<string> split(const string &str, const string &delim);
+    static vector<string> split(const string &str, const string &delim, bool transformConstants);
 
     static bool isOperatorLoaded(string name);
     static shared_ptr<OperatorNode> getOperatorInfo(string name);
-    static void loadOperators();
+    static void loadOperators(string file_in);
 
     static shared_ptr<RuleSet> loadRulesFromFile(string file_in);
     static shared_ptr<ExpressionTree> loadExpressionFromFile(string file_in);
