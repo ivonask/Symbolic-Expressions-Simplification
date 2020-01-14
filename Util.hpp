@@ -30,12 +30,13 @@ public:
     static bool isOperatorLoaded(string name);
     static shared_ptr<OperatorNode> getOperatorInfo(string name);
     static void loadOperators(string file_in);
+    static void loadOperators(map<string, int> ops);
 
     static shared_ptr<RuleSet> loadRulesFromFile(string file_in);
     static shared_ptr<ExpressionTree> loadExpressionFromFile(string file_in);
 
     static void printTree(shared_ptr<ExpressionTree> et);
-
+    static int getNoTokens(string expression);
     static bool reduceConstants(shared_ptr<Node> n);
 };
 

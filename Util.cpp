@@ -48,7 +48,6 @@ shared_ptr<OperatorNode> Util::getOperatorInfo(string name)
 
 void Util::loadOperators(string file_in) //TODO make dependent on the RuleSet?
 {
-    vector<shared_ptr<Rule>> rules;
     ifstream file(file_in);
     if (!file)
     {
@@ -63,6 +62,16 @@ void Util::loadOperators(string file_in) //TODO make dependent on the RuleSet?
     }
     file.close();
 }
+
+void Util::loadOperators(map<string, int> ops)
+{
+    map<string, int>::iterator itr;
+    for (itr = ops.begin(); itr != ops.end(); ++itr)
+    {
+        operatorsInfo.insert(pair<string, OperatorNode *>(itr->first, new OperatorNode(itr->first, itr->second)));
+    }
+}
+
 shared_ptr<Rule> Util::loadRule(string rule)
 {
     vector<string> ruleVec = split(rule, "->", true);
@@ -196,4 +205,9 @@ bool Util::reduceConstants(shared_ptr<Node> n)
         }
     }
     return reduced;
+}
+
+int Util::getNoTokens(string expression)
+{
+    return split(expression, " ", true).size();
 }

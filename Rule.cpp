@@ -58,15 +58,16 @@ bool Rule::isAddedToMap(string var, shared_ptr<Node> n)
     }
 }
 
-void printMap()
+void printMap(std::map<string, shared_ptr<Node>> mapVars)
 {
     std::map<string, shared_ptr<Node>>::iterator itr;
     cout << "\nThe variables dictionary is : \n";
     cout << "\tKEY\tELEMENT\n";
-    for (itr = variables.begin(); itr != variables.end(); ++itr)
+    for (itr = mapVars.begin(); itr != mapVars.end(); ++itr)
     {
+        shared_ptr<ExpressionTree> etp = make_shared<ExpressionTree>(itr->second);
         cout << '\t' << itr->first
-             << '\t' << itr->second->d << '\n';
+             << '\t' << etp->prefix() << '\n';
     }
     cout << endl;
 }
@@ -105,6 +106,9 @@ bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
             else
                 return false;
         }
+		else {
+			return false;
+		}
     }
     //case 5: pattern node is a variable, expression a variable or a constant
     else
@@ -116,7 +120,7 @@ bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
 bool Rule::applyRule(shared_ptr<ExpressionTree> expression)
 {
     variables.clear();
-    return match(original->peek(), expression->peek());
+    return (match(original->peek(), expression->peek()));
 }
 
 bool Rule::match(shared_ptr<Node> P, shared_ptr<Node> T)
@@ -125,7 +129,9 @@ bool Rule::match(shared_ptr<Node> P, shared_ptr<Node> T)
     {
         cout << "Rule applied: " << originalStr << " -> " << replacementStr << "\n";
 
-        replacement = make_shared<ExpressionTree>(replacementStr); //TODO fix translating expressions, this is a workaround
+        replacement = make_shared<ExpressionTree>(replacementStr);
+
+        //printMap(variables);
 
         //replace the original tree with replacement tree
         shared_ptr<ExpressionTree> translated = replacement->translate(variables);
@@ -148,6 +154,7 @@ bool Rule::compare(shared_ptr<Node> P, shared_ptr<Node> U)
     //step 1: check for empty nodes
     if (!U || !P) //if any of the nodes are empty, the comparison came to end and they are the same
     {
+
         return true;
     }
 
@@ -164,7 +171,6 @@ bool Rule::compare(shared_ptr<Node> P, shared_ptr<Node> U)
             variables.clear(); //important: clear the mappings for this subtree since the matching was unsuccessful
             return false;
         }
-
     return true;
 }
 

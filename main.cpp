@@ -19,7 +19,8 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
 
     int changed = 0;
     int total = 0;
-    map<string, string> changedRules;
+    map<string, string> changedExpressions;
+    vector<string> notChanged;
 
     while (std::getline(file, str))
     {
@@ -27,7 +28,11 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
         if (ruleSet->applyAllRules(et))
         {
             changed++;
-            changedRules.insert(pair<string, string>(str, et->prefix()));
+            changedExpressions.insert(pair<string, string>(str, et->prefix()));
+        }
+        else
+        {
+            notChanged.push_back(et->prefix());
         }
         total++;
     }
@@ -39,7 +44,7 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
     ofs << "\nChanged expressions:\n";
 
     map<string, string>::iterator itr;
-    for (itr = changedRules.begin(); itr != changedRules.end(); ++itr)
+    for (itr = changedExpressions.begin(); itr != changedExpressions.end(); ++itr)
     {
         int diff = Util::split(itr->first, " ", true).size() - Util::split(itr->second, " ", true).size();
         string first = itr->first;
@@ -48,6 +53,12 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
         ofs << second << endl;
         ofs << diff << endl
             << endl;
+    }
+
+    ofs << "\nExpressions not changed:\n";
+    for (int i = 0; i < notChanged.size(); i++)
+    {
+        ofs << notChanged[i] << endl;
     }
 
     ofs << "\n\nCnt\t\tRule used" << endl;
@@ -68,5 +79,9 @@ int main()
     shared_ptr<RuleSet> trigonometric = Util::loadRulesFromFile("trigonometric.txt");
     shared_ptr<RuleSet> boolean_alg = Util::loadRulesFromFile("boolean.txt");
 
-    statistics(boolean_alg, "expressions/BoolExample.txt");
+    // statistics(boolean_alg, "expressions/BoolExample.txt");
+
+    shared_ptr<RuleSet> at = Util::loadRulesFromFile("arithm_trig.txt");
+
+    statistics(at, "tryThis.txt");
 }
