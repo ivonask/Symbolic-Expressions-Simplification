@@ -1,12 +1,14 @@
 ﻿#include "ECFSimplificator.hpp"
 #include "Util.hpp"
 
-ECFSimplificator::ECFSimplificator(std::string rulesPath)
+ECFSimplificator::ECFSimplificator(std::string rulesPath, StateP state)
 {
-	this->rules = Util::loadRulesFromFile(rulesPath);
+	loadOperators(state);
+	this->rules = make_shared<RuleSet>(rulesPath);
 }
 
-std::string getTreeTrimmed(std::string inputTree) {
+std::string getTreeTrimmed(std::string inputTree)
+{
 	int pos = inputTree.find(">");
 	inputTree = inputTree.substr(pos + 1);
 
@@ -15,17 +17,20 @@ std::string getTreeTrimmed(std::string inputTree) {
 	return inputTree;
 }
 
-std::string getTreeFull(std::string inputTree) {
+std::string getTreeFull(std::string inputTree)
+{
 	return "<Tree size=\"" + std::to_string(Util::getNoTokens(inputTree)) + "\">" + inputTree + "</Tree>";
 }
 
-bool isReducible(shared_ptr<Node> n) {
+bool isReducible(shared_ptr<Node> n)
+{
 	bool toReduce = true;
 	if (Util::isOperatorLoaded(n->d))
 	{
 		for (int i = 0; i < n->chlidren.size(); i++)
 		{
-			if (Util::isOperatorLoaded(n->chlidren[i]->d)) {
+			if (Util::isOperatorLoaded(n->chlidren[i]->d))
+			{
 				toReduce = isReducible(n->chlidren[i]) && toReduce;
 			}
 			else if (!ExpressionTree::isConstant(n->chlidren[i]->d))
@@ -37,13 +42,16 @@ bool isReducible(shared_ptr<Node> n) {
 		}
 		return toReduce;
 	}
-	else if (ExpressionTree::isConstant(n->d)) {
+	else if (ExpressionTree::isConstant(n->d))
+	{
 		return true && toReduce;
 	}
-	else return false;
+	else
+		return false;
 }
 
-bool reduce(shared_ptr<Node> n, Tree::Tree* tree) {
+bool reduce(shared_ptr<Node> n, Tree::Tree *tree)
+{
 	bool reduced = false;
 	if (n != NULL)
 	{
@@ -53,7 +61,7 @@ bool reduce(shared_ptr<Node> n, Tree::Tree* tree) {
 			cout << "Reducing expression " << subTree->prefix() << endl;
 
 			XMLNode xTree = XMLNode::parseString(getTreeFull(subTree->prefix()).c_str());
-			Tree::Tree* newTree = tree->copy();
+			Tree::Tree *newTree = tree->copy();
 			newTree->read(xTree);
 			double result;
 			newTree->execute(&result);
@@ -85,7 +93,8 @@ bool reduce(shared_ptr<Node> n, Tree::Tree* tree) {
 
 		else if (n->chlidren.size() > 0)
 		{
-			for (int i = 0; i < n->chlidren.size(); i++) {
+			for (int i = 0; i < n->chlidren.size(); i++)
+			{
 				reduced = reduce(n->chlidren[i], tree) || reduced;
 			}
 		}
@@ -93,8 +102,7 @@ bool reduce(shared_ptr<Node> n, Tree::Tree* tree) {
 	return reduced;
 }
 
-
-bool ECFSimplificator::reduceConstants(Tree::Tree* tree)
+bool ECFSimplificator::reduceConstants(Tree::Tree *tree)
 {
 	std::string izraz = getTreeTrimmed(tree->toString());
 	shared_ptr<ExpressionTree> wholeTree = make_shared<ExpressionTree>(izraz);
@@ -108,15 +116,18 @@ bool ECFSimplificator::reduceConstants(Tree::Tree* tree)
 	tree->read(xTree);
 	return reduced;
 }
-void ECFSimplificator::loadOperators(StateP state) {
-	Tree::Tree* tree = (Tree::Tree*) state->getGenotypes().at(0).get();
+void ECFSimplificator::loadOperators(StateP state)
+{
+	Tree::Tree *tree = (Tree::Tree *)state->getGenotypes().at(0).get();
 
 	// izlistaj sve koristene funkcije
 	std::map<std::string, Tree::PrimitiveP>::iterator it = tree->primitiveSet_->mAllPrimitives_.begin();
 	std::map<std::string, int> operatorsMap;
-	while (it != tree->primitiveSet_->mAllPrimitives_.end()) {
+	while (it != tree->primitiveSet_->mAllPrimitives_.end())
+	{
 		Tree::PrimitiveP func;
-		if (func = tree->primitiveSet_->getFunctionByName(it->first)) {
+		if (func = tree->primitiveSet_->getFunctionByName(it->first))
+		{
 			cout << func->getName();
 			cout << "\t" << func->getNumberOfArguments() << endl;
 
@@ -128,12 +139,13 @@ void ECFSimplificator::loadOperators(StateP state) {
 	Util::loadOperators(operatorsMap);
 }
 
-void ECFSimplificator::simplify(Tree::Tree* tree) {
+void ECFSimplificator::simplify(Tree::Tree *tree)
+{
 
 	reduceConstants(tree);
 
 	std::string treeStr = getTreeTrimmed(tree->toString());
-	std::shared_ptr<ExpressionTree> et = make_shared <ExpressionTree>(treeStr);
+	std::shared_ptr<ExpressionTree> et = make_shared<ExpressionTree>(treeStr);
 
 	this->rules->applyAllRules(et);
 

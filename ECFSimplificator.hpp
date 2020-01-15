@@ -19,7 +19,7 @@ public:
     bool reduceConstants(Tree::Tree* tree);
     void loadOperators(StateP state);
 
-    ECFSimplificator(std::string rulesPath);
+    ECFSimplificator(std::string rulesPath, StateP state);
 };
 
 #endif //EcfSimplificator_h
