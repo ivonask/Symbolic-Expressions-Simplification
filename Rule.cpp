@@ -106,9 +106,10 @@ bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
             else
                 return false;
         }
-		else {
-			return false;
-		}
+        else
+        {
+            return false;
+        }
     }
     //case 5: pattern node is a variable, expression a variable or a constant
     else

@@ -136,9 +136,11 @@ void ExpressionTree::translateNode(shared_ptr<Node> n, map<string, shared_ptr<No
         shared_ptr<Node> newNode(it->second);
         *n = *newNode;
     }
+	else {
 
-    for (int i = 0; i < n->chlidren.size(); i++)
-        translateNode(n->chlidren[i], variables);
+		for (int i = 0; i < n->chlidren.size(); i++)
+			translateNode(n->chlidren[i], variables);
+	}
 }
 
 shared_ptr<ExpressionTree> ExpressionTree::translate(map<string, shared_ptr<Node>> variables)
@@ -151,6 +153,7 @@ shared_ptr<ExpressionTree> ExpressionTree::translate(map<string, shared_ptr<Node
         std::map<string, shared_ptr<Node>>::iterator it = variables.find(top->node->d);
 
         translatedTree = make_shared<ExpressionTree>(it->second);
+		return translatedTree;
     }
     else
     {

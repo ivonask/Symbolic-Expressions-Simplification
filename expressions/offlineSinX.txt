@@ -51,3 +51,4 @@
 - X sin - * * * sin 1 sin X X - X X X 
 - X sin - - X X X 
 - X sin * - * / sin X * X 1 sin - X X X 1 
+* / + sin X X X X 

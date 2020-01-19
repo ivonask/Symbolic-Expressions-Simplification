@@ -1,190 +1,234 @@
-Expressions simplified: 41/50
+Expressions simplified: 52/54
 
-Changed rules:
-* + + + / + - SL pt - pmin pavg / pmin + pavg MR + / pavg w * pos PAT pmin / + - SL pt - pmin PAT / * SL pmin + pavg MR + / / + * pmin pmin * pmin pmin + pmin age * MR - + w SL * PAT pavg pos pos dd - + dd / MR + - pmin MR pos + pt pavg PAT 
-* + + + / + - SL pt - pmin pavg / pmin + pavg MR + / pavg w * pos PAT pmin / + - SL pt - pmin PAT / * SL pmin + pavg MR + / / * pmin * D_2 pmin + pmin age * MR - + w SL * PAT pavg pos pos dd - + dd / MR + - pmin MR pos + pt pavg PAT 
-2
-
-* - pos * / + / PAT pt pos SL / - age MR + PAT SL * + - pmin SL + SL SL * pmin - age MR + * / pmin w / pos + SL dd pt * * + - dd MR * SL w - / pt dd pos dd / pos + SL pavg pos / w pmin + pos + * / - dd pt / pt pt / * pavg pmin pos PAT / / + pavg age * PAT w / * MR PAT * MR MR pos w 
-* - pos * / + / PAT pt pos SL / - age MR + PAT SL * + - pmin SL * D_2 SL * pmin - age MR + * / pmin w / pos + SL dd pt * * + - dd MR * SL w - / pt dd pos dd / pos + SL pavg pos / w pmin + pos + * - dd pt / * pavg pmin pos PAT / / + pavg age * PAT w / * MR PAT sqr MR pos w 
-5
-
-+ * / / - * SL dd MR + + SL MR pos * MR SL SL + pmin pmin - - + + + + dd age * pavg PAT * MR SL / pos + dd w pos w + pos / pmin w * / pos pt pos pt + SL SL - + pt - - / w pavg / pt pt / pt pavg + - - * pmin dd + pt MR pos pt - - * SL dd MR / pos w / pt pavg 
-+ * / / - * SL dd MR + + SL MR pos * MR SL SL * D_2 pmin - - + + + + dd age * pavg PAT * MR SL / pos + dd w pos w + pos / pmin w * D_2 SL - + pt - - / w pavg D_1 / pt pavg + - - * pmin dd + pt MR pos pt - - * SL dd MR / pos w / pt pavg 
-8
-
-+ + - - * / + pmin pmin / w w + - dd w / age w + / * pavg w MR + pt + MR pavg + dd + + + w MR pos pt + / pt PAT + MR pt * dd dd + + + pos / - pavg pt pos w - - - pt w + MR pt / dd - w w + pos pos / age w pos / age w / - pavg + + w / MR w + + MR w / PAT w SL 
-+ + - - * * D_2 pmin + - dd w / age w + / * pavg w MR + pt + MR pavg + dd + + + w MR pos pt + / pt PAT + MR pt sqr dd + + + pos / - pavg pt pos w - - - pt w + MR pt / dd D_0 + pos pos / age w pos / age w / - pavg + + w / MR w + + MR w / PAT w SL 
+Changed expressions:
+* - X sin - / * 1 - 1 1 * sin D_0.693777 / D_-0.469283 X X 1 
+- X sin - / D_0 * D_0.639446 / D_-0.469283 X X 
 7
 
-+ + - pos + / dd w - pos SL dd * / * pmin SL - SL / SL pt pos MR - pos - pos * pmin dd pos - pt age - - - * PAT pmin * dd SL / + w pt / SL pt + + / PAT SL / dd PAT * age * age PAT / / / PAT MR + + w w pos SL w 
-+ + - pos + / dd w - pos SL dd * / * pmin SL - SL / SL pt pos MR - pos - pos * pmin dd pos - pt age - - - * PAT pmin * dd SL / + w pt / SL pt + + / PAT SL / dd PAT * age * age PAT / / / PAT MR + * D_2 w pos SL w 
-0
-
-+ + - pos dd * / * / SL pavg - dd MR pos pos MR - pos pt + SL MR * pos - + / SL MR / pmin w - - pt pavg - SL MR + - pmin pt dd + * / * / + MR PAT - MR pt / pos pmin pos dd - pos pos MR pos - MR SL - pos * pos PAT - pavg PAT / / + MR PAT - MR pt - * PAT PAT pos pavg pos + PAT * pmin pmin 
-+ + - pos dd * / * / SL pavg - dd MR pos pos MR - pos pt + SL MR * pos - + / SL MR / pmin w - - pt pavg - SL MR + - pmin pt dd + * / * / + MR PAT - MR pt / pos pmin pos dd - pos pos MR pos - MR SL - pos * pos PAT - pavg PAT / / + MR PAT - MR pt - sqr PAT pos pavg pos + PAT sqr pmin 
-2
-
-+ + / + + - / dd MR pos pt + + pavg w / dd w * + pos dd / PAT w / * pmin pmin / pt pmin + pt MR + * PAT / pt SL / dd w + - / pos - pmin SL * / pos SL pos dd + / age pavg / PAT w + pos pos - MR SL * + pos MR pos pmin / pos SL pos dd * SL dd 
-+ + / + + - / dd MR pos pt + + pavg w / dd w * + pos dd / PAT w / sqr pmin / pt pmin + pt MR + * PAT / pt SL / dd w + - / pos - pmin SL * / pos SL pos dd + / age pavg / PAT w + pos pos - MR SL * + pos MR pos pmin / pos SL pos dd * SL dd 
-1
-
-+ + / pos / pos SL * pt pt / pos / age pt - MR - pmin MR + pmin - pos + - PAT MR pos SL pt + / SL + / - - pmin PAT - pmin MR + pt pos pt * * / age pt - dd pmin - / pt dd - pmin w pmin 
-+ + / pos / pos SL sqr pt / pos / age pt - MR - pmin MR + pmin - pos + - PAT MR pos SL pt + / SL + / - - pmin PAT - pmin MR + pt pos pt * * / age pt - dd pmin - / pt dd - pmin w pmin 
-1
-
-+ + SL + pmin + - / pos pmin / PAT dd * pos pmin pos w / pos + PAT pmin * * SL SL pos SL - + + SL pmin + pos + / pt dd pmin - / SL PAT pt MR 
-+ + SL + pmin + - / pos pmin / PAT dd * pos pmin pos w / pos + PAT pmin * sqr SL pos SL - + + SL pmin + pos + / pt dd pmin - / SL PAT pt MR 
-1
-
-+ + pos * - * pmin + dd dd + age + age age pos - - dd PAT * age w + - - + + SL pavg - pmin pt + * pavg pmin * pavg pmin pos - * age MR pos pt - * / * SL SL / pt age / - MR PAT pos pt * + - pt pmin MR * + pt pt * age w * pos * pos + pt pt + MR - MR dd / - + + pos w age - / MR PAT pos dd pos - - dd PAT + w PAT - / * pmin * MR pavg pavg + pt + pos age pt 
-+ + pos * - * pmin * D_2 dd * D_3 age pos - - dd PAT * age w + - - + + SL pavg - pmin pt * pavg * D_2 pmin pos - * age MR pos pt - * / sqr SL / pt age / - MR PAT pos pt * + - pt pmin MR * * D_2 pt * age w * pos * pos * D_2 pt + MR - MR dd / - + + pos w age - / MR PAT pos dd pos - - dd PAT + w PAT - / * pmin * MR pavg pavg + pt + pos age pt 
-5
-
-+ - * - * + SL pmin + + PAT PAT pavg + + MR pt pmin + dd - / + SL SL * pmin pmin pos + MR pt + SL + + / MR / pmin age * - PAT SL SL * + + SL pmin * MR SL * + w pavg - pt pmin pos + PAT - / / - pavg MR / w pavg + + w w + PAT w pos * * pmin dd * MR w 
-+ - * - * + SL pmin + * D_2 PAT pavg + + MR pt pmin + dd - / * D_2 SL sqr pmin pos + MR pt + SL + + / MR / pmin age * - PAT SL SL * + + SL pmin * MR SL * + w pavg - pt pmin pos + PAT - / / - pavg MR / w pavg + * D_2 w + PAT w pos * * pmin dd * MR w 
-1
-
-+ - - + pos - SL PAT + + / pmin w pmin / pos pavg / PAT dd pos pos + pos MR / dd pavg pt + pos + + / + SL pmin + SL PAT * + pmin SL / pmin pmin + SL + - dd pavg pmin pmin 
-+ - - + pos - SL PAT + + / pmin w pmin / pos pavg / PAT dd pos pos + pos MR / dd pavg pt + pos + + / + SL pmin + SL PAT + pmin SL + SL + - dd pavg pmin pmin 
+* / + sin X X X X 
++ sin X X 
 4
 
-+ - - pos - / PAT / PAT pavg * + pmin SL - MR dd + - pos pavg / - pavg pmin * w w pos / - pt age / PAT pavg - - pos pos / MR pt - + pos SL + w dd * pmin + pt pavg + * dd + + pmin pmin / PAT w * + * age age pos pmin / pos w pos PAT - pos * - PAT dd pos / pt w - - / + pos MR / pt age - pos age * w pt + / - pavg age pos age + + MR PAT - PAT age + pmin + / * pmin MR * w dd dd 
-+ - - pos - / PAT / PAT pavg * + pmin SL - MR dd + - pos pavg / - pavg pmin sqr w pos / - pt age / PAT pavg - - pos pos / MR pt - + pos SL + w dd * pmin + pt pavg + * dd + * D_2 pmin / PAT w * + sqr age pos pmin / pos w pos PAT - pos * - PAT dd pos / pt w - - / + pos MR / pt age - pos age * w pt + / - pavg age pos age + + MR PAT - PAT age + pmin + / * pmin MR * w dd dd 
-2
-
-+ - / * + / pos pmin pos w pos SL + / pos pt * age SL * + dd pmin - PAT PAT * MR pos w - + pos pt MR + - - dd MR - pt pmin * pmin pos + dd SL pos + + - pos pos pmin / pos pmin pos w / * dd pos pmin pos SL pos * - - dd MR - pt pmin + pos SL pos pmin 
-+ - / * + / pos pmin pos w pos SL / pos pt * age SL * MR pos w - + pos pt MR + - - dd MR - pt pmin * pmin pos + dd SL pos + + - pos pos pmin / pos pmin pos w / * dd pos pmin pos SL pos * - - dd MR - pt pmin + pos SL pos pmin 
-8
-
-+ - / / + w pmin w + pos * + PAT pmin w pos * w pt / - pos dd w * - / / MR w pos MR * PAT + pavg age * - pos age w MR - - + * - / SL pavg / pavg dd SL dd - - MR PAT + pmin pmin pt 
-+ - / / + w pmin w + pos * + PAT pmin w pos * w pt / - pos dd w * - / / MR w pos MR * PAT + pavg age * - pos age w MR - - + * - / SL pavg / pavg dd SL dd - - MR PAT * D_2 pmin pt 
-0
-
-+ - pos * * w + pt w * pmin / + MR w + MR pt * + / * + SL pmin / pt pt pos pos w / + / SL age + SL pmin * - pt PAT + MR pt - - + pos pt MR / pos SL age pos + pmin - dd PAT pos * * / + MR w / dd age pmin * / - MR age - dd pt / + MR * w PAT + age + SL pt 
-+ - pos * * w + pt w * pmin / + MR w + MR pt * + / + SL pmin pos pos w / + / SL age + SL pmin * - pt PAT + MR pt - - + pos pt MR / pos SL age pos + pmin - dd PAT pos * * / + MR w / dd age pmin * / - MR age - dd pt / + MR * w PAT + age + SL pt 
++ * * 1 1 X sin X 
++ X sin X 
 4
 
-+ - pos + - + - SL PAT * pmin pavg + + PAT MR - pt dd * + + dd dd pos pmin + dd + w pmin * pos - / - SL PAT * pt w / * dd w SL - / SL / age / MR dd - pos pos dd - / SL pavg SL / + / dd - SL PAT pos MR / PAT / age SL 
-+ - pos + - + - SL PAT * pmin pavg + + PAT MR - pt dd * + * D_2 dd pos pmin + dd + w pmin * pos - / - SL PAT * pt w / * dd w SL - / SL / age / MR dd - pos pos dd - / SL pavg SL / + / dd - SL PAT pos MR / PAT / age SL 
-0
-
-+ - pos + pos pos dd pos + w - pmin pt / - - - pos dd + PAT pt - - SL pt pos w pos / + dd dd w / * + pos MR + dd pt + / pavg pmin / pavg pmin pos pos + pavg SL * / + * pos pos dd pos pos SL - * / pavg dd / pt pt MR + - * / dd w - PAT dd dd * - * pt PAT pos MR + age SL / + / * dd pmin - PAT pavg / + age + age MR pos w + pos + + pmin dd / MR dd - * / pavg dd / pt pt MR 
-+ - pos + pos pos dd pos + w - pmin pt / - - - pos dd + PAT pt - - SL pt pos w pos / * D_2 dd w / * + pos MR + dd pt * D_2 / pavg pmin pos pos + pavg SL * / + * pos pos dd pos pos SL - / pavg dd MR + - * / dd w - PAT dd dd * - * pt PAT pos MR + age SL / + / * dd pmin - PAT pavg / + age + age MR pos w + pos + + pmin dd / MR dd - / pavg dd MR 
-10
-
-+ - pos - * + * pmin dd * age pmin - - pmin w - age dd - pos * pt pt * + dd dd / dd w + / + * - pavg dd pos SL + age / pavg MR pos / pmin age - pos * + MR pmin * dd pt pos + * MR pt SL + / - * + dd dd - MR pmin / + age pmin / pt pos dd + - pos SL * SL / pt pmin pos - - MR dd age * - * SL dd pos * MR - age pmin SL 
-+ - pos - * + * pmin dd * age pmin - - pmin w - age dd - pos sqr pt * * D_2 dd / dd w + / + * - pavg dd pos SL + age / pavg MR pos / pmin age - pos * + MR pmin * dd pt pos + * MR pt SL + / - * * D_2 dd - MR pmin / + age pmin / pt pos dd + - pos SL * SL / pt pmin pos - - MR dd age * - * SL dd pos * MR - age pmin SL 
-1
-
-+ / + * - - * SL SL pos PAT * * dd pt - SL SL + - * MR SL + w MR * pos SL PAT + * / + pt MR PAT / * dd pt - SL MR * pos + dd pmin * + SL pmin + dd PAT - * + / + pt MR pavg w * pos + MR pavg * / pavg pmin / pt pmin / pos SL + / pos PAT pos PAT - * MR PAT pmin / - pos dd MR * / * + SL pt - SL PAT * / / MR PAT + MR PAT + w dd pos pos + MR pavg 
-+ / + * - sqr SL pos PAT + - * MR SL + w MR * pos SL PAT + * / + pt MR PAT / * dd pt - SL MR * pos + dd pmin * + SL pmin + dd PAT - * + / + pt MR pavg w * pos + MR pavg * / pavg pmin / pt pmin / pos SL + D_1 - * MR PAT pmin / - pos dd MR * / * + SL pt - SL PAT * / / MR PAT + MR PAT + w dd pos pos + MR pavg 
-13
-
-+ / - + pmin + * PAT dd + pavg w MR + * pos - + PAT pt * SL w + age pmin pos + * pos dd / PAT MR w + / - - * - w SL * SL SL MR MR pos * - + pt pt pos dd + SL / MR pavg + - + + - PAT MR + w SL - pos SL - pt pmin pos PAT + + pos pos pmin pos - w pavg + pmin + * PAT dd + pavg w 
-+ / - + pmin + * PAT dd + pavg w MR + * pos - + PAT pt * SL w + age pmin pos + * pos dd / PAT MR w + / - - * - w SL sqr SL MR MR pos * - * D_2 pt pos dd + SL / MR pavg + - + + - PAT MR + w SL - pos SL - pt pmin pos PAT + + pos pos pmin pos - w pavg + pmin + * PAT dd + pavg w 
-1
-
-+ pos * - / SL PAT MR + / SL PAT / SL PAT + + pos * pos dd - - SL pt pos PAT - - + - SL pt pmin + pos MR + pt pavg - / MR SL * + dd pavg + pmin w / - - - - pmin MR * MR w pos pavg * dd + pmin w * * - / pavg MR MR - * MR MR - pmin MR + pos MR + pt pmin 
-+ pos * - / SL PAT MR * D_2 / SL PAT + + pos * pos dd - - SL pt pos PAT - - + - SL pt pmin + pos MR + pt pavg - / MR SL * + dd pavg + pmin w / - - - - pmin MR * MR w pos pavg * dd + pmin w * * - / pavg MR MR - sqr MR - pmin MR + pos MR + pt pmin 
-3
-
-+ pos + * * / + pavg pmin PAT + + dd pmin + pavg MR + - SL MR - pos pavg - pt pmin / pos + / pt w - pmin dd / * pos pmin - dd pt * pos pmin + w pmin - pos + - / + dd dd / w pmin pos + dd age - * - dd PAT + SL SL pos + pt pavg + - pos pos SL + - SL MR - pos pavg - pt pmin / * dd + pmin SL * + / pt SL / MR dd + + SL SL - PAT pmin 
-+ pos + * * / + pavg pmin PAT + + dd pmin + pavg MR + - SL MR - pos pavg - pt pmin / pos + / pt w - pmin dd / * pos pmin - dd pt * pos pmin + w pmin - pos + - / * D_2 dd / w pmin pos + dd age - * - dd PAT * D_2 SL pos + pt pavg + - pos pos SL + - SL MR - pos pavg - pt pmin / * dd + pmin SL * + / pt SL / MR dd + * D_2 SL - PAT pmin 
-0
-
-+ pos + - - + age * dd pmin - + w pt pos pavg / - / dd w pos pavg * * MR w - PAT dd pos + w - * SL SL + dd MR - + pos / - / pavg w pos SL - + SL MR pavg pos - - / dd w pos SL pos pos pmin MR 
-+ pos + - - + age * dd pmin - + w pt pos pavg / - / dd w pos pavg * * MR w - PAT dd pos + w - sqr SL + dd MR - + pos / - / pavg w pos SL - + SL MR pavg pos - - / dd w pos SL pos pos pmin MR 
-1
-
-- + * + pavg * pos / age pavg * + w w * PAT dd + - - - pmin MR * MR pmin pos pos pt + + pos dd - w age + * pmin MR - pmin pavg * + - * * PAT pavg pos pt - pos dd / age pavg SL * * * * PAT pavg pos pt - pos dd * dd pmin * / - pt pt - dd w * + dd PAT pos pavg + / / * SL pmin + w w - - + + age MR pmin * w pos w + / SL pos pavg / pos PAT pos MR + + * - / age SL + SL pmin / * dd pmin pmin / + pos dd - SL SL SL * - - pavg / pmin w / * PAT pavg / MR w age 
-- + * + pavg * pos / age pavg * * D_2 w * PAT dd + - - - pmin MR * MR pmin pos pos pt + + pos dd - w age + * pmin MR - pmin pavg * + - * * PAT pavg pos pt - pos dd / age pavg SL * * * * PAT pavg pos pt - pos dd * dd pmin * / D_0 - dd w * + dd PAT pos pavg + / / * SL pmin * D_2 w - - + + age MR pmin * w pos w + / SL pos pavg / pos PAT pos MR + + * - / age SL + SL pmin / * dd pmin pmin / pos dd SL * - - pavg / pmin w / * PAT pavg / MR w age 
-6
-
-- + * + pos w * - + w pavg pos pmin pos + PAT SL pos * - + SL age + dd MR * * PAT PAT PAT + + / + PAT SL - SL pmin + pos SL pos pmin - pmin / / + MR MR PAT age pos pos pos + / - MR pmin pos MR * pos w + pt MR 
-- + * + pos w * - + w pavg pos pmin pos + PAT SL pos * - + SL age + dd MR * sqr PAT PAT + + / + PAT SL - SL pmin + pos SL pos pmin - pmin / / * D_2 MR PAT age pos pos pos + / - MR pmin pos MR * pos w + pt MR 
-1
-
-- + * / PAT PAT + pos + / SL MR / SL MR - pos pmin w + + PAT SL pos / / + MR SL pos MR + / MR pt - age age * w + MR pt 
-- + + pos * D_2 / SL MR - pos pmin w + + PAT SL pos / / + MR SL pos MR / MR pt * w + MR pt 
-10
-
-- + + - + / dd w * dd dd - + + w MR pos pt pos pos age - dd pt - - - * + pmin pmin + dd pmin pos - SL w / * * PAT SL - MR PAT - pos SL + dd dd pos * pos + pt MR / + PAT MR - SL SL pos / / + * age * pmin PAT w pos - pos MR SL - + / dd w - * w age + age w + + + w MR / dd MR pos pos SL 
-- + + - + / dd w sqr dd - + + w MR pos pt pos pos age - dd pt - - - * * D_2 pmin + dd pmin pos - SL w / * * PAT SL - MR PAT - pos SL * D_2 dd pos * pos + pt MR / + PAT MR D_0 pos / / + * age * pmin PAT w pos - pos MR SL - + / dd w - * w age + age w + + + w MR / dd MR pos pos SL 
-3
-
-- + + / pos * pavg pt pos * * w pt pos w + * pavg + dd PAT / / pos pavg + pmin PAT pos * dd dd + - + + - PAT PAT * dd SL * pavg + PAT PAT + pos * pmin MR / / pt PAT + w MR pos * pos pmin - + PAT dd - pt dd - / + pmin pmin - / + dd * age pmin + * PAT SL pmin / pos * pmin MR MR / pos dd pos + - pt dd - / dd PAT / dd dd 
-- + + / pos * pavg pt pos * * w pt pos w + * pavg + dd PAT / / pos pavg + pmin PAT pos sqr dd + - + * dd SL * pavg * D_2 PAT + pos * pmin MR / / pt PAT + w MR pos * pos pmin - + PAT dd - pt dd - / * D_2 pmin - / + dd * age pmin + * PAT SL pmin / pos * pmin MR MR / pos dd pos + - pt dd - / dd PAT D_1 
-7
-
-- + + pos * + pt * w w + / w pmin * pmin w + / pos dd * - w SL pos age - * dd SL / - SL dd w + + + - + SL w * MR pt pos - PAT w - * PAT SL pos MR + pos * + pmin dd * age PAT / / - pmin dd w + * pavg w + pmin pt - * - MR pmin pavg + + pos - pmin * w pavg - / * MR pt age - * pt pt + pavg dd pos * + / MR MR pos pmin - pos dd / pt pmin 
-- + + pos * + pt sqr w + / w pmin * pmin w + / pos dd * - w SL pos age - * dd SL / - SL dd w + + + - + SL w * MR pt pos - PAT w - * PAT SL pos MR + pos * + pmin dd * age PAT / / - pmin dd w + * pavg w + pmin pt - * - MR pmin pavg + + pos - pmin * w pavg - / * MR pt age - sqr pt + pavg dd pos * + D_1 pos pmin - pos dd / pt pmin 
++ + - 1 1 sin X X 
++ sin X X 
 4
 
-- + / * pos + w dd pos pos PAT w pos - * pos + pmin dd pos + dd pmin * + pt + MR dd + pos PAT / pt pmin + / - pos pos - pavg SL * * SL w pos PAT * MR MR + + pmin dd * / * PAT pavg * * SL w pos PAT / SL + pos MR / dd MR 
-- + / * pos + w dd pos pos PAT w pos - * pos + pmin dd pos + dd pmin * + pt + MR dd + pos PAT / pt pmin + / - pos pos - pavg SL * * SL w pos PAT sqr MR + + pmin dd * / * PAT pavg * * SL w pos PAT / SL + pos MR / dd MR 
-1
-
-- + pos + - * / SL w + MR SL / age * MR SL + / * pmin age MR / + PAT dd / age age + + * SL age - pmin age / + PAT dd + pt age - / - * - / age pmin pos pmin SL * pmin * age age + + + / SL age pos SL pos SL - SL / MR MR + + * / - age pmin SL age / + w dd / w age * - - * dd dd + dd pt pos + age MR / * + pmin age + age pmin + pos age / age pavg 
-- + pos + - * / SL w + MR SL / age * MR SL + / * pmin age MR + PAT dd + + * SL age - pmin age / + PAT dd + pt age - / - * - / age pmin pos pmin SL * pmin sqr age + + + / SL age pos SL pos SL - SL D_1 + + * / - age pmin SL age / + w dd / w age * - - sqr dd + dd pt pos + age MR / * + pmin age + age pmin + pos age / age pavg 
-8
-
-- + pos - + * pos dd pos SL dd pos * dd pmin / pos - * dd pos PAT age + * w pmin + pt MR + + * + + / dd dd pos w pos w / pos pos SL + / PAT pt / pmin MR + - MR pos * dd PAT pt + + / / / MR pt / dd w * pos age + w MR * + + pmin pavg / dd dd - / MR dd + pmin age - / / * pt pmin pos w + pos dd * PAT pmin - pos * dd PAT + + pt pmin * pavg age 
-- + pos - + * pos dd pos SL dd pos * dd pmin / pos - * dd pos PAT age + * w pmin + pt MR + + * + + D_1 pos w pos w / pos pos SL + / PAT pt / pmin MR + - MR pos * dd PAT pt + + / / / MR pt / dd w * pos age + w MR * + + pmin pavg D_1 - / MR dd + pmin age - / / * pt pmin pos w + pos dd * PAT pmin - pos * dd PAT + + pt pmin * pavg age 
-4
-
-- + pos pos PAT - age * pmin pt - + - - - pos PAT - pmin SL + - PAT MR - pavg pt * - + dd w * w MR + + pmin pmin / pmin pmin pmin + / * - + PAT pt SL * + PAT pavg * pmin SL * + + pmin PAT * w w - pos MR - pavg w - + + / dd w pmin + * SL dd + dd SL - - age pmin / PAT + MR age 
-- + pos pos PAT - age * pmin pt - + - - - pos PAT - pmin SL + - PAT MR - pavg pt * - + dd w * w MR + * D_2 pmin D_1 pmin + / * - + PAT pt SL * + PAT pavg * pmin SL * + + pmin PAT sqr w - pos MR - pavg w - + + / dd w pmin + * SL dd + dd SL - - age pmin / PAT + MR age 
-3
-
-- - + / pos * + dd dd + dd pmin w * + pmin pos - SL pt pos + * dd dd + age age pos pos SL - pos + pt MR - / - MR - / pmin w / dd SL - SL pt * + / - pt PAT + SL PAT / - MR age pt / / - pt w / age PAT + pmin PAT 
-- - + / pos * * D_2 dd + dd pmin w * + pmin pos - SL pt pos + sqr dd * D_2 age pos pos SL - pos + pt MR - / - MR - / pmin w / dd SL - SL pt * + / - pt PAT + SL PAT / - MR age pt / / - pt w / age PAT + pmin PAT 
-1
-
-- - + pos pmin - pos dd * w MR pos pos / - pt pmin / + pmin pmin + pt MR / / + MR - + pos dd MR pos pmin pos / * pmin pmin * w MR / * dd + - pos pt * PAT pt - MR pos age / pos age w 
-- - + pos pmin - pos dd * w MR pos pos / - pt pmin / * D_2 pmin + pt MR / / + MR - + pos dd MR pos pmin pos / sqr pmin * w MR / * dd + - pos pt * PAT pt - MR pos age / pos age w 
-1
-
-- - - / pt * dd * age pavg / age MR * / + pos * age pavg dd pos * pos dd pos pavg * - pos - pavg w - * dd pmin / pt w / - / PAT w - MR SL - + pavg dd + MR SL + - + / + / pt w PAT PAT - pt age - - / * dd dd / pavg pmin / age MR + pos * age pavg + pt - MR age pos / - - / PAT w - MR pmin dd * - pos age pos MR - pavg pmin 
-- - - / pt * dd * age pavg / age MR * / + pos * age pavg dd pos * pos dd pos pavg * - pos - pavg w - * dd pmin / pt w / - / PAT w - MR SL - + pavg dd + MR SL + - + / + / pt w PAT PAT - pt age - - / sqr dd / pavg pmin / age MR + pos * age pavg + pt - MR age pos / - - / PAT w - MR pmin dd * - pos age pos MR - pavg pmin 
-1
-
-- - - pos + + * PAT dd / pavg pmin / * dd dd / w pavg - * - pos PAT * dd dd pmin pos / pmin SL / - / / + pmin pmin * w SL dd / pt * * SL MR pos PAT pos * - pos PAT * dd dd dd + - + dd dd - - dd + - pt dd + PAT MR pt + pos - - / pt w * PAT age + / SL SL pos dd + * dd dd / pmin / dd SL 
-- - - pos + + * PAT dd / pavg pmin / sqr dd / w pavg - * - pos PAT sqr dd pmin pos / pmin SL / - / / * D_2 pmin * w SL dd / pt * * SL MR pos PAT pos * - pos PAT sqr dd dd + - * D_2 dd - - dd + - pt dd + PAT MR pt + pos - - / pt w * PAT age + D_1 pos dd + sqr dd / pmin / dd SL 
-6
-
-- - pos / PAT pos / w pmin - - pos * pavg + pt MR + pos * SL SL + / SL MR * pmin pavg + + pos / pavg w / SL - w pt + + / pavg w * pmin pmin pos * PAT SL pos + + + - / dd PAT pos pavg pos * PAT pmin - pos / age SL pos + pt w * * age - - MR SL pt pos w 
-- - pos / PAT pos / w pmin - - pos * pavg + pt MR + pos sqr SL + / SL MR * pmin pavg + + pos / pavg w / SL - w pt + + / pavg w sqr pmin pos * PAT SL pos + + + - / dd PAT pos pavg pos * PAT pmin - pos / age SL pos + pt w * * age - - MR SL pt pos w 
-2
-
-- / / dd + + MR pt - / - SL SL pos PAT / + PAT MR pos w / * + pos pos pavg * - PAT pavg + age pmin pos / / MR SL pos PAT - * + / MR dd - w dd - pos pt * pmin dd + - pos pt pavg pos PAT + pos / pos * + MR pt pos pavg / - / w pavg + MR pt * * pavg pmin - w pt * + + + MR pavg - age * dd pavg - / + MR pt dd / / pavg w pos w + * + / MR dd - w dd - pos pt * pmin dd * + / MR dd - w dd - pos pt * pmin dd 
-- / / dd + + MR pt - / D_0 pos PAT / + PAT MR pos w / * + pos pos pavg * - PAT pavg + age pmin pos / / MR SL pos PAT - * + / MR dd - w dd - pos pt * pmin dd + - pos pt pavg pos PAT + pos / pos * + MR pt pos pavg / - / w pavg + MR pt * * pavg pmin - w pt * + + + MR pavg - age * dd pavg - / + MR pt dd / / pavg w pos w * + / MR dd - w dd * D_2 - pos pt * pmin dd 
++ + sin X * sin - X X sin - cos X + / X 1 1 X 
++ sin X X 
 15
 
-/ + * - + * pmin * dd pmin * dd pmin - - w pavg - / w PAT pmin + + / / PAT SL w + pos SL + PAT w / - - dd SL PAT - - dd SL MR * * + - dd pavg - / pmin w PAT + MR / / age SL w pos SL pos pos + pos pos pt pos MR 
-/ + * - * + D_1 pmin * dd pmin - - w pavg - / w PAT pmin + + / / PAT SL w + pos SL + PAT w / - - dd SL PAT - - dd SL MR * * + - dd pavg - / pmin w PAT + MR / / age SL w pos SL pos pos + pos pos pt pos MR 
++ - X X + sin X X 
++ sin X X 
+4
+
++ X + - cos sin - X X 1 sin X 
++ X sin X 
+8
+
++ X sin * * 1 X 1 
++ X sin X 
+4
+
++ sin + - 1 1 X X 
++ sin X X 
+4
+
++ sin + X - X X X  
++ sin X X 
+5
+
++ sin X - X - X - * X 1 - X X 
++ sin X X 
+10
+
+- * 1 sin X - sin sin / sin - 1 1 cos sin D_0.216834 X 
++ sin X X 
+13
+
+- - X X - - - X X X sin X 
+- D_0 - - D_0 X sin X 
+4
+
+- - X sin - * - 1 1 * 1 D_-0.383587 / 1 / 1 X * / * * 1 X cos * sin 1 - D_-0.844783 1 - X * D_-0.468917 sin X sin / - sin sin 1 sin sin 1 * sin X / cos D_-0.748466 X 
+- + X sin / D_1 / D_1 X * / * X D_0.018464 - X * D_-0.468917 sin X sin / D_0 * sin X / D_0.732734 X 
+23
+
+- / X 1 * - * - X X * 1 D_0.156163 sin * 1 X / / / D_-0.936766 X - D_-0.416242 1 - sin X sin X 
+- X * - D_0 sin X / / / D_-0.936766 X D_-1.416242 D_0 
+16
+
+- X * 1 sin - - 1 X 1 
+- X sin - - D_1 X D_1 
 2
 
+- X * sin / X 1 - - * 1 X X 1 
+- X * sin X D_-1 
+8
+
+- X - * * X sin 1 * - / 1 cos D_-0.931578 sin sin 1 / * * 1 X - 1 1 / * X X * X 1 sin X 
+- X - * * X D_0.841471 * D_0.930631 / D_0 X sin X 
+20
+
+- X - * * sin * * 1 D_-0.867977 D_0.0857875 - / * X D_0.223487 * D_0.223487 X 1 sin D_0.233863 sin - X sin sin - X X 
+- X - * * D_-0.074393 - / * X D_0.223487 * D_0.223487 X D_1 D_0.231737 sin X 
+12
+
+- X - * - sin * 1 X sin X sin sin sin - X X * cos * sin - X X * cos X cos X sin X 
++ X sin X 
+27
+
+- X - - D_0.297037 D_0.297037 sin X 
++ X sin X 
+4
+
+- X - - X X sin X 
++ X sin X 
+4
+
+- X - sin * * * - D_0.737785 D_0.737785 sin D_-0.0226753 1 sin D_-0.0226753 sin X 
++ X sin X 
+13
+
+- X - sin - X * X 1 sin X 
++ X sin X 
+7
+
+- X / X - sin - X X / * 1 X sin X 
+- X / X - D_0 / X sin X 
+5
+
+- X / sin X - * * * sin D_0.111381 - D_-0.0858486 D_-0.0858486 sin cos 1 * - / 1 1 * D_-0.585559 X sin - 1 D_-0.844722 cos / - cos X cos X cos / X D_-0.0859096 
+- X / sin X - D_0 cos / D_0 cos / X D_-0.0859096 
+26
+
+- X sin * - * / sin X * X 1 sin - X X X 1 
++ X sin X 
+14
+
+- X sin - * * * sin 1 sin X X - X X X 
++ X sin X 
+12
+
+- X sin - * * / * 1 D_-0.109836 * D_-0.849483 X - / X X 1 D_0.414411 X 
++ X sin X 
+16
+
+- X sin - * / - 1 1 - * D_-0.680776 1 sin 1 * sin * X X - * D_0.325358 1 - X 1 X 
++ X sin X 
+24
+
+- X sin - - 1 1 * X 1 
++ X sin X 
+6
+
+- X sin - - X X X 
++ X sin X 
+4
+
+- X sin - - cos - * X 1 / X 1 1 X 
++ X sin X 
+11
+
+- X sin - - sin 1 sin 1 / X 1 
++ X sin X 
+8
+
+- X sin - - sin D_0.285012 sin D_0.285012 X 
++ X sin X 
+6
+
+- X sin - / - - 1 1 - X X - sin - X X - * 1 D_0.228797 * X X X 
+- X sin - / D_0 - D_0 - D_0.228797 * X X X 
+11
+
+- X sin - / - X X - X sin * D_0.692557 D_0.709525 X 
+- X sin - / D_0 - X D_0.471849 X 
+5
+
+- X sin - sin - * 1 X X X 
++ X sin X 
+7
+
+- X sin - sin - 1 1 X 
++ X sin X 
+5
+
+- X sin - sin - X X X 
++ X sin X 
+5
+
+- X sin - sin - sin * X 1 sin * X 1 X 
++ X sin X 
+11
+
+- X sin - sin sin sin - X X * X 1 
++ X sin X 
+9
+
+- sin X - * * / sin cos X X cos * cos X * 1 X / sin - 1 1 1 / X / sin - * X D_-0.515 cos X / sin - 1 1 - sin 1 * X D_-0.578051 
++ sin X / X / sin - * X D_-0.515 cos X / D_0 - D_0.841471 * X D_-0.578051 
+25
+
+- sin X - * X - X X X 
++ sin X X 
+6
+
+- sin X - - / 1 D_-0.0119327 / 1 D_-0.0119327 X 
++ sin X X 
+8
+
+- sin X - - X X X 
++ sin X X 
+4
+
+/ - X - / * D_-0.0673962 - cos X cos X sin 1 sin X 1 
++ X sin X 
+13
+
+/ - X sin - - 1 1 X 1 
++ X sin X 
+6
+
+
+Expressions not changed:
+- X sin - - cos - X - X D_1 D_0.540302 X 
+- X sin - - D_1 X D_1 
 
 
 Cnt		Rule used
-3		+ * X Y * X Z -> * X + Y Z
+0		+ * X Y * X Z -> * X + Y Z
 0		+ * Y X * Z X -> * X + Y Z
-25		+ X X -> * D_2 X
+0		+ X X -> * D_2 X
 0		+ * D_2 X X -> * D_3 X
-1		+ X * D_2 X -> * D_3 X
-27		* X X -> sqr X
-3		* X D_1 -> X
-2		* D_1 X -> X
-2		* X D_0 -> D_0
-0		* D_0 X -> D_0
-1		+ D_0 X -> X
-3		+ X D_0 -> X
-14		/ X X -> D_1
-8		- X X -> D_0
-1		- X D_0 -> X
-3		/ X D_1 -> X
+0		+ X * D_2 X -> * D_3 X
+11		* X D_1 -> X
+13		* D_1 X -> X
+6		* X D_0 -> D_0
+4		* D_0 X -> D_0
+4		+ D_0 X -> X
+2		+ X D_0 -> X
+1		/ X X -> D_1
+33		- X X -> D_0
+3		- X D_0 -> X
+6		/ X D_1 -> X
 0		+ X * Y X -> * + D_1 Y X
 0		+ X * X Y -> * + D_1 Y X
-1		+ * Y X X -> * + D_1 Y X
+0		+ * Y X X -> * + D_1 Y X
 0		+ * X Y X -> * + D_1 Y X
+1		/ * X Y Y -> X
+1		* / X Y Y -> X
+31		- X - D_0 Y -> + X Y 
+0		+ X - - D_1 Y D_1 -> - X Y
+0		- X - - D_1 Y D_1 -> + X Y
+20		sin - D_0 X -> - D_0 sin X
+0		+ * sin A cos B * cos A sin B -> sin + A B
+0		- * sin A cos B * cos A sin B -> sin - A B
+0		- * cos A cos B * sin A sin B -> cos + A B
+0		+ * cos A cos B * sin A sin B -> cos - A B
+0		* D_2 * sin A cos A -> sin * D_2 A
+0		sin D_0 -> D_0
+0		cos D_0 -> D_1

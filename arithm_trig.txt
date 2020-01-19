@@ -1,27 +1,32 @@
-+ * _X _Y * _X _Z->* _X + _Y _Z
-+ * _Y _X * _Z _X->* _X + _Y _Z
-+ _X _X->* D_2 _X
-+ * D_2 _X _X->* D_3 _X
-+ _X * D_2 _X->* D_3 _X
-* _X D_1->_X
-* D_1 _X->_X
-* _X D_0->D_0
-* D_0 _X->D_0
-+ D_0 _X->_X
-+ _X D_0->_X
-/ _X _X->D_1
-- _X _X->D_0
-- _X D_0->_X
-/ _X D_1->_X
-+ _X * _Y _X->* + D_1 _Y _X
-+ _X * _X _Y->* + D_1 _Y _X
-+ * _Y _X _X->* + D_1 _Y _X
-+ * _X _Y _X->* + D_1 _Y _X
-- _X - D_0 _Y->+ _X _Y 
-+ * sin _A_ cos _B_ * cos _A_ sin _B_->sin + _A_ _B_
-- * sin _A_ cos _B_ * cos _A_ sin _B_->sin - _A_ _B_
-- * cos _A_ cos _B_ * sin _A_ sin _B_->cos + _A_ _B_
-+ * cos _A_ cos _B_ * sin _A_ sin _B_->cos - _A_ _B_a
-* D_2 * sin _A_ cos _A_->sin * D_2 _A_
++ * X Y * X Z->* X + Y Z
++ * Y X * Z X->* X + Y Z
++ X X->* D_2 X
++ * D_2 X X->* D_3 X
++ X * D_2 X->* D_3 X
+* X D_1->X
+* D_1 X->X
+* X D_0->D_0
+* D_0 X->D_0
++ D_0 X->X
++ X D_0->X
+/ X X->D_1
+- X X->D_0
+- X D_0->X
+/ X D_1->X
++ X * Y X->* + D_1 Y X
++ X * X Y->* + D_1 Y X
++ * Y X X->* + D_1 Y X
++ * X Y X->* + D_1 Y X
+/ * X Y Y->X
+* / X Y Y->X
+- X - D_0 Y->+ X Y 
++ X - - D_1 Y D_1->- X Y
+- X - - D_1 Y D_1->+ X Y
+sin - D_0 X->- D_0 sin X
++ * sin A cos B * cos A sin B->sin + A B
+- * sin A cos B * cos A sin B->sin - A B
+- * cos A cos B * sin A sin B->cos + A B
++ * cos A cos B * sin A sin B->cos - A B
+* D_2 * sin A cos A->sin * D_2 A
 sin D_0->D_0
 cos D_0->D_1
