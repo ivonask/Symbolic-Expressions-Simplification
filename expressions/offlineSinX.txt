@@ -14,18 +14,15 @@
 - sin X - * X - X X X 
 - X sin - - cos - X - X 1 cos 1 X 
 - X / X - sin - X X / * 1 X sin X 
-- X sin - sin - X X X 
 - sin X - - X X X 
 - - X X - - - X X X sin X 
 - X sin - - 1 1 * X 1 
 - X sin - - sin 1 sin 1 / X 1 
 - sin X - - / 1 D_-0.0119327 / 1 D_-0.0119327 X 
 - X sin - / - X X - X sin * D_0.692557 D_0.709525 X 
-- X sin - - X X X 
 - * 1 sin X - sin sin / sin - 1 1 cos sin D_0.216834 X 
 - X sin - sin sin sin - X X * X 1 
 * - X sin - / * 1 - 1 1 * sin D_0.693777 / D_-0.469283 X X 1 
-- X sin - - X X X 
 - X * 1 sin - - 1 X 1 
 - X - sin * * * - D_0.737785 D_0.737785 sin D_-0.0226753 1 sin D_-0.0226753 sin X 
 - / X 1 * - * - X X * 1 D_0.156163 sin * 1 X / / / D_-0.936766 X - D_-0.416242 1 - sin X sin X 
@@ -35,7 +32,6 @@
 / - X - / * D_-0.0673962 - cos X cos X sin 1 sin X 1 
 - X sin - sin - X X X 
 - X sin - / - - 1 1 - X X - sin - X X - * 1 D_0.228797 * X X X 
-- X sin - - X X X 
 - X - sin - X * X 1 sin X 
 / - X sin - - 1 1 X 1 
 - X * sin / X 1 - - * 1 X X 1 

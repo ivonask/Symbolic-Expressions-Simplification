@@ -1,202 +1,207 @@
-Expressions simplified: 52/54
+Expressions simplified: 49/50
 
-Changed expressions:
+Rules successfully applied to:
 * - X sin - / * 1 - 1 1 * sin D_0.693777 / D_-0.469283 X X 1 
 - X sin - / D_0 * D_0.639446 / D_-0.469283 X X 
-7
-
-* / + sin X X X X 
-+ sin X X 
-4
+Shortened by 36.8421%
 
 + * * 1 1 X sin X 
 + X sin X 
-4
+Shortened by 50%
 
 + + - 1 1 sin X X 
 + sin X X 
-4
+Shortened by 50%
 
 + + sin X * sin - X X sin - cos X + / X 1 1 X 
 + sin X X 
-15
+Shortened by 78.9474%
 
 + - X X + sin X X 
 + sin X X 
-4
+Shortened by 50%
 
 + X + - cos sin - X X 1 sin X 
 + X sin X 
-8
+Shortened by 66.6667%
 
 + X sin * * 1 X 1 
 + X sin X 
-4
+Shortened by 50%
 
 + sin + - 1 1 X X 
 + sin X X 
-4
+Shortened by 50%
 
 + sin + X - X X X  
 + sin X X 
-5
+Shortened by 55.5556%
 
 + sin X - X - X - * X 1 - X X 
 + sin X X 
-10
+Shortened by 71.4286%
 
 - * 1 sin X - sin sin / sin - 1 1 cos sin D_0.216834 X 
-+ sin X X 
-13
+- sin X - D_0 X 
+Shortened by 64.7059%
 
 - - X X - - - X X X sin X 
 - D_0 - - D_0 X sin X 
-4
+Shortened by 33.3333%
 
 - - X sin - * - 1 1 * 1 D_-0.383587 / 1 / 1 X * / * * 1 X cos * sin 1 - D_-0.844783 1 - X * D_-0.468917 sin X sin / - sin sin 1 sin sin 1 * sin X / cos D_-0.748466 X 
-- + X sin / D_1 / D_1 X * / * X D_0.018464 - X * D_-0.468917 sin X sin / D_0 * sin X / D_0.732734 X 
-23
+- - X sin - D_0 / D_1 / D_1 X * / * X D_0.018464 - X * D_-0.468917 sin X sin / D_0 * sin X / D_0.732734 X 
+Shortened by 40.3846%
 
 - / X 1 * - * - X X * 1 D_0.156163 sin * 1 X / / / D_-0.936766 X - D_-0.416242 1 - sin X sin X 
 - X * - D_0 sin X / / / D_-0.936766 X D_-1.416242 D_0 
-16
+Shortened by 53.3333%
 
 - X * 1 sin - - 1 X 1 
 - X sin - - D_1 X D_1 
-2
+Shortened by 20%
 
 - X * sin / X 1 - - * 1 X X 1 
 - X * sin X D_-1 
-8
+Shortened by 57.1429%
 
 - X - * * X sin 1 * - / 1 cos D_-0.931578 sin sin 1 / * * 1 X - 1 1 / * X X * X 1 sin X 
-- X - * * X D_0.841471 * D_0.930631 / D_0 X sin X 
-20
+- X - * * X D_0.841471 * D_0.930631 / D_0 / sqr X X sin X 
+Shortened by 50%
 
 - X - * * sin * * 1 D_-0.867977 D_0.0857875 - / * X D_0.223487 * D_0.223487 X 1 sin D_0.233863 sin - X sin sin - X X 
 - X - * * D_-0.074393 - / * X D_0.223487 * D_0.223487 X D_1 D_0.231737 sin X 
-12
+Shortened by 40%
 
 - X - * - sin * 1 X sin X sin sin sin - X X * cos * sin - X X * cos X cos X sin X 
-+ X sin X 
-27
-
-- X - - D_0.297037 D_0.297037 sin X 
-+ X sin X 
-4
+- X - D_0 sin X 
+Shortened by 80.6452%
 
 - X - - X X sin X 
-+ X sin X 
-4
-
-- X - sin * * * - D_0.737785 D_0.737785 sin D_-0.0226753 1 sin D_-0.0226753 sin X 
-+ X sin X 
-13
+- X - D_0 sin X 
+Shortened by 25%
 
 - X - sin - X * X 1 sin X 
-+ X sin X 
-7
+- X - D_0 sin X 
+Shortened by 45.4545%
 
 - X / X - sin - X X / * 1 X sin X 
 - X / X - D_0 / X sin X 
-5
+Shortened by 33.3333%
 
 - X / sin X - * * * sin D_0.111381 - D_-0.0858486 D_-0.0858486 sin cos 1 * - / 1 1 * D_-0.585559 X sin - 1 D_-0.844722 cos / - cos X cos X cos / X D_-0.0859096 
 - X / sin X - D_0 cos / D_0 cos / X D_-0.0859096 
-26
+Shortened by 65%
 
 - X sin * - * / sin X * X 1 sin - X X X 1 
-+ X sin X 
-14
+- X sin - D_0 X 
+Shortened by 66.6667%
 
 - X sin - * * * sin 1 sin X X - X X X 
-+ X sin X 
-12
+- X sin - D_0 X 
+Shortened by 62.5%
 
 - X sin - * * / * 1 D_-0.109836 * D_-0.849483 X - / X X 1 D_0.414411 X 
-+ X sin X 
-16
+- X sin - D_0 X 
+Shortened by 70%
 
 - X sin - * / - 1 1 - * D_-0.680776 1 sin 1 * sin * X X - * D_0.325358 1 - X 1 X 
-+ X sin X 
-24
+- X sin - D_0 X 
+Shortened by 78.5714%
 
 - X sin - - 1 1 * X 1 
-+ X sin X 
-6
+- X sin - D_0 X 
+Shortened by 40%
 
 - X sin - - X X X 
-+ X sin X 
-4
+- X sin - D_0 X 
+Shortened by 25%
 
 - X sin - - cos - * X 1 / X 1 1 X 
-+ X sin X 
-11
+- X sin - D_0 X 
+Shortened by 60%
 
 - X sin - - sin 1 sin 1 / X 1 
-+ X sin X 
-8
-
-- X sin - - sin D_0.285012 sin D_0.285012 X 
-+ X sin X 
-6
+- X sin - D_0 X 
+Shortened by 50%
 
 - X sin - / - - 1 1 - X X - sin - X X - * 1 D_0.228797 * X X X 
-- X sin - / D_0 - D_0 - D_0.228797 * X X X 
-11
+- X sin - / D_0 - D_0 - D_0.228797 sqr X X 
+Shortened by 48%
 
 - X sin - / - X X - X sin * D_0.692557 D_0.709525 X 
 - X sin - / D_0 - X D_0.471849 X 
-5
+Shortened by 33.3333%
 
 - X sin - sin - * 1 X X X 
-+ X sin X 
-7
-
-- X sin - sin - 1 1 X 
-+ X sin X 
-5
+- X sin - D_0 X 
+Shortened by 45.4545%
 
 - X sin - sin - X X X 
-+ X sin X 
-5
+- X sin - D_0 X 
+Shortened by 33.3333%
 
 - X sin - sin - sin * X 1 sin * X 1 X 
-+ X sin X 
-11
+- X sin - D_0 X 
+Shortened by 60%
 
 - X sin - sin sin sin - X X * X 1 
-+ X sin X 
-9
+- X sin - D_0 X 
+Shortened by 53.8462%
 
 - sin X - * * / sin cos X X cos * cos X * 1 X / sin - 1 1 1 / X / sin - * X D_-0.515 cos X / sin - 1 1 - sin 1 * X D_-0.578051 
-+ sin X / X / sin - * X D_-0.515 cos X / D_0 - D_0.841471 * X D_-0.578051 
-25
+- sin X - D_0 / X / sin - * X D_-0.515 cos X / D_0 - D_0.841471 * X D_-0.578051 
+Shortened by 51.1111%
 
 - sin X - * X - X X X 
-+ sin X X 
-6
-
-- sin X - - / 1 D_-0.0119327 / 1 D_-0.0119327 X 
-+ sin X X 
-8
+- sin X - D_0 X 
+Shortened by 40%
 
 - sin X - - X X X 
-+ sin X X 
-4
+- sin X - D_0 X 
+Shortened by 25%
 
 / - X - / * D_-0.0673962 - cos X cos X sin 1 sin X 1 
-+ X sin X 
-13
+- X - D_0 sin X 
+Shortened by 64.7059%
 
 / - X sin - - 1 1 X 1 
-+ X sin X 
-6
+- X sin - D_0 X 
+Shortened by 40%
+
+
+Expressions where only the constants are reduced:
+- X - - D_0.297037 D_0.297037 sin X 
+- X - D_0 sin X 
+Shortened by 25%
+
+- X - sin * * * - D_0.737785 D_0.737785 sin D_-0.0226753 1 sin D_-0.0226753 sin X 
+- X - D_0 sin X 
+Shortened by 64.7059%
+
+- X sin - - 1 X 1 
+- X sin - - D_1 X D_1 
+Shortened by 0%
+
+- X sin - - cos - X - X 1 cos 1 X 
+- X sin - - cos - X - X D_1 D_0.540302 X 
+Shortened by 7.14286%
+
+- X sin - - sin D_0.285012 sin D_0.285012 X 
+- X sin - D_0 X 
+Shortened by 40%
+
+- X sin - sin - 1 1 X 
+- X sin - D_0 X 
+Shortened by 33.3333%
+
+- sin X - - / 1 D_-0.0119327 / 1 D_-0.0119327 X 
+- sin X - D_0 X 
+Shortened by 50%
 
 
 Expressions not changed:
-- X sin - - cos - X - X D_1 D_0.540302 X 
-- X sin - - D_1 X D_1 
+* / + sin X X X X 
 
 
 Cnt		Rule used
@@ -212,19 +217,10 @@ Cnt		Rule used
 4		+ D_0 X -> X
 2		+ X D_0 -> X
 1		/ X X -> D_1
-33		- X X -> D_0
+29		- X X -> D_0
 3		- X D_0 -> X
 6		/ X D_1 -> X
-0		+ X * Y X -> * + D_1 Y X
-0		+ X * X Y -> * + D_1 Y X
-0		+ * Y X X -> * + D_1 Y X
-0		+ * X Y X -> * + D_1 Y X
-1		/ * X Y Y -> X
-1		* / X Y Y -> X
-31		- X - D_0 Y -> + X Y 
-0		+ X - - D_1 Y D_1 -> - X Y
-0		- X - - D_1 Y D_1 -> + X Y
-20		sin - D_0 X -> - D_0 sin X
+2		* X X -> sqr X
 0		+ * sin A cos B * cos A sin B -> sin + A B
 0		- * sin A cos B * cos A sin B -> sin - A B
 0		- * cos A cos B * sin A sin B -> cos + A B

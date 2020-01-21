@@ -20,6 +20,7 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
     int changed = 0;
     int total = 0;
     map<string, string> changedExpressions;
+    map<string, string> reducedOnly;
     vector<string> notChanged;
 
     while (std::getline(file, str))
@@ -29,6 +30,11 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
         {
             changed++;
             changedExpressions.insert(pair<string, string>(str, et->prefix()));
+        }
+        else if (str != et->prefix())
+        {
+            changed++;
+            reducedOnly.insert(pair<string, string>(str, et->prefix()));
         }
         else
         {
@@ -40,27 +46,46 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
 
     std::ofstream ofs("statistics.txt", std::ofstream::out);
     ofs << "Expressions simplified: " << changed << "/" << total << endl;
-
-    ofs << "\nChanged expressions:\n";
-
-    map<string, string>::iterator itr;
-    for (itr = changedExpressions.begin(); itr != changedExpressions.end(); ++itr)
+    if (!changedExpressions.empty())
     {
-        int diff = Util::split(itr->first, " ", true).size() - Util::split(itr->second, " ", true).size();
-        string first = itr->first;
-        string second = itr->second;
-        ofs << first << endl;
-        ofs << second << endl;
-        ofs << diff << endl
-            << endl;
+        ofs << "\nRules successfully applied to:\n";
+        map<string, string>::iterator itr;
+        for (itr = changedExpressions.begin(); itr != changedExpressions.end(); ++itr)
+        {
+            string first = itr->first;
+            string second = itr->second;
+            double diff = (1 - ((double)Util::getNoTokens(second) / (double)Util::getNoTokens(first))) * 100;
+            ofs << first << endl;
+            ofs << second << endl;
+            ofs << "Shortened by " << diff << "%" << endl
+                << endl;
+        }
+    }
+    if (!reducedOnly.empty())
+    {
+
+        ofs << "\nExpressions where only the constants are reduced:\n";
+        map<string, string>::iterator itr;
+        for (itr = reducedOnly.begin(); itr != reducedOnly.end(); ++itr)
+        {
+            string first = itr->first;
+            string second = itr->second;
+            double diff = (1 - ((double)Util::getNoTokens(second) / (double)Util::getNoTokens(first))) * 100;
+            ofs << first << endl;
+            ofs << second << endl;
+            ofs << "Shortened by " << diff << "%" << endl
+                << endl;
+        }
     }
 
-    ofs << "\nExpressions not changed:\n";
-    for (int i = 0; i < notChanged.size(); i++)
+    if (!notChanged.empty())
     {
-        ofs << notChanged[i] << endl;
+        ofs << "\nExpressions not changed:\n";
+        for (int i = 0; i < notChanged.size(); i++)
+        {
+            ofs << notChanged[i] << endl;
+        }
     }
-
     ofs << "\n\nCnt\t\tRule used" << endl;
 
     for (int i = 0; i < ruleSet->getCounter().size(); i++)
@@ -83,5 +108,5 @@ int main()
 
     shared_ptr<RuleSet> at = Util::loadRulesFromFile("arithm_trig.txt");
 
-    statistics(at, "tryThis.txt");
+    statistics(at, "expressions/offlineSinX.txt");
 }
