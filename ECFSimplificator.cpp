@@ -1,10 +1,49 @@
 ﻿#include "ECFSimplificator.hpp"
 #include "Util.hpp"
 
+void ECFSimplificator::registerParameters(StateP state)
+{
+	state->getRegistry()->registerEntry("simplifier.rulespath", (voidP)(new std::string), ECF::STRING);
+	state->getRegistry()->registerEntry("simplifier.frequency", (voidP)(new uint(0)), ECF::UINT);
+}
+
+bool ECFSimplificator::initialize(StateP state)
+{
+	state_ = state;
+	loadOperators(state);
+
+	if (!state->getRegistry()->isModified("simplifier.rulespath")) {
+		this->rules = make_shared<RuleSet>("defaultRules.txt");
+	}
+	else {
+		voidP sptr = state->getRegistry()->getEntry("simplifier.rulespath");
+		this->rules = make_shared<RuleSet>(*((std::string*)sptr.get()));
+	}
+
+	if (state->getRegistry()->isModified("simplifier.frequency")) {
+		voidP sptr = state->getRegistry()->getEntry("simplifier.frequency");
+		this->frequency = *((uint*)sptr.get());
+	}
+	else {
+		this->frequency = DEFAULT_FREQ;
+	}
+
+	return true;
+}
+
+bool ECFSimplificator::operate(StateP state)
+{
+	return false;
+}
+
 ECFSimplificator::ECFSimplificator(std::string rulesPath, StateP state)
 {
 	loadOperators(state);
 	this->rules = make_shared<RuleSet>(rulesPath);
+}
+
+ECFSimplificator::ECFSimplificator()
+{
 }
 
 std::string getTreeTrimmed(std::string inputTree)
@@ -119,8 +158,11 @@ bool ECFSimplificator::reduceConstants(Tree::Tree *tree)
 void ECFSimplificator::loadOperators(StateP state)
 {
 	Tree::Tree *tree = (Tree::Tree *)state->getGenotypes().at(0).get();
-
-	// izlistaj sve koristene funkcije
+	if (tree->getName() != "Tree") {
+		cout << "Error: bad genotype. Loading operators for simpification requires tree as the first genotype. Exiting.";
+		exit(1);
+	}
+	// listing all used functions and adding them to a map
 	std::map<std::string, Tree::PrimitiveP>::iterator it = tree->primitiveSet_->mAllPrimitives_.begin();
 	std::map<std::string, int> operatorsMap;
 	while (it != tree->primitiveSet_->mAllPrimitives_.end())
@@ -128,9 +170,6 @@ void ECFSimplificator::loadOperators(StateP state)
 		Tree::PrimitiveP func;
 		if (func = tree->primitiveSet_->getFunctionByName(it->first))
 		{
-			cout << func->getName();
-			cout << "\t" << func->getNumberOfArguments() << endl;
-
 			operatorsMap.insert(pair<string, int>(func->getName(), func->getNumberOfArguments()));
 		}
 		it++;
@@ -141,6 +180,7 @@ void ECFSimplificator::loadOperators(StateP state)
 
 void ECFSimplificator::simplify(Tree::Tree *tree)
 {
+	if (this->frequency > 0 && state_->getGenerationNo() % this->frequency != 0) return;
 
 	reduceConstants(tree);
 
