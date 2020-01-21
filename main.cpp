@@ -100,13 +100,13 @@ int main()
 {
     Util::loadOperators("operators.txt");
 
-    shared_ptr<RuleSet> arithmetic = Util::loadRulesFromFile("arithmetic.txt");
-    shared_ptr<RuleSet> trigonometric = Util::loadRulesFromFile("trigonometric.txt");
-    shared_ptr<RuleSet> boolean_alg = Util::loadRulesFromFile("boolean.txt");
+    // shared_ptr<RuleSet> arithmetic = Util::loadRulesFromFile("arithmetic.txt");
+    // shared_ptr<RuleSet> trigonometric = Util::loadRulesFromFile("trigonometric.txt");
+    // shared_ptr<RuleSet> boolean_alg = Util::loadRulesFromFile("boolean.txt");
 
     // statistics(boolean_alg, "expressions/BoolExample.txt");
 
-    shared_ptr<RuleSet> at = Util::loadRulesFromFile("arithm_trig.txt");
+    shared_ptr<RuleSet> at = Util::loadRulesFromFile("ruleSets\\arithm_trig.txt");
 
     statistics(at, "expressions/offlineSinX.txt");
 }
