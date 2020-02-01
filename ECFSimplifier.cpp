@@ -1,13 +1,13 @@
-﻿#include "ECFSimplificator.hpp"
-#include "Util.hpp"
+﻿#include "ECFSimplifier.hpp"
 
-void ECFSimplificator::registerParameters(StateP state)
+
+void ECFSimplifier::registerParameters(StateP state)
 {
 	state->getRegistry()->registerEntry("simplifier.rulespath", (voidP)(new std::string), ECF::STRING);
 	state->getRegistry()->registerEntry("simplifier.frequency", (voidP)(new uint(0)), ECF::UINT);
 }
 
-bool ECFSimplificator::initialize(StateP state)
+bool ECFSimplifier::initialize(StateP state)
 {
 	state_ = state;
 	loadOperators(state);
@@ -31,18 +31,20 @@ bool ECFSimplificator::initialize(StateP state)
 	return true;
 }
 
-bool ECFSimplificator::operate(StateP state)
+bool ECFSimplifier::operate(StateP state)
 {
 	return false;
 }
 
-ECFSimplificator::ECFSimplificator(std::string rulesPath, StateP state)
+ECFSimplifier::ECFSimplifier(std::string rulesPath, StateP state)
 {
+	state_ = state;
 	loadOperators(state);
 	this->rules = make_shared<RuleSet>(rulesPath);
+	frequency = 1;
 }
 
-ECFSimplificator::ECFSimplificator()
+ECFSimplifier::ECFSimplifier()
 {
 }
 
@@ -64,11 +66,11 @@ std::string getTreeFull(std::string inputTree)
 bool isReducible(shared_ptr<Node> n)
 {
 	bool toReduce = true;
-	if (Util::isOperatorLoaded(n->d))
+	if (Simplifier::isOperatorLoaded(n->d))
 	{
 		for (int i = 0; i < n->chlidren.size(); i++)
 		{
-			if (Util::isOperatorLoaded(n->chlidren[i]->d))
+			if (Simplifier::isOperatorLoaded(n->chlidren[i]->d))
 			{
 				toReduce = isReducible(n->chlidren[i]) && toReduce;
 			}
@@ -125,6 +127,18 @@ bool reduce(shared_ptr<Node> n, Tree::Tree *tree)
 
 			res_str = "D_" + res_str;
 
+			////for scheduling example only!
+			//if (res_str == "D_0" || res_str == "D_1") {
+
+
+			//	shared_ptr<Node> n2 = make_shared<Node>(res_str);
+			//	*n = *n2;
+			//	reduced = true;
+			//}
+			//else {
+			//	return false;
+			//}
+
 			shared_ptr<Node> n2 = make_shared<Node>(res_str);
 			*n = *n2;
 			reduced = true;
@@ -141,7 +155,7 @@ bool reduce(shared_ptr<Node> n, Tree::Tree *tree)
 	return reduced;
 }
 
-bool ECFSimplificator::reduceConstants(Tree::Tree *tree)
+bool ECFSimplifier::reduceConstants(Tree::Tree *tree)
 {
 	std::string izraz = getTreeTrimmed(tree->toString());
 	shared_ptr<ExpressionTree> wholeTree = make_shared<ExpressionTree>(izraz);
@@ -155,7 +169,7 @@ bool ECFSimplificator::reduceConstants(Tree::Tree *tree)
 	tree->read(xTree);
 	return reduced;
 }
-void ECFSimplificator::loadOperators(StateP state)
+void ECFSimplifier::loadOperators(StateP state)
 {
 	Tree::Tree *tree = (Tree::Tree *)state->getGenotypes().at(0).get();
 	if (tree->getName() != "Tree") {
@@ -175,20 +189,75 @@ void ECFSimplificator::loadOperators(StateP state)
 		it++;
 	}
 
-	Util::loadOperators(operatorsMap);
+	Simplifier::loadOperators(operatorsMap);
 }
 
-void ECFSimplificator::simplify(Tree::Tree *tree)
+void ECFSimplifier::simplify(Tree::Tree *tree)
 {
-	if (this->frequency > 0 && state_->getGenerationNo() % this->frequency != 0) return;
+	if (frequency <= 0) return;
+
+
+	else if (state_->getGenerationNo() % frequency != 0) return;
+
+	std::string treeStr = getTreeTrimmed(tree->toString());
+	std::shared_ptr<ExpressionTree> expression = make_shared<ExpressionTree>(treeStr);
+
+	cout << "\nInitial expression: ";
+	cout << expression->prefix().c_str();
+	cout << "\n\n";
+
 
 	reduceConstants(tree);
 
-	std::string treeStr = getTreeTrimmed(tree->toString());
-	std::shared_ptr<ExpressionTree> et = make_shared<ExpressionTree>(treeStr);
+	treeStr = getTreeTrimmed(tree->toString());
+	expression = make_shared<ExpressionTree>(treeStr);
 
-	this->rules->applyAllRules(et);
 
-	XMLNode xTree = XMLNode::parseString(getTreeFull(et->prefix()).c_str());
+	//if (counter.empty())
+	//{
+	//	for (int i = 0; i < rules->size(); i++)
+	//	{
+	//		counter.push_back(0);
+	//	}
+	//}
+
+	bool reset = true;
+	vector<shared_ptr<Rule>>::iterator itr;
+	int cnt = 0;
+	int MAX_ITERATIONS = 100; //security reasons: in case rules are written in a way which can make an infinite loop
+	do
+	{
+		reset = false;
+
+		int i = 0;
+		for (i = 0; i < rules->size(); i++)
+		{
+			if (rules->getRule(i)->applyRule(expression))
+			{
+				reduce(expression->peek(), tree);
+
+				cout << "New expression: ";
+				cout << expression->prefix().c_str();
+				cout << "\n\n";
+
+				//counter[i]++;
+
+				reset = true;
+				break;
+			}
+		}
+		if (cnt >= MAX_ITERATIONS)
+		{
+			cnt = 0;
+			reset = true;
+		}
+		cnt++;
+	} while (reset);
+
+	cout << "Final result: ";
+	cout << expression->prefix().c_str();
+	cout << "\n";
+
+	XMLNode xTree = XMLNode::parseString(getTreeFull(expression->prefix()).c_str());
 	tree->read(xTree);
 }

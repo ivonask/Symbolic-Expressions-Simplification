@@ -12,6 +12,7 @@
                 "${workspaceFolder}\\Operator.cpp",
                 "${workspaceFolder}\\Util.cpp",
                 "${workspaceFolder}\\RuleSet.cpp",
+                "${workspaceFolder}\\Simplifier.cpp",
                 "-o",
                 "${workspaceFolder}\\a.exe"
             ],

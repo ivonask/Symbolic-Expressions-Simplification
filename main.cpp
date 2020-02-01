@@ -3,10 +3,11 @@
 #include "Rule.hpp"
 #include "RuleSet.hpp"
 #include <string>
+#include "Simplifier.hpp"
 
 using namespace std;
 
-void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
+void statistics(shared_ptr<Simplifier> simplifier, string filePath)
 {
     ifstream file(filePath);
     if (!file)
@@ -26,7 +27,7 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
     while (std::getline(file, str))
     {
         et = make_shared<ExpressionTree>(str);
-        if (ruleSet->applyAllRules(et))
+        if (simplifier->simplify(et))
         {
             changed++;
             changedExpressions.insert(pair<string, string>(str, et->prefix()));
@@ -88,9 +89,9 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
     }
     ofs << "\n\nCnt\t\tRule used" << endl;
 
-    for (int i = 0; i < ruleSet->getCounter().size(); i++)
+    for (int i = 0; i < simplifier->getCounter().size(); i++)
     {
-        ofs << ruleSet->getCounter()[i] << "\t\t" << ruleSet->getRules()[i]->printRule() << endl;
+        ofs << simplifier->getCounter()[i] << "\t\t" << simplifier->getRules()->getRule(i)->printRule() << endl;
     }
 
     ofs.close();
@@ -98,15 +99,7 @@ void statistics(shared_ptr<RuleSet> ruleSet, string filePath)
 
 int main()
 {
-    Util::loadOperators("operators.txt");
+    shared_ptr<Simplifier> simplifier = make_shared<Simplifier>("ruleSets\\arithm_trig.txt", "operators.txt");
 
-    // shared_ptr<RuleSet> arithmetic = Util::loadRulesFromFile("arithmetic.txt");
-    // shared_ptr<RuleSet> trigonometric = Util::loadRulesFromFile("trigonometric.txt");
-    // shared_ptr<RuleSet> boolean_alg = Util::loadRulesFromFile("boolean.txt");
-
-    // statistics(boolean_alg, "expressions/BoolExample.txt");
-
-    shared_ptr<RuleSet> at = Util::loadRulesFromFile("ruleSets\\arithm_trig.txt");
-
-    statistics(at, "expressions/offlineSinX.txt");
+    statistics(simplifier, "expressions/offlineSinX.txt");
 }

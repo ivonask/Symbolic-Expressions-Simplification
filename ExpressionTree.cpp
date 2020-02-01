@@ -1,6 +1,7 @@
 #include "ExpressionTree.hpp"
 #include "Util.hpp"
 #include "Operator.hpp"
+#include "Simplifier.hpp"
 
 #include <map>
 #include <algorithm>
@@ -74,10 +75,8 @@ void ExpressionTree::insert(string val)
     {
         shared_ptr<Node> nptr = make_shared<Node>(val);
 
-        shared_ptr<OperatorNode> op = Util::getOperatorInfo(val);
+        shared_ptr<OperatorNode> op = Simplifier::getOperatorInfo(val);
 
-        //TODO: read from some definition of the operator - how many children?
-        //or: while pop() =! null?
         for (int i = 0; i < op->numberOfChildren(); i++)
         {
             nptr->chlidren.push_back(pop());
@@ -94,12 +93,12 @@ void ExpressionTree::insert(string val)
 
 bool ExpressionTree::isSymbol(string ch)
 {
-    return (!isConstant(ch) && !isOperator(ch)); //TODO check defined variables from ECF file.
+    return (!isConstant(ch) && !isOperator(ch)); //TODO check defined variables from ECF file?
 }
 
 bool ExpressionTree::isOperator(string ch)
 {
-    return Util::isOperatorLoaded(ch);
+    return Simplifier::isOperatorLoaded(ch);
 }
 
 bool ExpressionTree::isConstant(string ch)
@@ -136,11 +135,12 @@ void ExpressionTree::translateNode(shared_ptr<Node> n, map<string, shared_ptr<No
         shared_ptr<Node> newNode(it->second);
         *n = *newNode;
     }
-	else {
+    else
+    {
 
-		for (int i = 0; i < n->chlidren.size(); i++)
-			translateNode(n->chlidren[i], variables);
-	}
+        for (int i = 0; i < n->chlidren.size(); i++)
+            translateNode(n->chlidren[i], variables);
+    }
 }
 
 shared_ptr<ExpressionTree> ExpressionTree::translate(map<string, shared_ptr<Node>> variables)
@@ -153,7 +153,7 @@ shared_ptr<ExpressionTree> ExpressionTree::translate(map<string, shared_ptr<Node
         std::map<string, shared_ptr<Node>>::iterator it = variables.find(top->node->d);
 
         translatedTree = make_shared<ExpressionTree>(it->second);
-		return translatedTree;
+        return translatedTree;
     }
     else
     {

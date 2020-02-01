@@ -14,9 +14,9 @@ private:
 
     bool match(shared_ptr<Node> P, shared_ptr<Node> T);
     bool compare(shared_ptr<Node> P, shared_ptr<Node> U);
+    bool map(shared_ptr<Node> n1, shared_ptr<Node> n2);
 
     bool isAddedToMap(string var, shared_ptr<Node> n);
-    bool compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2);
 
 public:
     Rule(string original, string replacement);

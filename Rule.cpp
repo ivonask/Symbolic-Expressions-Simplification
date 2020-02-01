@@ -72,7 +72,7 @@ void printMap(std::map<string, shared_ptr<Node>> mapVars)
     cout << endl;
 }
 
-bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
+bool Rule::map(shared_ptr<Node> n1, shared_ptr<Node> n2)
 {
     //case 1: both nodes operators
     if (ExpressionTree::isOperator(n1->d) && ExpressionTree::isOperator(n2->d))
@@ -97,12 +97,14 @@ bool Rule::compareNode(shared_ptr<Node> n1, shared_ptr<Node> n2)
     {
         return false;
     }
+
+    //case 4: expression node is a variable/constant, pattern node is constant
     else if (ExpressionTree::isConstant(n1->d))
     {
         if (ExpressionTree::isConstant(n2->d))
         {
             if (n1->d == n2->d)
-                return true; //TODO: is mapping needed?
+                return true;
             else
                 return false;
         }
@@ -160,7 +162,7 @@ bool Rule::compare(shared_ptr<Node> P, shared_ptr<Node> U)
     }
 
     //step 2: compare the nodes
-    if (!compareNode(P, U)) //true if expression node is successfully mapped to a pattern variable or the nodes are the same
+    if (!map(P, U)) //true if expression node is successfully mapped to a pattern variable or the nodes are the same
     {
         return false;
     }

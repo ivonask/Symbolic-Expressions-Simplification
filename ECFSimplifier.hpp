@@ -8,25 +8,27 @@
 
 #include "Node.hpp"
 #include "RuleSet.hpp"
+#include "Simplifier.hpp"
+#include "Util.hpp"
 
-
-class ECFSimplificator : public Operator
+class ECFSimplifier : public Operator
 {
 
 private:
-	shared_ptr<RuleSet> rules;
 	uint frequency;
 
 	const uint DEFAULT_FREQ = 0;
 	StateP state_;
 
-public:
-	ECFSimplificator(std::string rulesPath, StateP state);
-	ECFSimplificator();
+	shared_ptr<RuleSet> rules;
 
-	void simplify(Tree::Tree* tree);
-    bool reduceConstants(Tree::Tree* tree);
-    void loadOperators(StateP state);
+public:
+	ECFSimplifier();
+	ECFSimplifier(std::string rulesPath, StateP state);
+
+	void simplify(Tree::Tree *tree);
+	bool reduceConstants(Tree::Tree *tree);
+	void loadOperators(StateP state);
 
 	void registerParameters(StateP state);
 	bool initialize(StateP state);
